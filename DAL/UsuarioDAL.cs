@@ -14,6 +14,85 @@ namespace DAL
         BE.Usuario usuarioBE = new Usuario();
         DataTable dt = new DataTable();
         Conexion con = Conexion.GetInstance();
+        GenericRepository<BE.Usuario> GenericRepository = new GenericRepository<BE.Usuario>();
+
+        public List<Usuario> GetUsuarios(List<Usuario> listausuarios)
+        {
+            string sql = "select * from Usuario";
+            dt = con.Ejecutarreader(sql);
+
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow item in dt.Rows)
+                {
+                    BE.Usuario USUBE = new BE.Usuario();
+                    
+                    USUBE.UsuarioID = Convert.ToInt32(item[0].ToString());
+                    USUBE._Usuario = Convert.ToString(item[1].ToString());
+                    USUBE.Apellido = Convert.ToString(item[4].ToString()); 
+                    USUBE.Nombre = Convert.ToString(item[3].ToString()); 
+                    USUBE.Email = Convert.ToString(item[6].ToString()); 
+                    USUBE.Dni = Convert.ToInt32(item[5].ToString()); 
+                    USUBE.Habilitado = Convert.ToBoolean(item[7].ToString()); 
+
+                    listausuarios.Add(USUBE);
+                }
+               
+            }
+            return listausuarios;
+        }
+
+        public Usuario UpdateUser(Usuario usube)
+        {
+            string sql = "update usuario set Usuario = '" + usube._Usuario + "',Nombre = '" + usube.Nombre + ",Apellido = '" +
+                usube.Apellido + "', email = '" + usube.Email + "',Habilitado = " + usube.Habilitado + 
+                "where Usuarioid = " +usube.UsuarioID+"";
+
+            usube.OResult = con.Ejecutar(sql);
+            // dv.RecalcularDVH();
+
+            return usube;
+        }
+
+        public Usuario CreateUser(Usuario usube)
+        {
+            string sql = "insert into Usuario values( '" + usube._Usuario + "',"
+               + "'" + usube.Clave + "','" + usube.Nombre + "','" + usube.Apellido + "'," + usube.Dni + ",'" + usube.Email + "','" + usube.Habilitado + "',0," + "'_DVH')";
+
+            usube.OResult = con.Ejecutar(sql);
+            // dv.RecalcularDVH();
+
+
+            EmailSevice mail = new EmailSevice();
+            mail.EnviarEmail(usube);
+
+            return usube;
+
+
+        }
+
+        public Usuario GetbyID(Usuario usube)
+        {
+            string columna = "UsuarioID,Usuario,Nombre,Apellido,DNI,Email,Habilitado";
+            string tabla = "Usuario u";
+            string condicion = "u.UsuarioID in (" + usube.UsuarioID + ")";
+            dt = GenericRepository.GetAllbyID(columna, tabla, condicion);
+
+
+            foreach (DataRow item in dt.Rows)
+            {
+                usube.UsuarioID = Convert.ToInt32(item[0].ToString());
+                usube._Usuario = Convert.ToString(item[1].ToString());
+                usube.Apellido = Convert.ToString(item[3].ToString());
+                usube.Nombre = Convert.ToString(item[2].ToString());
+                usube.Dni = Convert.ToInt32(item[4].ToString());
+                usube.Email = Convert.ToString(item[5].ToString());
+                usube.Habilitado = Convert.ToBoolean(item[6].ToString());
+            }
+
+            return usube;
+        }
+
         public static UsuarioDAL GetInstance()
         {
             if (_instanciausuario == null)

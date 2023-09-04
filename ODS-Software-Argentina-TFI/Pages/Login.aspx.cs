@@ -11,6 +11,7 @@ namespace ODS_Software_Argentina_TFI.Pages
     {
         BE.Usuario usu = new BE.Usuario();
         BLL.sesion sesionusuario = BLL.sesion.GetInstance();
+        BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -35,16 +36,16 @@ namespace ODS_Software_Argentina_TFI.Pages
                     //entra
                     Session["Usuarionombre"] = usu.Nombre;
                     Session["Usuario"] = usu._Usuario;
-                    //Session["Nombre"] = objUser.Nombre + ' ' + objUser.Apellido;
-                    // Session["Perfil"] = objUser.Perfil;
+                    Session["UsuarioID"] = usu.UsuarioID;
+                    logbll.IngresarDatoBitacora("LogIn", "Login Exitoso", 1, usu.UsuarioID);
                     Response.Redirect("MenuPrincipal.aspx");
                 }
-                 
+               
             }
-            catch (Exception ex )
+            catch (Exception  ex )
             {
                 (this.Master as MP).mostrarmodal("Ocurrio un error, por favor reintentar",BE.ControlException.TipoEventoException.Error);
-
+                logbll.IngresarDatoBitacora("LogIn", "Ocurrio un error, por favor reintentar", 2,0);
 
             }
 

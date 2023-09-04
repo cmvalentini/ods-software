@@ -45,8 +45,11 @@
     <Compile Include="ControlException\TipoEventoException.cs" />
     <Compile Include="idioma\idioma.cs" />
     <Compile Include="idioma\traduccion.cs" />
+    <Compile Include="Permisos\Component.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seguridad\BitacoraBE.cs" />
+    <Compile Include="Seguridad\Encriptacion.cs" />
     <Compile Include="Seguridad\Operacion.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>

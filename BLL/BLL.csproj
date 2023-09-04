@@ -45,8 +45,12 @@
     <Compile Include="PermisosComposite\Component.cs" />
     <Compile Include="PermisosComposite\Composite.cs" />
     <Compile Include="PermisosComposite\Leaf.cs" />
+    <Compile Include="PermisosComposite\ManejadorPerfilUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seguridad\BitacoraBLL.cs" />
+    <Compile Include="Seguridad\EncriptacionBLL.cs" />
     <Compile Include="sesion.cs" />
+    <Compile Include="Usuario\Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BE\BE.csproj">

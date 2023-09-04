@@ -11,8 +11,11 @@ namespace DAL
     public class Conexion
     {
         public static Conexion conexion_instancia;
+        static string stringconexion = DevolverConexion();
+        SqlConnection con = new SqlConnection(stringconexion);
+        DataTable dt;
 
-         public static Conexion GetInstance()
+        public static Conexion GetInstance()
         {
             if (conexion_instancia == null)
             {
@@ -21,10 +24,51 @@ namespace DAL
             return conexion_instancia;
         }
 
+        
+        public  DataTable SPListarFull(string NomProc)
+        {
+            DataTable dt = new DataTable();  
 
-         static string  stringconexion = DevolverConexion();
-        SqlConnection con = new SqlConnection(stringconexion);
-        DataTable dt;
+            try
+            {
+
+                SqlCommand com = new SqlCommand(NomProc,con);
+                
+                com.CommandType = CommandType.StoredProcedure;
+                
+                Conectar();
+
+                SqlDataReader reader = com.ExecuteReader();
+                dt.Load(reader);
+                Desconectar();
+
+                return dt;
+
+
+                //SqlCommand cmd = new SqlCommand();
+                //dt = new DataTable();
+                //cmd.Parameters.Clear();
+                //cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.CommandText = NomProc;
+                //cmd.Connection = con  ;
+                //dt.Load(cmd.ExecuteReader());
+                //con.Close();
+                //cmd.Connection = con;
+                //return dt;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+            finally
+            {
+                con.Close();
+                //desconectar
+            }
+
+        }
+
 
         public static string DevolverConexion()
         {

@@ -29,7 +29,7 @@ namespace ODS_Software_Argentina_TFI.Pages
                     break;
                 case BE.ControlException.TipoEventoException.Info:
                     MensajeHeader.Text = "Aviso";
-                    HeaderModal.Attributes["class"] = "modal-header bg-warning";
+                    HeaderModal.Attributes["class"] = "modal-header bg-info";
 
                     break;
 

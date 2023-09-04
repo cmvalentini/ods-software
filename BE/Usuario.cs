@@ -15,6 +15,7 @@ namespace BE
         public int FlagIntentosLogin { get; set; }
         public string clavesinencriptar { get; set; }
         public string Clave { get; set; }
+        public string OResult { get; set; }
 
 
         public Usuario(string _usuario, string apellido, string nombre, string email, int dni, bool habilitado, string clave, string clavesinencriptar)

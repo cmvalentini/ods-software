@@ -12,9 +12,7 @@ namespace BE
         public string Nombre { get; set; }
         public string Email { get; set; }
         public int Dni { get; set; }
-        public string telefono { get; set; }
-        public string Domicilio { get; set; }
-        public string Result { get; set; }
+     
 
 
 

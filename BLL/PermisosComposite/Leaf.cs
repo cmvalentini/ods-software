@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BE;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,8 @@ namespace BLL.PermisosComposite
 {
     public class Leaf : Component
     {
-        private IList<Component> _hijos = new List<Component>();
-        private List<BE.Seguridad.Operacion> listaoperaciones;
+        private List<Component> _hijos = new List<Component>();
+   
 
         public override List<BE.Seguridad.Operacion> obtenerpatente
         {
@@ -19,30 +20,19 @@ namespace BLL.PermisosComposite
             }
         }
 
-        public override void AgregarHijo(Component c)
-        {
-            _hijos.Add(c);
-        }
-        public override IList<Component> obtenerhijos()
-        {
-            throw new NotImplementedException();
-        }
-        public Leaf(string nombre) : base(nombre)
-        {
-        }
+
 
 
         public IList<Component> obtenerhijos(IList<Component> Hijos)
         {
-            foreach (var operacion in listaoperaciones)
-            {
-                foreach (var item in _hijos)
-                {
-                    Leaf leaf = new Leaf(operacion.ToString());
-                    this.AgregarHijo(leaf);
-                }
-            }
-            return _hijos;
+            throw new NotImplementedException();
         }
+
+        public override List<BE.Permisos.Component> obtenerhijos(List<BE.Permisos.Component> listaoperaciones, BE.Usuario usuario)
+        {
+            throw new NotImplementedException();
+        }
+
+        
     }
 }

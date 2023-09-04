@@ -68,10 +68,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Controllers\ModalHeader.aspx" />
+    <Content Include="Images\Home.png" />
+    <Content Include="Images\New.png" />
     <Content Include="Images\ODS Soft logo_preview_rev_1.png" />
     <Content Include="Images\ods_soft_logo.png" />
+    <Content Include="Images\Search.png" />
+    <Content Include="Images\Select.png" />
     <Content Include="js\ModalMessage.js" />
     <Content Include="js\ValidarCampos.js" />
+    <Content Include="Pages\AMB_Usuario\FUsersA.aspx" />
+    <Content Include="Pages\AMB_Usuario\Usuarios.aspx" />
+    <Content Include="Pages\Bitacora\Bitacora.aspx" />
     <Content Include="Pages\ExceptionModal.ascx" />
     <Content Include="Pages\Index.aspx" />
     <Content Include="Pages\Login.aspx" />
@@ -100,6 +107,27 @@
     </Compile>
     <Compile Include="MP.Master.designer.cs">
       <DependentUpon>MP.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AMB_Usuario\FUsersA.aspx.cs">
+      <DependentUpon>FUsersA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AMB_Usuario\FUsersA.aspx.designer.cs">
+      <DependentUpon>FUsersA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AMB_Usuario\Usuarios.aspx.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AMB_Usuario\Usuarios.aspx.designer.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Bitacora\Bitacora.aspx.cs">
+      <DependentUpon>Bitacora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Bitacora\Bitacora.aspx.designer.cs">
+      <DependentUpon>Bitacora.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ExceptionModal.ascx.cs">
       <DependentUpon>ExceptionModal.ascx</DependentUpon>

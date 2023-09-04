@@ -1,6 +1,9 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Menu_operaciones.master.cs" Inherits="ODS_Software_Argentina_TFI.Menu_operaciones" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true"   CodeBehind="Menu_operaciones.master.cs" Inherits="ODS_Software_Argentina_TFI.Menu_operaciones" %>
+
 <%@ Register Src="~/Pages/ExceptionModal.ascx" TagPrefix="uc1" TagName="ExceptionModal" %>
+
 <!DOCTYPE html>
+ 
 
 <html>
 <head runat="server">
@@ -8,28 +11,72 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        <asp:ContentPlaceHolder ID="tittle" runat="server"></asp:ContentPlaceHolder>
-    </title>
+        <asp:ContentPlaceHolder ID="tittle" runat="server">
+
+        </asp:ContentPlaceHolder></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
       
     </asp:ContentPlaceHolder>
 </head>
-<body>
-   
-<nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-      <img src="../Images/ODS Soft logo_preview_rev_1.png" alt="Logo" class="navbar-brand" style="width:70px" />
-   
-    <div class="collapse navbar-collapse" id="navbarScroll">
 
-        <asp:Button ID="btnhacerbackup" Visible="false" CssClass="btn btn-outline-success" runat="server" Text="Hacer BackUp" />
-     
-    </div>
-  </div>
-</nav>
- 
-            <asp:ContentPlaceHolder ID="body" runat="server">
-            
+    <body>
+        <uc1:ExceptionModal runat="server" ID="ExceptionModal" />
+        <form runat="server">
+            <nav class="navbar navbar-light bg-light fixed-top">
+                <div class="container-fluid">
+                    <img src="../Images/ODS Soft logo_preview_rev_1.png" alt="Logo" class="navbar-brand" style="width:70px" />
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu Principal</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                            </button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          		          
+                                    <asp:Button UseSubmitBehavior="false" ID="btnBackUp" Visible="false" CssClass="btn btn-secondary" runat="server" Text="Back Up" Height="35px" Width="231px" />
+                                    <asp:Button UseSubmitBehavior="False" ID="btnBitacora" runat="server" Text="Bitacora" Visible="true" OnClick="btnBitacora_Click1" CssClass="btn btn-secondary"  Height="35px" Width="231px" />
+                                    <asp:Button UseSubmitBehavior="False" ID="Button3" runat="server" CssClass="btn btn-secondary"  Text="Respuestas" Height="35px" Width="231px" />
+                                    <asp:Button UseSubmitBehavior="False" ID="btnUsuarios" CssClass="btn btn-secondary" runat="server" Text="Usuarios" Height="35px" Width="231px" OnClick="btnUsuarios_Click"  />
+                                    <asp:Button UseSubmitBehavior="False" ID="Button5" CssClass="btn btn-secondary" runat="server" Text="Permisos" Height="35px" Width="231px" />
+                                    <asp:Button UseSubmitBehavior="False" ID="Button6" CssClass="btn btn-secondary" runat="server" Text="Familias" Height="35px" Width="231px" />
+                                    <asp:Button UseSubmitBehavior="False" ID="Button7" CssClass="btn btn-secondary" runat="server" Text="Seguridad" Height="35px" Width="231px" />
+                                    <asp:Button UseSubmitBehavior="False" ID="Button8" CssClass="btn btn-secondary" runat="server" Text="Facturacion" Height="35px" Width="231px" />
+                                    <asp:Button UseSubmitBehavior="False" ID="Button9" CssClass="btn btn-dark"  runat="server" Text="LogOut" />
+                                <li class="nav-item"><a class="nav-link" href="#">Link</a> </li>
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown </a>
+                                    <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+             <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-</body>
+            <hr />
+            <footer>
+                <p>
+                    &copy; <%: DateTime.Now.Year %> - Pentagram</p>
+            </footer>
+        </div>
+        </form>
+       
+    </body>
+         
 </html>
+
+
+
