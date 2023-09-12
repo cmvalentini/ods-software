@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ODS_Software_Argentina_TFI.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -18,7 +19,7 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
         {
             if (!this.IsPostBack)
             {
-                cargar_data(1, 5);
+                
 
             }
         }
@@ -27,10 +28,56 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
 
         private void cargar_data(int v1, int v2)
         {
-            dvgBitacora = new GridView();
-            listabitacora = bitacoraBLL.ListarBitacora();
-            dvgBitacora.DataSource = listabitacora;
-            dvgBitacora.DataBind();
+            try
+            {
+
+
+                string fechadesde =  CalendarC.GetFechaDesde();
+                string fechahasta =  CalendarC.GetFechaHasta();
+                string criticidad = CalendarC.GetCriticidad();
+                string usuario = CalendarC.GetUsuario();
+                string sqlusuario = "";
+                string sqlcriticidad = "";
+
+                switch (usuario)
+                {
+                    case "":
+                        
+                        break;
+                    case "Todos":
+                        sqlusuario = "select usuarioid from usuario";
+                        break;
+                    default:
+                        sqlusuario = "select usuarioid from usuario where usuario like '" + usuario + "'";
+                        break;
+                }
+
+                switch (criticidad)
+                {
+                    case "":
+                     
+                        break;
+                    case "Todas":
+                        sqlcriticidad = "select distinct criticidad from bitacora";
+                        break;
+                    default:
+                        sqlcriticidad = "select criticidad from bitacora where criticidad = " + Convert.ToInt16(criticidad) + "";
+                        break;
+                }
+                
+                //llenamos la bitacora con todo lo filtrado
+                listabitacora = bitacoraBLL.ConsultarBitacora(fechadesde, fechahasta, sqlcriticidad, sqlusuario);
+
+                dvgBitacora.DataSource = listabitacora;
+                dvgBitacora.DataBind();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+          
+           
         }
 
         private int Count()
@@ -46,8 +93,8 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
 
         protected void ConsultarBitacora_click(object sender, EventArgs e)
         {
-            dvgBitacora.DataSource = bitacoraBLL.ListarBitacora();
-            dvgBitacora.DataBind();
+            cargar_data(1,3);
+      
         }
 
         protected void GridView1_Sorting(object sender, GridViewSortEventArgs e)
@@ -113,6 +160,11 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
             }
             set { ViewState["sortDirection"] = value; }
         }
-       
+
+        protected void btnback_Click(object sender, EventArgs e)
+        {
+
+            Response.Redirect("~/Pages/MenuPrincipal.aspx");
+        }
     }
 }

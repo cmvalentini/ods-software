@@ -9,7 +9,7 @@ namespace BE.Seguridad
    public class BitacoraBE
     {
         public string Accion { get; set; }
-        public int Criticidad { get; set; }
+        public string Criticidad { get; set; }
         public string Descripcion { get; set; }
         public DateTime FechayHora { get; set; }
         public string NombreOperacion { get; set; }
@@ -18,7 +18,7 @@ namespace BE.Seguridad
 
         public BitacoraBE() { }
 
-        public BitacoraBE(int _usuaroid,string _descripcion, int _criticidad, string _accion, DateTime _fecha)
+        public BitacoraBE(int _usuaroid,string _descripcion, string _criticidad, string _accion, DateTime _fecha)
         {
             Usuarioid = _usuaroid;
             Descripcion = _descripcion;

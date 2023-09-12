@@ -54,7 +54,10 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
 
         }
 
+        protected void btnback_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Pages/MenuPrincipal.aspx");
 
-
+        }
     }
 }

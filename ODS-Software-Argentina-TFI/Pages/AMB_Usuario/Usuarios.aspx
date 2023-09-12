@@ -12,7 +12,8 @@
             <div  class="row">
                 <div   class="col align-self-end">              
                     <asp:Button  runat="server" Text="Alta Usuarios" ID="btnCreateUser" CssClass="btn btn-success form-control-sm"  OnClick="btnCreateUser_Click" />
-               </div>
+                    <asp:Button ID="btnback" runat="server" Text="Volver" CssClass="btn btn-dark form-control-sm" OnClick="btnback_Click" />
+                    </div>
 
             </div>
         </div>

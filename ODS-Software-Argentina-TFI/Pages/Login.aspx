@@ -21,7 +21,7 @@
                 <asp:TextBox ID="txtusuario" runat="server" CssClass="form-control" required></asp:TextBox>
                 <br />
                 <asp:Label ID="Label2" runat="server" Text="Clave: "></asp:Label>
-                <asp:TextBox ID="txtclave" runat="server" CssClass="form-control" required></asp:TextBox>
+                <asp:TextBox ID="txtclave" runat="server" CssClass="form-control" required TextMode="Password"></asp:TextBox>
                 <br />
                 <asp:Button Text="Aceptar" runat="server" CssClass="btn form-control btn-success btn-sm" ID="btnaceptar" OnClick="btnaceptar_Click"  />
                

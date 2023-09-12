@@ -37,15 +37,15 @@ namespace ODS_Software_Argentina_TFI.Pages
                     Session["Usuarionombre"] = usu.Nombre;
                     Session["Usuario"] = usu._Usuario;
                     Session["UsuarioID"] = usu.UsuarioID;
-                    logbll.IngresarDatoBitacora("LogIn", "Login Exitoso", 1, usu.UsuarioID);
+                    logbll.IngresarDatoBitacora("LogIn", "Login Exitoso", "Bajo", usu.UsuarioID);
                     Response.Redirect("MenuPrincipal.aspx");
                 }
                
             }
-            catch (Exception  ex )
+            catch (Exception  )
             {
                 (this.Master as MP).mostrarmodal("Ocurrio un error, por favor reintentar",BE.ControlException.TipoEventoException.Error);
-                logbll.IngresarDatoBitacora("LogIn", "Ocurrio un error, por favor reintentar", 2,0);
+                logbll.IngresarDatoBitacora("LogIn", "Ocurrio un error, por favor reintentar", "Medio",0);
 
             }
 

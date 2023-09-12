@@ -67,7 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controllers\CalendarControl.ascx" />
     <Content Include="Controllers\ModalHeader.aspx" />
+    <Content Include="Images\Calendar.png" />
     <Content Include="Images\Home.png" />
     <Content Include="Images\New.png" />
     <Content Include="Images\ODS Soft logo_preview_rev_1.png" />
@@ -80,6 +82,9 @@
     <Content Include="Pages\AMB_Usuario\Usuarios.aspx" />
     <Content Include="Pages\Bitacora\Bitacora.aspx" />
     <Content Include="Pages\ExceptionModal.ascx" />
+    <Content Include="Pages\Familia\AsignarPermisosFamilia.aspx" />
+    <Content Include="Pages\Familia\FormFamilia.aspx" />
+    <Content Include="Pages\Familia\ListFamilia.aspx" />
     <Content Include="Pages\Index.aspx" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\MenuPrincipal.aspx" />
@@ -87,6 +92,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CalendarControl.ascx.cs">
+      <DependentUpon>CalendarControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controllers\CalendarControl.ascx.designer.cs">
+      <DependentUpon>CalendarControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\ModalHeader.aspx.cs">
       <DependentUpon>ModalHeader.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -135,6 +147,27 @@
     </Compile>
     <Compile Include="Pages\ExceptionModal.ascx.designer.cs">
       <DependentUpon>ExceptionModal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Familia\AsignarPermisosFamilia.aspx.cs">
+      <DependentUpon>AsignarPermisosFamilia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Familia\AsignarPermisosFamilia.aspx.designer.cs">
+      <DependentUpon>AsignarPermisosFamilia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Familia\FormFamilia.aspx.cs">
+      <DependentUpon>FormFamilia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Familia\FormFamilia.aspx.designer.cs">
+      <DependentUpon>FormFamilia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Familia\ListFamilia.aspx.cs">
+      <DependentUpon>ListFamilia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Familia\ListFamilia.aspx.designer.cs">
+      <DependentUpon>ListFamilia.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

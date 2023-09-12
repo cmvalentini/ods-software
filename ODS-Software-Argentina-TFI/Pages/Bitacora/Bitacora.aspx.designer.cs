@@ -24,6 +24,24 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
         protected global::System.Web.UI.WebControls.Button btnConsultarBitacora;
 
         /// <summary>
+        /// Control btnback.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnback;
+
+        /// <summary>
+        /// Control CalendarC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::ODS_Software_Argentina_TFI.Controllers.CalendarControl CalendarC;
+
+        /// <summary>
         /// Control dvgBitacora.
         /// </summary>
         /// <remarks>

@@ -1,0 +1,14 @@
+
+
+ALTER TABLE BITACORA ALTER COLUMN Criticidad varchar(10) not null
+
+drop table PerfilPatente;
+create table PerfilPatente (
+PatenteID int not null ,
+PerfilUsuarioID int not null,
+ FOREIGN KEY (PatenteID) REFERENCES patente(PatenteID),
+ FOREIGN KEY (PerfilUsuarioID) REFERENCES PerfilUsuario(PerfilUsuarioID),
+)
+
+insert into patente(Descripcion,PatenteEscencial,dvh) values ('AsignarPermisos','S',0)
+insert into usuariopatente(UsuarioID,PatenteID,Habilitado,dvh) values (1,17,'S',0)

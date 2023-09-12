@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="ControlException\TipoEventoException.cs" />
+    <Compile Include="Familia\Familia.cs" />
     <Compile Include="idioma\idioma.cs" />
     <Compile Include="idioma\traduccion.cs" />
     <Compile Include="Permisos\Component.cs" />

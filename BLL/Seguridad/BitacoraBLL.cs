@@ -11,17 +11,10 @@ namespace BLL.Seguridad
         BE.Seguridad.BitacoraBE log = new BE.Seguridad.BitacoraBE();
         DAL.Seguridad.BitacoraDAL logdal = new DAL.Seguridad.BitacoraDAL();
         List<BE.Seguridad.BitacoraBE> listabitacora = new List<BE.Seguridad.BitacoraBE>();
-        public List<BE.Seguridad.BitacoraBE> ConsultarBitacora(DateTime fechadesde, DateTime fechahasta, string sqlcriticidad, string sqlusuario)
+        public List<BE.Seguridad.BitacoraBE> ConsultarBitacora(string fechadesde, string fechahasta, string sqlcriticidad, string sqlusuario)
         {
-          
-
-
-          
-
             listabitacora = logdal.ConsultarBitacora(fechadesde, fechahasta, sqlcriticidad, sqlusuario);
-
             return listabitacora;
-
 
         }
 
@@ -33,18 +26,7 @@ namespace BLL.Seguridad
         }
 
         
-
-        public List<BE.Usuario> traerUsuarios()
-        {
-            List<BE.Usuario> listausuario = new List<BE.Usuario>();
-            
-            listausuario = logdal.traerUsuarios();
-            return listausuario;
-
-
-        }
-
-        public BE.Seguridad.BitacoraBE IngresarDatoBitacora(string NombreOperacion, string Descripcion, int Criticidad, int Usuarioid)
+        public BE.Seguridad.BitacoraBE IngresarDatoBitacora(string NombreOperacion, string Descripcion, string Criticidad, int Usuarioid)
         {
 
             BE.Seguridad.BitacoraBE log = new BE.Seguridad.BitacoraBE();

@@ -5,13 +5,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <br />
     <div class="mx-auto" style="width:250px" >
         <asp:Label runat="server" CssClass="h2" ID="lbltitulo"></asp:Label>
     </div>
-    <form runat="server" class="h-100 d-flex align-items-center justify-content-center">
-        <div>
+       <br />
+        <div class="mx-auto d-flex flex-column align-items-center justify-content-center" >
                  <div class="mb-3">
             <label class="form-label">Usuario</label>
             <asp:TextBox runat="server" CssClass="form-control" ID="txtUsuario" ></asp:TextBox>
@@ -43,7 +43,7 @@
         
         </div>
         <uc1:ExceptionModal runat="server" ID="ExceptionModal" />
-    </form>
+    
 
 
 </asp:Content>

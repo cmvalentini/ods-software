@@ -83,7 +83,9 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
                 //Modal 
                
 
-                logbll.IngresarDatoBitacora("Creación Usuario", "Creacion usuario exitosa :"+txtUsuario.Text+" ", 1, Convert.ToInt32(Session["UsuarioID"])); 
+                logbll.IngresarDatoBitacora("Creación Usuario", "Creación usuario exitosa :"+txtUsuario.Text+" ", "Medio", Convert.ToInt32(Session["UsuarioID"]));
+                (this.Master as Menu_operaciones).mostrarmodal("Creación usuario exitosa", BE.ControlException.TipoEventoException.Aviso);
+
             }
             catch (Exception)
             {
@@ -139,13 +141,15 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
             }
 
             usube = usuariobll.UpdateUser(usube);
-            logbll.IngresarDatoBitacora("Actualizacion de Usuario", "Actualización de usuario exitosa :" + txtUsuario.Text + " ", 1, Convert.ToInt32(Session["UsuarioID"]));
+            logbll.IngresarDatoBitacora("Actualizacion de Usuario", "Actualización de usuario exitosa :" + txtUsuario.Text + " ", "Medio", Convert.ToInt32(Session["UsuarioID"]));
+            (this.Master as Menu_operaciones).mostrarmodal("Modificación usuario exitosa", BE.ControlException.TipoEventoException.Aviso);
 
         }
 
         protected void BtnDelete_Click(object sender, EventArgs e)
         {
-            logbll.IngresarDatoBitacora("Eliminación de Usuario", "Eliminación de usuario exitosa :" + txtUsuario.Text + " ", 1, Convert.ToInt32(Session["UsuarioID"]));
+            logbll.IngresarDatoBitacora("Eliminación de Usuario", "Eliminación de usuario exitosa :" + txtUsuario.Text + " ", "Alto", Convert.ToInt32(Session["UsuarioID"]));
+            (this.Master as Menu_operaciones).mostrarmodal("Eliminación usuario exitosa", BE.ControlException.TipoEventoException.Aviso);
 
         }
 
@@ -170,7 +174,7 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
             {
                 chkHabilitado.Checked = true;
             }
-            logbll.IngresarDatoBitacora("Carga de datos Usuario", " "+txtnombre.Text + txtUsuario.Text + " ", 1, Convert.ToInt32(Session["UsuarioID"]));
+            logbll.IngresarDatoBitacora("Carga de datos Usuario", " "+txtnombre.Text + txtUsuario.Text + " ", "Bajo", Convert.ToInt32(Session["UsuarioID"]));
 
         }
 
