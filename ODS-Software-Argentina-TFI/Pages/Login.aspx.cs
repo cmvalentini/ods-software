@@ -12,6 +12,7 @@ namespace ODS_Software_Argentina_TFI.Pages
         BE.Usuario usu = new BE.Usuario();
         BLL.sesion sesionusuario = BLL.sesion.GetInstance();
         BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
+        BLL.Usuario.Usuario usuariobll = new BLL.Usuario.Usuario();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -28,7 +29,33 @@ namespace ODS_Software_Argentina_TFI.Pages
                 sesionusuario.GetUsuariosesion(usu);
                 if (usu._Usuario is null)
                 {
-                    throw new Exception();
+                    logbll.IngresarDatoBitacora("LogIn", "Usuario no encontrado", "Medio", 1);
+                    usu._Usuario = txtusuario.Text;
+                    //busco usuario por el nombre
+                    usu = usuariobll.GetbyUser(usu);
+                   
+                    if (usu.FlagIntentosLogin >= 3)
+                    {
+                        (this.Master as MP).mostrarmodal("El usuario se encuentra Bloqueado", BE.ControlException.TipoEventoException.Error);
+
+                        logbll.IngresarDatoBitacora("LogIn", "Usuario Bloqueado"+ usu._Usuario +"", "Medio", 1);
+
+                    }
+                    else if (usu._Usuario != null) {
+                        logbll.IngresarDatoBitacora("LogIn", "Contraseña incorrecta para usuario " + usu._Usuario, "Medio", 1);
+                        (this.Master as MP).mostrarmodal("Contraseña invalida", BE.ControlException.TipoEventoException.Aviso);
+                        usuariobll.SumarFlagIntentos(usu);
+                    }
+                }
+                else if (usu._Usuario is null) {
+                    (this.Master as MP).mostrarmodal("Usuario no encontrado", BE.ControlException.TipoEventoException.Error);
+                    logbll.IngresarDatoBitacora("LogIn", "Usuario no encontrado", "Medio", 1);
+
+                }
+                else if (usu.FlagIntentosLogin >= 3) {
+
+                    (this.Master as MP).mostrarmodal("El usuario se encuentra Bloqueado", BE.ControlException.TipoEventoException.Error);
+
 
                 }
                 else if (usu._Usuario != null && usu.FlagIntentosLogin < 3)
@@ -37,6 +64,7 @@ namespace ODS_Software_Argentina_TFI.Pages
                     Session["Usuarionombre"] = usu.Nombre;
                     Session["Usuario"] = usu._Usuario;
                     Session["UsuarioID"] = usu.UsuarioID;
+                    Session["PerfilID"] = usu.PerfilID;
                     logbll.IngresarDatoBitacora("LogIn", "Login Exitoso", "Bajo", usu.UsuarioID);
                     Response.Redirect("MenuPrincipal.aspx");
                 }

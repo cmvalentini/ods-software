@@ -42,6 +42,18 @@ namespace BLL.Usuario
             return usube;
         }
 
+        public BE.Usuario GetbyUser(BE.Usuario usu)
+        {
+            usu = UsuarioDAL.GetbyUser(usu);
+
+            return usu;
+        }
+
+        public void SumarFlagIntentos(BE.Usuario usu)
+        {
+           UsuarioDAL.SumarFlagIntentos(usu);
+        }
+
         public BE.Usuario UpdateUser(BE.Usuario usube)
         {
             usube = UsuarioDAL.UpdateUser(usube);

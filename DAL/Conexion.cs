@@ -24,7 +24,19 @@ namespace DAL
             return conexion_instancia;
         }
 
-        
+        internal void EjecutarProcedureconListaParametros(string NombreParametro, SqlParameter parametro1)
+        {
+            Conectar();
+            SqlCommand com = new SqlCommand(NombreParametro, con);
+            com.CommandType = CommandType.StoredProcedure;
+
+            com.Parameters.Add(parametro1);
+
+            com.ExecuteReader();
+
+            Desconectar();
+        }
+
         public  DataTable SPListarFull(string NomProc)
         {
             DataTable dt = new DataTable();  

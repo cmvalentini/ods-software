@@ -42,6 +42,32 @@ namespace DAL
             return listausuarios;
         }
 
+        public Usuario GetbyUser(Usuario USUBE)
+        {
+            string sql = "select usuarioid,usuario,Email,FlagIntentosLogin from Usuario where usuario ='" + USUBE._Usuario+"'";
+
+            dt = con.Ejecutarreader(sql);
+
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow item in dt.Rows)
+                {
+                    USUBE.UsuarioID = Convert.ToInt32(item[0].ToString());
+                    USUBE._Usuario = Convert.ToString(item[1].ToString());
+                    USUBE.Email = Convert.ToString(item[2].ToString());
+                    USUBE.FlagIntentosLogin = Convert.ToInt32(item[3].ToString());
+                }
+            }
+            return USUBE;
+        }
+
+        public void SumarFlagIntentos(Usuario usu)
+        {
+            string sql = "update usuario set FlagIntentosLogin = FlagIntentosLogin + 1 " +
+                          " where Usuario = '"+usu._Usuario+"' ";
+            con.Ejecutar(sql);
+        }
+
         public Usuario UpdateUser(Usuario usube)
         {
             string sql = "update usuario set Usuario = '" + usube._Usuario + "',Nombre = '" + usube.Nombre + ",Apellido = '" +
@@ -105,7 +131,7 @@ namespace DAL
         public Usuario GetUsuariosesion(BE.Usuario UsuBE)
         {
 
-            string sql = "select UsuarioID,Usuario,Clave,Nombre,Apellido,DNI,Email,Habilitado,FlagIntentosLogin From Usuario " +
+            string sql = "select UsuarioID,Usuario,Clave,Nombre,Apellido,DNI,Email,Habilitado,FlagIntentosLogin,PerfilID From Usuario " +
                           " where usuario = '" + UsuBE._Usuario + "'" +
                           " and clave = '" + UsuBE.Clave + "' " +
                           " and Habilitado = 1";
@@ -127,7 +153,7 @@ namespace DAL
                 UsuBE.Dni = Convert.ToInt32(dt.Rows[0][5].ToString());
                 UsuBE.Habilitado = Convert.ToBoolean(dt.Rows[0][7].ToString());
                 UsuBE.FlagIntentosLogin = Convert.ToInt32(dt.Rows[0][8].ToString());
- 
+                UsuBE.PerfilID = Convert.ToInt32(dt.Rows[0][9].ToString());
                 return UsuBE;
 
             }

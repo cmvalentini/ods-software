@@ -23,5 +23,15 @@ namespace BLL.PermisosComposite
             listapermisos2 = ManejadorPerfilUsuariosDAL.GetOperaciones();
             return listapermisos2;
         }
+
+        public void AsignarPerfilaUsuario(BE.Familia.Familia perfilBE, BE.Usuario usuariobe)
+        {
+            ManejadorPerfilUsuariosDAL.AsignarPerfilaUsuario(perfilBE, usuariobe);
+        }
+
+        public void UpdatePermisosUsuario(BE.Usuario usuariobe, List<BE.Permisos.Component> listaoperacionesperfil)
+        {
+            ManejadorPerfilUsuariosDAL.UpdatePermisosUsuario(usuariobe, listaoperacionesperfil);
+        }
     }
 }

@@ -20,13 +20,14 @@
 
                 <asp:Button runat="server" OnClick="ConsultarBitacora_click" Text="Consultar Bitacora" ID="btnConsultarBitacora" CssClass="btn btn-success form-control-sm" />
                 <asp:Button runat="server" OnClick="btnback_Click" Text="Volver" ID="btnback" CssClass="btn btn-dark form-control-sm" />
-           
+                <asp:Button ID="btnExport" runat="server" Text="Exportar XML" Visible="false" OnClick="btnExport_Click" />
+                <asp:Button ID="btnexportxls" runat="server" Text="Button Excel" OnClick="btnexportxls_Click" />
                 </div>
 
         </div>
     </div >
     <div class="col-sm-10">
-       
+     
     </div>
     <br />
         <uc1:CalendarControl ID="CalendarC" runat="server" />

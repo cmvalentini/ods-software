@@ -48,6 +48,7 @@
     <Compile Include="Permisos\FamiliaDal.cs" />
     <Compile Include="Permisos\ManejadorPerfilUsuariosDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seguridad\BackRestoreDal.cs" />
     <Compile Include="Seguridad\BitacoraDAL.cs" />
     <Compile Include="UsuarioDAL.cs" />
   </ItemGroup>

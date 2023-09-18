@@ -7,110 +7,128 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace ODS_Software_Argentina_TFI.Pages
+namespace ODS_Software_Argentina_TFI.Pages.Familia
 {
 
 
-    public partial class MenuPrincipal
+    public partial class AsignarPermisosUsuario
     {
 
         /// <summary>
-        /// Control lblPerfil.
+        /// Control Label2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPerfil;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Control imgbutton.
+        /// Control ddlRolList.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgbutton;
+        protected global::System.Web.UI.WebControls.DropDownList ddlRolList;
 
         /// <summary>
-        /// Control btnBackUp.
+        /// Control btnAplicarFamilia.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBackUp;
+        protected global::System.Web.UI.WebControls.Button btnAplicarFamilia;
 
         /// <summary>
-        /// Control btnBitacora.
+        /// Control Label4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBitacora;
+        protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// Control BtnRestore.
+        /// Control ddlUserList.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnRestore;
+        protected global::System.Web.UI.WebControls.DropDownList ddlUserList;
 
         /// <summary>
-        /// Control btnUsuarios.
+        /// Control Label3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUsuarios;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Control BtnPermisos.
+        /// Control Label1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnPermisos;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Control BtnasignarPermisos.
+        /// Control listNotAssing.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnasignarPermisos;
+        protected global::System.Web.UI.WebControls.ListBox listNotAssing;
 
         /// <summary>
-        /// Control BtnasignarPermisosusuario.
+        /// Control btnAsignar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnasignarPermisosusuario;
+        protected global::System.Web.UI.WebControls.Button btnAsignar;
 
         /// <summary>
-        /// Control Button8.
+        /// Control btnDesasignar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button8;
+        protected global::System.Web.UI.WebControls.Button btnDesasignar;
 
         /// <summary>
-        /// Control btnlogout.
+        /// Control listAssing.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnlogout;
+        protected global::System.Web.UI.WebControls.ListBox listAssing;
+
+        /// <summary>
+        /// Control btnupdate.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnupdate;
+
+        /// <summary>
+        /// Control btnback.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnback;
     }
 }

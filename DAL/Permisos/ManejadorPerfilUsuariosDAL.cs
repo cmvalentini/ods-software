@@ -44,6 +44,56 @@ namespace DAL.Permisos
             return hijos;
         }
 
+        public void UpdatePermisosUsuario(Usuario usuariobe, List<Component> listaoperacionesperfil)
+        {
+            con.Conectar();
+            //borro los perfiles que pueda tener ese usuario
+            string primersql = "delete usuariopatente where UsuarioID = " +
+             "(select usuarioid from usuario where Usuario = '" + usuariobe._Usuario + "' );";
+            con.Ejecutar(primersql);
+
+            int usuarioid = 500;
+            
+            string segundosql = "(select usuarioid from usuario where Usuario = '" + usuariobe._Usuario + "' );";
+            dt = con.Ejecutarreader(segundosql);
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow item in dt.Rows)
+                {
+
+                    usuarioid = Convert.ToInt32(item[0].ToString());
+                }
+
+            }
+
+            string sql;
+            //asigno las patentes
+            foreach (BE.Permisos.Component item in listaoperacionesperfil)
+            {
+
+                sql = "INSERT INTO usuariopatente (PatenteID,UsuarioID,Habilitado,DVH)" +
+                      " select PatenteID," + usuarioid + " as USUARIOID,'S',0 from Patente where Descripcion = '" + item.Nombre + "'";
+
+                con.Ejecutar(sql);
+
+            }
+
+
+            con.Desconectar();
+
+        }
+
+        public void AsignarPerfilaUsuario(Familia perfilBE, Usuario usuariobe)
+        {
+            string sql = "update usuario set perfilid = (select perfilusuarioid from PerfilUsuario " +
+                "where NombrePerfil = '" + perfilBE.NombrePerfil + "') " +
+                "where Usuario = '" + usuariobe._Usuario + "';";
+            con.Conectar();
+            con.Ejecutar(sql);
+            con.Desconectar();
+
+        }
+
         public List<Component> GetOperaciones()
         {
             string sql = "select distinct p.Descripcion from patente p ";

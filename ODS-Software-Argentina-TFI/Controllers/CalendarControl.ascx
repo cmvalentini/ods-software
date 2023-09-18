@@ -45,8 +45,8 @@
         <asp:DropDownList ID="DropCriticidad" CssClass="form-control col-sm-9" runat="server">
             <asp:ListItem Selected="True" Text="Todas" />
             <asp:ListItem Text="Critico" />
-            <asp:ListItem Text="Muy Alto" />
-            <asp:ListItem Text="Alto" />
+            <asp:ListItem Text="Muy Alta" />
+            <asp:ListItem Text="Alta" />
             <asp:ListItem Text="Medio" />
             <asp:ListItem Text="Bajo" />
         </asp:DropDownList>

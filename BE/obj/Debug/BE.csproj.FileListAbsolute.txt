@@ -3,4 +3,3 @@ C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BE\bin\Debug\BE.pdb
 C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
 C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BE\obj\Debug\BE.dll
 C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BE\obj\Debug\BE.pdb
-C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BE\obj\Debug\BE.csproj.AssemblyReference.cache

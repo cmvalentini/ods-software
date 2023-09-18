@@ -1,6 +1,8 @@
 ﻿using ODS_Software_Argentina_TFI.Controllers;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Web;
@@ -61,7 +63,7 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
                         sqlcriticidad = "select distinct criticidad from bitacora";
                         break;
                     default:
-                        sqlcriticidad = "select criticidad from bitacora where criticidad = " + Convert.ToInt16(criticidad) + "";
+                        sqlcriticidad = "select criticidad from bitacora where criticidad = '"+criticidad+"'";
                         break;
                 }
                 
@@ -94,7 +96,7 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
         protected void ConsultarBitacora_click(object sender, EventArgs e)
         {
             cargar_data(1,3);
-      
+            btnExport.Visible = true;
         }
 
         protected void GridView1_Sorting(object sender, GridViewSortEventArgs e)
@@ -165,6 +167,69 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
         {
 
             Response.Redirect("~/Pages/MenuPrincipal.aspx");
+        }
+
+        protected void btnExport_Click(object sender, EventArgs e)
+        {
+            #region exportarxml
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+
+            //recorre el header de la tabla
+            foreach (TableCell column in dvgBitacora.HeaderRow.Cells)
+            {
+                dt.Columns.Add(column.Text);
+            }
+
+            //recorre las filas de la tabla
+            foreach (GridViewRow row in dvgBitacora.Rows)
+            {
+                dt.Rows.Add();
+                for (int i = 0; i < row.Cells.Count; i++)
+                {
+                    dt.Rows[row.RowIndex][i] = row.Cells[i].Text;
+                }
+            }
+
+            //guardamos la tabla
+            ds.Tables.Add(dt);
+            // Specify the file path for the XML file
+            string filePath = Server.MapPath("~/GridBitacora.xml");
+
+            // Write the DataSet to an XML file
+            ds.WriteXml(filePath);
+
+            // Provide a download link for the generated XML file
+            Response.Clear();
+            Response.ContentType = "application/xml";
+            Response.AppendHeader("Content-Disposition", "attachment; filename=GridBitacora.xml");
+            Response.TransmitFile(filePath);
+            Response.End();
+            #endregion
+        }
+
+        protected void btnexportxls_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Response.Clear();
+                Response.Buffer = true;
+                Response.ContentType = "application/ms-excel";
+                Response.AddHeader("content-disposition", "attachment; filename=Bitacora.xls");
+                Response.Charset = "";
+                StringWriter sw = new StringWriter();
+                HtmlTextWriter htw = new HtmlTextWriter(sw);
+                dvgBitacora.RenderControl(htw);
+                Response.Output.Write(sw.ToString());
+                Response.End();
+            }
+            catch (Exception)
+            {
+                (this.Master as Menu_operaciones).mostrarmodal("Ocurrio un error, por favor reintentar", BE.ControlException.TipoEventoException.Error);
+
+                throw;
+            }
+        
         }
     }
 }

@@ -17,6 +17,8 @@ namespace BE
         public string Clave { get; set; }
         public string OResult { get; set; }
 
+        public int PerfilID { get; set; }
+
 
         public Usuario(string _usuario, string apellido, string nombre, string email, int dni, bool habilitado, string clave, string clavesinencriptar)
         {

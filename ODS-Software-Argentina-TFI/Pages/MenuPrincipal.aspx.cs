@@ -9,16 +9,30 @@ namespace ODS_Software_Argentina_TFI.Pages
 {
     public partial class MenuPrincipal : System.Web.UI.Page
     {
+        string permisosconcatenados;
         BE.Usuario usuario = new BE.Usuario();
         List<BE.Permisos.Component> listaoperaciones = new List<BE.Permisos.Component>();
         BLL.PermisosComposite.Composite Composite = new BLL.PermisosComposite.Composite();
-
+        BE.Familia.Familia Familia = new BE.Familia.Familia();
+        BLL.Familia.FamiliaBLL familybll = new BLL.Familia.FamiliaBLL();
+        BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
         protected void Page_Load(object sender, EventArgs e)
         {
             
             if (!this.IsPostBack)
             {
                 traerpermisos();
+                Familia.FamiliaID = (int)Session["PerfilID"];
+                if (Familia.FamiliaID == 0)
+                {
+
+                }
+                else
+                {
+                    Familia = familybll.GetbyID(Familia);
+                    lblPerfil.Text = Familia.NombrePerfil;
+                    lblPerfil.Visible = true;
+                }
             }
 
 
@@ -33,6 +47,7 @@ namespace ODS_Software_Argentina_TFI.Pages
             this.MapeoComponentes(listaoperaciones);
 
         }
+
 
         private void MapeoComponentes(IList<BE.Permisos.Component> listaoperaciones)
         {
@@ -65,13 +80,22 @@ namespace ODS_Software_Argentina_TFI.Pages
                             BtnPermisos.Visible = true;
                             break;
 
+                        case "HacerRestore":
+                            BtnRestore.Enabled = true;
+                            BtnRestore.Visible = true;
+                            break;
+
                         case "AsignarPermisos":
                             BtnasignarPermisos.Enabled = true;
                             BtnasignarPermisos.Visible = true;
+                            BtnasignarPermisosusuario.Enabled = true;
+                            BtnasignarPermisosusuario.Visible = true;
                             break;
 
                     }
 
+                    permisosconcatenados = permisosconcatenados + " - " + i.Nombre +" ";
+                    Session["permisosconcatenados"] = permisosconcatenados;
                 }
 
             }
@@ -87,8 +111,6 @@ namespace ODS_Software_Argentina_TFI.Pages
         {
             Response.Redirect("AMB_Usuario/Usuarios.aspx");
         }
-
-
 
         protected void btnBitacora_Click(object sender, EventArgs e)
         {
@@ -110,6 +132,44 @@ namespace ODS_Software_Argentina_TFI.Pages
         protected void BtnasignarPermisos_Click(object sender, EventArgs e)
         {
             Response.Redirect("Familia/AsignarPermisosFamilia.aspx");
+        }
+
+        protected void imgbutton_Click(object sender, ImageClickEventArgs e)
+        {
+
+            permisosconcatenados = Session["permisosconcatenados"].ToString();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('"+ permisosconcatenados + "')", true);
+
+        }
+
+        protected void BtnasignarPermisosusuario_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Familia/AsignarPermisosUsuario.aspx");
+        }
+
+        protected void btnBackUp_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("BackUpRestore/RealizarBackUp.aspx");
+        }
+
+        protected void btnlogout_Click(object sender, EventArgs e)
+        {
+            usuario._Usuario = Convert.ToString(Session["Usuario"]);
+            usuario.UsuarioID = Convert.ToInt16(Session["UsuarioID"]);
+            (this.Master as Menu_operaciones).mostrarmodal("Muchas gracias por utilizar nuestro sistema :-)", BE.ControlException.TipoEventoException.Info);
+            logbll.IngresarDatoBitacora("LogOut", "Logout " + usuario._Usuario +" ", "Bajo", Convert.ToInt32(Session["UsuarioID"]));
+
+            Session["Usuarionombre"] = null;
+            Session["Usuario"] = null;
+            Session["UsuarioID"] = null;
+            Session["PerfilID"] = null;
+           
+            Response.Redirect("~/Login.aspx");
+        }
+
+        protected void BtnRestore_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("BackUpRestore/RealizarRestore.aspx");
         }
     }
 }

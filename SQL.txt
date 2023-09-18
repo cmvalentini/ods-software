@@ -12,3 +12,89 @@ PerfilUsuarioID int not null,
 
 insert into patente(Descripcion,PatenteEscencial,dvh) values ('AsignarPermisos','S',0)
 insert into usuariopatente(UsuarioID,PatenteID,Habilitado,dvh) values (1,17,'S',0)
+
+
+/****** Object:  StoredProcedure [dbo].[RealizarBackup10Partes]    Script Date: 01/11/2022 18:16:17 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create PROCEDURE [dbo].[RealizarBackup10Partes]
+  AS
+    
+ 
+BEGIN
+BACKUP DATABASE ELARA
+TO DISK = 'C:\Users\Public\Desktop\BackUp\parte1.Bak',
+DISK = 'C:\Users\Public\Desktop\BackUp\parte2.Bak',
+DISK = 'C:\Users\Public\Desktop\BackUp\parte3.Bak',
+DISK = 'C:\Users\Public\Desktop\BackUp\parte4.Bak',
+DISK = 'C:\Users\Public\Desktop\BackUp\parte5.Bak',
+DISK = 'C:\Users\Public\Desktop\BackUp\parte6.Bak',
+DISK = 'C:\Users\Public\Desktop\BackUp\parte7.Bak',
+DISK = 'C:\Users\Public\Desktop\BackUp\parte8.Bak',
+DISK = 'C:\Users\Public\Desktop\BackUp\parte9.Bak',
+DISK = 'C:\Users\Public\Desktop\BackUp\parte10.Bak'
+
+
+END
+
+GO
+/****** Object:  StoredProcedure [dbo].[RealizarBackup3Partes]    Script Date: 01/11/2022 18:16:17 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create PROCEDURE [dbo].[RealizarBackup3Partes] 
+ 
+AS
+BEGIN
+BACKUP DATABASE ELARA
+TO DISK = 'C:\Users\Public\Desktop\BackUp\parte1.Bak',
+DISK = 'C:\Users\Public\Desktop\BackUp\parte2.Bak',
+DISK = 'C:\Users\Public\Desktop\BackUp\parte3.Bak'
+END
+
+ 
+GO
+/****** Object:  StoredProcedure [dbo].[RealizarBackup5Partes]    Script Date: 01/11/2022 18:16:17 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+  create PROCEDURE [dbo].[RealizarBackup5Partes]
+  AS
+    
+ 
+BEGIN
+BACKUP DATABASE ELARA
+TO DISK = 'C:\Users\Public\Desktop\BackUp\parte1.Bak',
+DISK = 'C:\Users\Public\Desktop\BackUp\parte2.Bak',
+DISK = 'C:\Users\Public\Desktop\BackUp\parte3.Bak',
+DISK = 'C:\Users\Public\Desktop\BackUp\parte4.Bak',
+DISK = 'C:\Users\Public\Desktop\BackUp\parte5.Bak'
+
+END
+
+GO
+/****** Object:  StoredProcedure [dbo].[SumarFlagIntentos]    Script Date: 01/11/2022 18:16:17 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ CREATE PROCEDURE [dbo].[RealizarBackup] 
+@CANT INT
+
+AS
+
+IF @CANT = 3
+ EXEC RealizarBackup3Partes
+
+ IF @CANT = 5
+ EXEC RealizarBackup5Partes
+ 
+ IF @CANT = 10
+
+ EXEC RealizarBackup10Partes
+GO
