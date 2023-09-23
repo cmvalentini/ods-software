@@ -9,7 +9,7 @@ namespace DAL
    public class EmailSevice
     {
         System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
-        internal void EnviarEmail(BE.Usuario usuBE) //mail y clave sin encriptar
+        public void EnviarEmail(BE.Usuario usuBE) //mail y clave sin encriptar
         {
             string mensaje = "Se ha generado la clave: " + usuBE.clavesinencriptar + " para el usuario:" + usuBE._Usuario;
 

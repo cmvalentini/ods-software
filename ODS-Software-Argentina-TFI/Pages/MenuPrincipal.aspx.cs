@@ -16,6 +16,8 @@ namespace ODS_Software_Argentina_TFI.Pages
         BE.Familia.Familia Familia = new BE.Familia.Familia();
         BLL.Familia.FamiliaBLL familybll = new BLL.Familia.FamiliaBLL();
         BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
+        BLL.Seguridad.DigitosVerificadoresBLL digBLL = new BLL.Seguridad.DigitosVerificadoresBLL();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -35,7 +37,8 @@ namespace ODS_Software_Argentina_TFI.Pages
                 }
             }
 
-
+             digBLL.RecalcularDigitos();
+          //  List<Tuple<string, string>> listaErrores = digBLL.ValidarIntegridadSistema();
         }
 
         private void traerpermisos()

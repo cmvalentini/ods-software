@@ -36,8 +36,9 @@ namespace ODS_Software_Argentina_TFI.Pages
                    
                     if (usu.FlagIntentosLogin >= 3)
                     {
-                        (this.Master as MP).mostrarmodal("El usuario se encuentra Bloqueado", BE.ControlException.TipoEventoException.Error);
-
+                        (this.Master as MP).mostrarmodal("El usuario se encuentra Bloqueado, se le enviará un correo a la casilla", BE.ControlException.TipoEventoException.Error);
+                        BLL.Services.EmailSeviceBLL emailSevice = new BLL.Services.EmailSeviceBLL();
+                        emailSevice.enviarmail(usu);
                         logbll.IngresarDatoBitacora("LogIn", "Usuario Bloqueado"+ usu._Usuario +"", "Medio", 1);
 
                     }

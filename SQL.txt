@@ -98,3 +98,119 @@ IF @CANT = 3
 
  EXEC RealizarBackup10Partes
 GO
+
+
+
+create table DVV(
+tabla varchar(100) not null,
+DVV varchar(50) not null)
+
+select * from usuariopatente
+
+alter table usuario drop column DVH
+alter table usuario add  DVH varchar(50) null
+alter table cliente drop column DVH
+alter table cliente add  DVH varchar(50) null
+alter table Idioma drop column DVH
+alter table Idioma add  DVH varchar(50) null
+alter table PerfilPatente drop column DVH
+alter table PerfilPatente add  DVH varchar(50) null
+alter table usuariopatente drop column DVH
+alter table usuariopatente add  DVH varchar(50) null
+alter table bitacora drop column DVH
+alter table bitacora add  DVH varchar(50) null
+alter table patente drop column DVH
+alter table patente add  DVH varchar(50) null
+select * from PerfilUsuario
+alter table perfilusuario drop column DVH
+alter table perfilusuario add  DVH varchar(50) null
+
+create PROCEDURE ObtenerDVV
+	@tabla varchar(100)
+AS
+BEGIN
+	 
+	SET NOCOUNT ON;
+
+	SELECT DVV FROM DVV WHERE tabla = @tabla
+END
+
+create PROCEDURE [dbo].[BuscarRegistro] 
+		@tabla varchar(100),
+		@id int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	DECLARE @primarykey nvarchar(MAX);
+
+   
+	SET @primarykey = (SELECT column_name as PRIMARYKEYCOLUMN FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS TC 
+	INNER JOIN INFORMATION_SCHEMA.KEY_COLUMN_USAGE AS KU
+		ON TC.CONSTRAINT_TYPE = 'PRIMARY KEY' 
+		AND TC.CONSTRAINT_NAME = KU.CONSTRAINT_NAME 
+		AND KU.table_name= @tabla);
+
+	DECLARE @sqlQuery NVARCHAR(MAX);
+	DECLARE @params NVARCHAR(MAX);
+
+	SET @sqlQuery = N'SELECT * FROM ' + QUOTENAME(@tabla) + N' WHERE ' + QUOTENAME(@primarykey) + N' = @id;';
+	SET @params = N'@id INT';
+
+	EXECUTE sp_executesql @sqlQuery, @params, @id = @id;
+END
+
+
+ CREATE PROCEDURE [dbo].[ActualizarDVV]
+		@tabla nvarchar(50),
+		@dvv nvarchar(MAX)
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+  
+	UPDATE DVV SET DVV = @dvv WHERE tabla = @tabla
+END
+
+CREATE PROCEDURE [dbo].[ActualizarDVH]
+		@tabla nvarchar(100),
+		@id int,
+		@dvh nvarchar(MAX)
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	DECLARE @primarykey nvarchar(MAX);
+
+  
+	SET @primarykey = (SELECT column_name as PRIMARYKEYCOLUMN FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS TC 
+	INNER JOIN INFORMATION_SCHEMA.KEY_COLUMN_USAGE AS KU
+		ON TC.CONSTRAINT_TYPE = 'PRIMARY KEY' 
+		AND TC.CONSTRAINT_NAME = KU.CONSTRAINT_NAME 
+		AND KU.table_name= @tabla);
+
+	DECLARE @sqlQuery NVARCHAR(MAX);
+	DECLARE @params NVARCHAR(MAX);
+
+	SET @sqlQuery = N'UPDATE ' + QUOTENAME(@tabla) + N' SET dvh = @newDvh WHERE ' + QUOTENAME(@primarykey) + N' = @id;';
+	SET @params = N'@newDvh NVARCHAR(MAX), @id INT';
+
+	EXECUTE sp_executesql @sqlQuery, @params, @newDvh = @dvh, @id = @id;
+END
+
+
+ create PROCEDURE [dbo].[ObtenerTabla]
+	@tabla nvarchar(100)
+AS
+BEGIN
+	 
+	SET NOCOUNT ON;
+
+   
+	declare @SQL nvarchar(1000)
+	set @SQL = 'Select * from ' + @tabla
+	exec sp_executesql @sql
+END

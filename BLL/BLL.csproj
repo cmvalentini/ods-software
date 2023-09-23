@@ -51,8 +51,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seguridad\BackUpResrore.cs" />
     <Compile Include="Seguridad\BitacoraBLL.cs" />
+    <Compile Include="Seguridad\DigitosVerificadoresBLL.cs" />
     <Compile Include="Seguridad\EncriptacionBLL.cs" />
     <Compile Include="Seguridad\NotificationsManager.cs" />
+    <Compile Include="Services\EmailSeviceBLL.cs" />
     <Compile Include="sesion.cs" />
     <Compile Include="Usuario\Usuario.cs" />
   </ItemGroup>

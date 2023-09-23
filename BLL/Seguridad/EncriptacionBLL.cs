@@ -45,6 +45,21 @@ namespace BLL.Seguridad
 
         }
 
+        public string cryptshort(string text)
+        {
+            StringBuilder sb = new StringBuilder();
+            using (SHA512 sha512 = SHA512.Create())
+            {
+                byte[] hashValue = sha512.ComputeHash(Encoding.UTF8.GetBytes(text));
+                foreach (byte b in hashValue)
+                {
+                    sb.Append($"{b:X2}");
+                }
+            }
+
+            return sb.ToString();
+        }
+
 
         public string Desencriptar(string TextoEncriptado) //string encriptado
         {

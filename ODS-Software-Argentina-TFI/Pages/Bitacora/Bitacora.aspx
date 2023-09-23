@@ -20,8 +20,8 @@
 
                 <asp:Button runat="server" OnClick="ConsultarBitacora_click" Text="Consultar Bitacora" ID="btnConsultarBitacora" CssClass="btn btn-success form-control-sm" />
                 <asp:Button runat="server" OnClick="btnback_Click" Text="Volver" ID="btnback" CssClass="btn btn-dark form-control-sm" />
-                <asp:Button ID="btnExport" runat="server" Text="Exportar XML" Visible="false" OnClick="btnExport_Click" />
-                <asp:Button ID="btnexportxls" runat="server" Text="Button Excel" OnClick="btnexportxls_Click" />
+                <asp:Button ID="btnExport" runat="server" CssClass="btn btn-info form-control-sm" Text="Exportar XML" Visible="false" OnClick="btnExport_Click" />
+                <asp:Button ID="btnexportxls" runat="server" Visible="false" Text="Button Excel" OnClick="btnexportxls_Click" />
                 </div>
 
         </div>

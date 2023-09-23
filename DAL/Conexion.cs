@@ -37,6 +37,37 @@ namespace DAL
             Desconectar();
         }
 
+        internal bool EjecutarProcedureconListaParametros(string NombreParametro, List<SqlParameter> parametros)
+        {
+            try
+            {
+                Conectar();
+                SqlCommand com = new SqlCommand(NombreParametro, con);
+                com.CommandType = CommandType.StoredProcedure;
+
+                foreach (SqlParameter item in parametros)
+                {
+                    com.Parameters.Add(item);
+                }
+                
+
+                com.ExecuteReader();
+
+                Desconectar();
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            
+        }
+
+
+
+
+
         public  DataTable SPListarFull(string NomProc)
         {
             DataTable dt = new DataTable();  
@@ -56,17 +87,8 @@ namespace DAL
 
                 return dt;
 
-
-                //SqlCommand cmd = new SqlCommand();
-                //dt = new DataTable();
-                //cmd.Parameters.Clear();
-                //cmd.CommandType = CommandType.StoredProcedure;
-                //cmd.CommandText = NomProc;
-                //cmd.Connection = con  ;
-                //dt.Load(cmd.ExecuteReader());
-                //con.Close();
-                //cmd.Connection = con;
-                //return dt;
+                 
+              
             }
             catch (Exception ex)
             {
@@ -81,6 +103,33 @@ namespace DAL
 
         }
 
+        internal DataTable Selectsp(string storedProcedurev, List<SqlParameter> listaParams)
+        {
+           try
+                {
+                    DataTable dataTable = new DataTable();
+                DataSet dataset = new DataSet();
+                SqlCommand command = new SqlCommand(storedProcedurev, con);
+                    command.CommandType = CommandType.StoredProcedure;
+                   
+                    if (listaParams != null)
+                        command.Parameters.AddRange(listaParams.ToArray());
+                    Conectar();
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                dataAdapter.Fill(dataset);
+                dataAdapter.Fill(dataTable);
+                dataTable = dataset.Tables[0];
+                Desconectar();
+                    return dataTable;
+
+                }
+                catch (SqlException)
+                {
+                   
+                    throw;
+                }
+            
+        }
 
         public static string DevolverConexion()
         {

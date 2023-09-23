@@ -103,7 +103,7 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
                 listNotAssing.Items.Remove(ope);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 (this.Master as Menu_operaciones).mostrarmodal("Seleccione un elemento", BE.ControlException.TipoEventoException.Aviso);
@@ -122,7 +122,7 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
                 listAssing.Items.Remove(ope);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 (this.Master as Menu_operaciones).mostrarmodal("Seleccione un elemento", BE.ControlException.TipoEventoException.Aviso);
