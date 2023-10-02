@@ -10,7 +10,8 @@ namespace ODS_Software_Argentina_TFI.Pages.BackupRestore
     public partial class RealizarRestore : System.Web.UI.Page
     {
         BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
-
+        BLL.Seguridad.DigitosVerificadoresBLL digBLL = new BLL.Seguridad.DigitosVerificadoresBLL();
+   
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,7 +30,7 @@ namespace ODS_Software_Argentina_TFI.Pages.BackupRestore
                 (this.Master as Menu_operaciones).mostrarmodal("Restore Realizado con Éxito", BE.ControlException.TipoEventoException.Info);
                 int usuarioid = (int)Session["UsuarioID"];
                 logbll.IngresarDatoBitacora("Restore", "Restore Realizado", "Alta", usuarioid);
-
+                digBLL.RecalcularDigitosunatabla("Bitacora");
             }
             catch (Exception)
             {

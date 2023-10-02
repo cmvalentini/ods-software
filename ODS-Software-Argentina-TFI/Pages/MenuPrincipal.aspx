@@ -44,5 +44,37 @@
                     </div>
                 </div>
             </nav>
-
+     <br />
+     <br />
+            <asp:Panel ID="panelErrores" Visible="false" runat="server">
+            <div class="container p-5 bg-light bg-opacity-75 text-light border-0 shadow-lg rounded-3 my-5 mt-5">
+                <asp:Label class="h1" ID="lblTituloErrores" runat="server" Text="Digitos Verificadores Corrompidos"></asp:Label>
+                <table class="table table-danger my-5">
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                <asp:Label ID="columnaNro" runat="server" Text="#"></asp:Label>
+                            </th>
+                            <th scope="col">
+                                <asp:Label ID="columnaErr" runat="server" Text="Error Detectado"></asp:Label>
+                            </th>
+                            <th scope="col">
+                                <asp:Label ID="columnaTabla" runat="server" Text="Tabla"></asp:Label>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <asp:Repeater runat="server" ID="rptErrores">
+                            <ItemTemplate>
+                                <tr class="table-danger">
+                                    <td><%#Container.ItemIndex + 1%></td>
+                                    <td><%# Eval("Item2") %></td>
+                                    <td><%# Eval("Item1") %></td>
+                                </tr>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </tbody>
+                </table>
+            </div>
+        </asp:Panel>
 </asp:Content>

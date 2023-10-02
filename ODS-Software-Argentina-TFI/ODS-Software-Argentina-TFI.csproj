@@ -68,6 +68,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\landing.css" />
+    <Content Include="assets\js\landing.js" />
     <Content Include="Controllers\CalendarControl.ascx" />
     <Content Include="Controllers\ModalHeader.aspx" />
     <Content Include="Images\Calendar.png" />
@@ -86,12 +88,14 @@
     <Content Include="Pages\BackupRestore\RealizarBackUp.aspx" />
     <Content Include="Pages\BackupRestore\RealizarRestore.aspx" />
     <Content Include="Pages\Bitacora\Bitacora.aspx" />
+    <Content Include="Pages\Carrito\Carrito.aspx" />
     <Content Include="Pages\ExceptionModal.ascx" />
     <Content Include="Pages\Familia\AsignarPermisosFamilia.aspx" />
     <Content Include="Pages\Familia\AsignarPermisosUsuario.aspx" />
     <Content Include="Pages\Familia\FormFamilia.aspx" />
     <Content Include="Pages\Familia\ListFamilia.aspx" />
     <Content Include="Pages\Index.aspx" />
+    <Content Include="Pages\LandingPage.aspx" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\MenuPrincipal.aspx" />
     <Content Include="Pages\WebFormPrueba.aspx" />
@@ -168,6 +172,13 @@
     <Compile Include="Pages\Bitacora\Bitacora.aspx.designer.cs">
       <DependentUpon>Bitacora.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Carrito\Carrito.aspx.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Carrito\Carrito.aspx.designer.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ExceptionModal.ascx.cs">
       <DependentUpon>ExceptionModal.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -209,6 +220,13 @@
     </Compile>
     <Compile Include="Pages\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LandingPage.aspx.cs">
+      <DependentUpon>LandingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LandingPage.aspx.designer.cs">
+      <DependentUpon>LandingPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -254,6 +272,7 @@
       <Name>BLL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

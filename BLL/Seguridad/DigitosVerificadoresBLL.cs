@@ -47,7 +47,7 @@ namespace BLL.Seguridad
                             if (!EvaluarRegistro(fila)) 
                             {
                                 //Reporto fila que da error
-                                Tuple<string, string> tupla = new Tuple<string, string>(tabla, "El registro " + fila.ItemArray[0] + " de la tabla " + tabla + " fue modificado por fuera del sistema.");
+                                Tuple<string, string> tupla = new Tuple<string, string>(tabla, "ALERTA-> El ID " + fila.ItemArray[0] + " de la tabla " + tabla + " ha sido corrompido.");
                                 listaErrores.Add(tupla);
                             }
                             //Sumo el dvh que ya tengo para poder calcular el dvv a futuro.
@@ -79,7 +79,6 @@ namespace BLL.Seguridad
             }
 
         }
-
 
         //Este metodo es sumamente pesado y riegoso
         public bool RecalcularDigitos()
@@ -225,6 +224,36 @@ namespace BLL.Seguridad
             string dvv = Encriptacion.cryptshort(sb.ToString());
 
             return dvv;
+        }
+
+
+        public bool RecalcularDigitosunatabla(string tabla)
+        {
+            try
+            {
+                    List<string> hashes = new List<string>();
+                    DataTable dtabla = digDAL.ObtenerTabla(tabla);
+                   //Si la tabla tiene registros, tiene sentido el dvh y dvv, de lo contrario no calculo
+                    if (dtabla != null)
+                    {
+                        foreach (DataRow fila in dtabla.Rows)
+                        {
+                            string hash = CalcularDVH(fila);
+                            ActualizarDVH(tabla, int.Parse(fila.ItemArray[0].ToString()), hash);
+                            hashes.Add(hash);
+                        }
+
+                        string dvv = CalcularDVV(hashes);
+
+                        ActualizarDVV(tabla, dvv);
+                    }
+                
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
 

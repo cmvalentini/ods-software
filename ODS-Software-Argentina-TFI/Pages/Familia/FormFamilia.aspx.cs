@@ -15,7 +15,8 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
         BLL.Familia.FamiliaBLL familybll = new BLL.Familia.FamiliaBLL();
         BE.Familia.Familia familybe = new BE.Familia.Familia();
         BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
-        
+        BLL.Seguridad.DigitosVerificadoresBLL digBLL = new BLL.Seguridad.DigitosVerificadoresBLL();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -93,7 +94,9 @@ protected void BtnBack_Click(object sender, EventArgs e)
             familybe.FamiliaID = Convert.ToInt16(id);
             familybe = familybll.DeleteFamily(familybe);
             (this.Master as Menu_operaciones).mostrarmodal("Familia Eliminada", BE.ControlException.TipoEventoException.Info);
-           
+           digBLL.RecalcularDigitosunatabla("PerfilUsuario");
+
+
         }
         // PONER BITACORA EN LOS BOTONES!!
         protected void BtnUpdate_Click(object sender, EventArgs e)
@@ -106,7 +109,9 @@ protected void BtnBack_Click(object sender, EventArgs e)
 
             //nm.showMsg("Familia Modificada", this.Page);
             (this.Master as Menu_operaciones).mostrarmodal("Permisos modificados", BE.ControlException.TipoEventoException.Info);
-             
+            logbll.IngresarDatoBitacora("Modificación Familia", "Creación Familia exitosa :" + txtNombrePerfil.Text + " ", "Medio", Convert.ToInt32(Session["UsuarioID"]));
+
+            digBLL.RecalcularDigitosunatabla("PerfilUsuario");
 
         }
 
@@ -121,7 +126,7 @@ protected void BtnBack_Click(object sender, EventArgs e)
                 //BITACORAA
                 logbll.IngresarDatoBitacora("Creación Familia", "Creacion Familia exitosa :" + txtNombrePerfil.Text + " ", "Medio", Convert.ToInt32(Session["UsuarioID"]));
                 (this.Master as Menu_operaciones).mostrarmodal("Familia Creada exitosamente", BE.ControlException.TipoEventoException.Info);
-
+                digBLL.RecalcularDigitosunatabla("PerfilUsuario");
             }
             catch (Exception)
             {

@@ -42,6 +42,18 @@ namespace DAL
             return listausuarios;
         }
 
+        public void UpdateUserwithpassword(Usuario usube)
+        {
+            string sql = "update usuario set Clave = '" + usube.clavesinencriptar + "'" +
+                         " where Usuarioid = " + usube.UsuarioID + "";
+
+            usube.OResult = con.Ejecutar(sql);
+            // dv.RecalcularDVH();
+
+             
+
+        }
+
         public Usuario GetbyUser(Usuario USUBE)
         {
             string sql = "select usuarioid,usuario,Email,FlagIntentosLogin from Usuario where usuario ='" + USUBE._Usuario+"'";
@@ -70,9 +82,18 @@ namespace DAL
 
         public Usuario UpdateUser(Usuario usube)
         {
-            string sql = "update usuario set Usuario = '" + usube._Usuario + "',Nombre = '" + usube.Nombre + ",Apellido = '" +
-                usube.Apellido + "', email = '" + usube.Email + "',Habilitado = " + usube.Habilitado + 
-                "where Usuarioid = " +usube.UsuarioID+"";
+            int habilitado = 0;
+            if (usube.Habilitado == true)
+            {
+                habilitado = 1;
+            }
+            else
+            {
+                habilitado = 0;
+            }
+            string sql = "update usuario set Usuario = '" + usube._Usuario + "',Nombre = '" + usube.Nombre + "',Apellido = '" +
+                usube.Apellido + "', email = '" + usube.Email + "',Habilitado = " + habilitado + 
+                " where Usuarioid = " +usube.UsuarioID+"";
 
             usube.OResult = con.Ejecutar(sql);
             // dv.RecalcularDVH();

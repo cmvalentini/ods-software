@@ -14,6 +14,9 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
         BLL.Usuario.Usuario usuariobll = new BLL.Usuario.Usuario();
         BE.Usuario usube = new BE.Usuario();
         BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
+        BLL.Seguridad.DigitosVerificadoresBLL digBLL = new BLL.Seguridad.DigitosVerificadoresBLL();
+
+ 
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -81,11 +84,12 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
 
                  usube = usuariobll.CreateUser(usube);
                 //Modal 
-               
 
+    
                 logbll.IngresarDatoBitacora("Creación Usuario", "Creación usuario exitosa :"+txtUsuario.Text+" ", "Medio", Convert.ToInt32(Session["UsuarioID"]));
                 (this.Master as Menu_operaciones).mostrarmodal("Creación usuario exitosa", BE.ControlException.TipoEventoException.Aviso);
-
+                digBLL.RecalcularDigitosunatabla("Bitacora");
+                digBLL.RecalcularDigitosunatabla("Usuario");
             }
             catch (Exception)
             {
@@ -117,7 +121,7 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
             catch (Exception)
             { 
 
-                (this.Master as Menu_operaciones).mostrarmodal("Usuario creado correctamente", BE.ControlException.TipoEventoException.Aviso);
+                (this.Master as Menu_operaciones).mostrarmodal("Ha Ocurrido un error", BE.ControlException.TipoEventoException.Aviso);
             }
            
 
@@ -125,7 +129,7 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
 
         protected void BtnUpdate_Click(object sender, EventArgs e)
         {
-            
+            usube.UsuarioID = Convert.ToInt32(id);
             usube._Usuario = txtUsuario.Text;
             usube.Apellido = txtapellido.Text;
             usube.Email = txtemail.Text;
@@ -141,16 +145,19 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
             }
 
             usube = usuariobll.UpdateUser(usube);
+            
             logbll.IngresarDatoBitacora("Actualizacion de Usuario", "Actualización de usuario exitosa :" + txtUsuario.Text + " ", "Medio", Convert.ToInt32(Session["UsuarioID"]));
             (this.Master as Menu_operaciones).mostrarmodal("Modificación usuario exitosa", BE.ControlException.TipoEventoException.Aviso);
-
+            digBLL.RecalcularDigitosunatabla("Usuario");
+            digBLL.RecalcularDigitosunatabla("Bitacora");
         }
 
         protected void BtnDelete_Click(object sender, EventArgs e)
         {
             logbll.IngresarDatoBitacora("Eliminación de Usuario", "Eliminación de usuario exitosa :" + txtUsuario.Text + " ", "Alto", Convert.ToInt32(Session["UsuarioID"]));
             (this.Master as Menu_operaciones).mostrarmodal("Eliminación usuario exitosa", BE.ControlException.TipoEventoException.Aviso);
-
+            digBLL.RecalcularDigitosunatabla("Bitacora");
+            digBLL.RecalcularDigitosunatabla("Usuario");
         }
 
         protected void BtnBack_Click(object sender, EventArgs e)

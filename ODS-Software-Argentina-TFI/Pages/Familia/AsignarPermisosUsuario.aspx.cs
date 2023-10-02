@@ -21,6 +21,7 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
         BLL.Usuario.Usuario usuariobll = new BLL.Usuario.Usuario();
         BE.Usuario usuariobe = new BE.Usuario();
         BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
+        BLL.Seguridad.DigitosVerificadoresBLL digBLL = new BLL.Seguridad.DigitosVerificadoresBLL();
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -148,7 +149,9 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
 
                 int usuarioid = (int)Session["UsuarioID"];
                 logbll.IngresarDatoBitacora("Asignación de Permisos Usuario ", "cambio de " + usuariobe._Usuario + " a " + PerfilBE.NombrePerfil + "", "Medio", usuarioid);
-
+                digBLL.RecalcularDigitosunatabla("Bitacora");
+                digBLL.RecalcularDigitosunatabla("usuariopatente");
+                
             }
             catch (Exception)
             {
@@ -180,7 +183,7 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
 
                 (this.Master as Menu_operaciones).mostrarmodal("Familia Aplicada", BE.ControlException.TipoEventoException.Info);
 
-
+                digBLL.RecalcularDigitosunatabla("Usuario");
             }
             catch (Exception)
             {

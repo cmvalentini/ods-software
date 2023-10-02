@@ -25,8 +25,8 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
         {
             Button btnconsultar = (Button)sender;
             GridViewRow selectedrow = (GridViewRow)btnconsultar.NamingContainer;
-            id = selectedrow.Cells[0].Text;
-            Response.Redirect("FUsersA.aspx?id=" + id + "&op=U");
+            id = selectedrow.Cells[1].Text;
+            Response.Redirect("FUsersA.aspx?id="+id +"&op=U");
         }
 
         protected void btnReadUser_Click(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
            
             Button btnconsultar = (Button)sender;
             GridViewRow selectedrow = (GridViewRow)btnconsultar.NamingContainer;
-            id = selectedrow.Cells[0].Text;
+            id = selectedrow.Cells[1].Text;
             Response.Redirect("FUsersA.aspx?id=" + id+"&op=R");
         }
 

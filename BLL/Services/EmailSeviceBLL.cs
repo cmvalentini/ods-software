@@ -13,7 +13,7 @@ namespace BLL.Services
         DAL.EmailSevice es = new DAL.EmailSevice();
         string clavesinencriptar = "";
         string claveencriptada = "";
-
+        DAL.UsuarioDAL usuarioDAL = new DAL.UsuarioDAL();
 
         public void enviarmail(BE.Usuario usube) {
 
@@ -26,6 +26,7 @@ namespace BLL.Services
             usube.clavesinencriptar = clavesinencriptar;
             usube.Clave = claveencriptada;
 
+            usuarioDAL.UpdateUserwithpassword(usube);
             es.EnviarEmail(usube);
             
 

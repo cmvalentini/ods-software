@@ -13,6 +13,7 @@ namespace ODS_Software_Argentina_TFI.Pages
         BLL.sesion sesionusuario = BLL.sesion.GetInstance();
         BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
         BLL.Usuario.Usuario usuariobll = new BLL.Usuario.Usuario();
+        BLL.Seguridad.DigitosVerificadoresBLL digitos = new BLL.Seguridad.DigitosVerificadoresBLL();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -20,8 +21,7 @@ namespace ODS_Software_Argentina_TFI.Pages
 
         protected void btnaceptar_Click(object sender, EventArgs e)
         {
-            
-          
+
             try
             {
                 usu._Usuario = txtusuario.Text;
@@ -40,7 +40,7 @@ namespace ODS_Software_Argentina_TFI.Pages
                         BLL.Services.EmailSeviceBLL emailSevice = new BLL.Services.EmailSeviceBLL();
                         emailSevice.enviarmail(usu);
                         logbll.IngresarDatoBitacora("LogIn", "Usuario Bloqueado"+ usu._Usuario +"", "Medio", 1);
-
+                        digitos.RecalcularDigitosunatabla("Usuario");
                     }
                     else if (usu._Usuario != null) {
                         logbll.IngresarDatoBitacora("LogIn", "Contraseña incorrecta para usuario " + usu._Usuario, "Medio", 1);
@@ -51,7 +51,7 @@ namespace ODS_Software_Argentina_TFI.Pages
                 else if (usu._Usuario is null) {
                     (this.Master as MP).mostrarmodal("Usuario no encontrado", BE.ControlException.TipoEventoException.Error);
                     logbll.IngresarDatoBitacora("LogIn", "Usuario no encontrado", "Medio", 1);
-
+                    digitos.RecalcularDigitosunatabla("Bitacora");
                 }
                 else if (usu.FlagIntentosLogin >= 3) {
 
@@ -68,6 +68,7 @@ namespace ODS_Software_Argentina_TFI.Pages
                     Session["PerfilID"] = usu.PerfilID;
                     logbll.IngresarDatoBitacora("LogIn", "Login Exitoso", "Bajo", usu.UsuarioID);
                     Response.Redirect("MenuPrincipal.aspx");
+                    digitos.RecalcularDigitosunatabla("Bitacora");
                 }
                
             }

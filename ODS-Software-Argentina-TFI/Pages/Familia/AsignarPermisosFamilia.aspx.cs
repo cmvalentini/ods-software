@@ -16,6 +16,8 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
         BE.Familia.Familia PerfilBE = new BE.Familia.Familia();
         List<BE.Familia.Familia> listafamilias = new List<BE.Familia.Familia>();
         BLL.Familia.FamiliaBLL familiaBLL = new BLL.Familia.FamiliaBLL();
+        BLL.Seguridad.DigitosVerificadoresBLL digBLL = new BLL.Seguridad.DigitosVerificadoresBLL();
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!this.IsPostBack)
@@ -138,10 +140,12 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
                     (this.Master as Menu_operaciones).mostrarmodal("Operaciones guardadas con exito", BE.ControlException.TipoEventoException.Info);
                      
                     BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
+                    
                     int usuarioid = (int)Session["UsuarioID"];
                     logbll.IngresarDatoBitacora("Asignación de Permisos ", "cambio de permisos en perfil " + PerfilBE.NombrePerfil + "", "Alta", usuarioid);
-                   
 
+                    digBLL.RecalcularDigitosunatabla("Bitacora");
+                    digBLL.RecalcularDigitosunatabla("PerfilPatente");
 
                 }
 

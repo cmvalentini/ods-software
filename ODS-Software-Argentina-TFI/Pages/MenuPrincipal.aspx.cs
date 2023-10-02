@@ -36,9 +36,16 @@ namespace ODS_Software_Argentina_TFI.Pages
                     lblPerfil.Visible = true;
                 }
             }
+       
+            digBLL.RecalcularDigitosunatabla("Bitacora");
+           List<Tuple<string, string>> listaErrores = digBLL.ValidarIntegridadSistema();
 
-             digBLL.RecalcularDigitos();
-          //  List<Tuple<string, string>> listaErrores = digBLL.ValidarIntegridadSistema();
+            if (listaErrores.Count != 0)
+            {
+                panelErrores.Visible = true;
+                rptErrores.DataSource = listaErrores;
+                rptErrores.DataBind();
+            }
         }
 
         private void traerpermisos()
@@ -167,7 +174,7 @@ namespace ODS_Software_Argentina_TFI.Pages
             Session["UsuarioID"] = null;
             Session["PerfilID"] = null;
            
-            Response.Redirect("~/Login.aspx");
+            Response.Redirect("~/Pages/Login.aspx");
         }
 
         protected void BtnRestore_Click(object sender, EventArgs e)

@@ -100,7 +100,6 @@ IF @CANT = 3
 GO
 
 
-
 create table DVV(
 tabla varchar(100) not null,
 DVV varchar(50) not null)
