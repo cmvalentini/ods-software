@@ -41,9 +41,9 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
                 ddlUserList.DataValueField = "_Usuario";
                 ddlUserList.DataBind();
 
+
+
             }
-
-
 
         }
 
@@ -145,11 +145,12 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
                 usuariobe._Usuario = ddlUserList.SelectedItem.Value;
                 mpu.UpdatePermisosUsuario(usuariobe, listaoperacionesperfil);
 
-                (this.Master as Menu_operaciones).mostrarmodal("Permisos Aplicados Correctamente", BE.ControlException.TipoEventoException.Info);
-
+               
                 int usuarioid = (int)Session["UsuarioID"];
                 logbll.IngresarDatoBitacora("Asignación de Permisos Usuario ", "cambio de " + usuariobe._Usuario + " a " + PerfilBE.NombrePerfil + "", "Medio", usuarioid);
                 digBLL.RecalcularDigitosunatabla("Bitacora");
+                (this.Master as Menu_operaciones).mostrarmodal("Permisos Aplicados Correctamente", BE.ControlException.TipoEventoException.Info);
+
                 digBLL.RecalcularDigitosunatabla("usuariopatente");
                 
             }
@@ -169,6 +170,47 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
 
         protected void ddlUserList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ordenarlistasusuario();
+        }
+
+        private void ordenarlistasusuario() {
+
+            usuariobe._Usuario = ddlUserList.SelectedItem.Value;
+           
+            listAssing.Items.Clear();
+            listNotAssing.Items.Clear();
+            listaoperacionesperfil.Clear();
+            listaoperacionesperfil = mpu.MostrarListaOperacionesUsuario(usuariobe);
+            listaoperaciones.Clear();
+            listaoperaciones = mpu.GetOperaciones();
+
+            for (int i = 0; i < listaoperaciones.Count; i++)
+            {
+                for (int j = 0; j < listaoperacionesperfil.Count; j++)
+                {
+                    listaoperaciones = listaoperaciones.OrderBy(x => x.Nombre).ToList();
+                    listaoperacionesperfil = listaoperacionesperfil.OrderBy(x => x.Nombre).ToList();
+
+                    if (listaoperaciones[i].Nombre == listaoperacionesperfil[j].Nombre)
+                    {
+                        listaoperaciones.Remove(listaoperaciones[i]);
+
+                    }
+                }
+            }
+
+            foreach (BE.Permisos.Component item in listaoperaciones)
+            {
+                listNotAssing.Items.Add(item.Nombre);
+            }
+
+            foreach (BE.Permisos.Component item in listaoperacionesperfil)
+            {
+                listAssing.Items.Add(item.Nombre);
+            }
+
+
+
 
         }
 

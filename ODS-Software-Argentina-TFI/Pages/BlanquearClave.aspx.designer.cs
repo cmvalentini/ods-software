@@ -11,7 +11,7 @@ namespace ODS_Software_Argentina_TFI.Pages
 {
 
 
-    public partial class Login
+    public partial class BlanquearClave
     {
 
         /// <summary>
@@ -42,31 +42,40 @@ namespace ODS_Software_Argentina_TFI.Pages
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Control txtclave.
+        /// Control txtclavevieja.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtclave;
+        protected global::System.Web.UI.WebControls.TextBox txtclavevieja;
 
         /// <summary>
-        /// Control btnaceptar.
+        /// Control Label3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnaceptar;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Control LinkButton1.
+        /// Control txtclavenueva.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.TextBox txtclavenueva;
+
+        /// <summary>
+        /// Control btncambiar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btncambiar;
 
         /// <summary>
         /// Control ExceptionModal.

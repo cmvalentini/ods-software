@@ -16,6 +16,7 @@ namespace BE
         public string clavesinencriptar { get; set; }
         public string Clave { get; set; }
         public string OResult { get; set; }
+        public string Result { get; set; }
 
         public int PerfilID { get; set; }
 

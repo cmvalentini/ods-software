@@ -95,6 +95,11 @@ namespace ODS_Software_Argentina_TFI.Pages
                             BtnRestore.Visible = true;
                             break;
 
+                        case "digitosverificadores":
+                            btnDigitosverificadores.Enabled = true;
+                            btnDigitosverificadores.Visible = true;
+                            break;
+
                         case "AsignarPermisos":
                             BtnasignarPermisos.Enabled = true;
                             BtnasignarPermisos.Visible = true;
@@ -105,8 +110,9 @@ namespace ODS_Software_Argentina_TFI.Pages
                     }
 
                     permisosconcatenados = permisosconcatenados + " - " + i.Nombre +" ";
-                    Session["permisosconcatenados"] = permisosconcatenados;
+                    
                 }
+                Session["permisosconcatenados"] = permisosconcatenados;
 
             }
             catch (Exception)
@@ -173,13 +179,21 @@ namespace ODS_Software_Argentina_TFI.Pages
             Session["Usuario"] = null;
             Session["UsuarioID"] = null;
             Session["PerfilID"] = null;
-           
+            Session["permisosconcatenados"] = null;
+
+
+            digBLL.RecalcularDigitosunatabla("Bitacora");
             Response.Redirect("~/Pages/Login.aspx");
         }
 
         protected void BtnRestore_Click(object sender, EventArgs e)
         {
             Response.Redirect("BackUpRestore/RealizarRestore.aspx");
+        }
+
+        protected void btnDigitosverificadores_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("DigitosVerificadores/RecalcularDigitosVerificadores.aspx");
         }
     }
 }

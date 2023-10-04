@@ -15,7 +15,7 @@
     <form runat="server" >
 <header class="header">
   <div class="container header__container">
-<div class="header__logo"><img src="../Images/ODS%20Soft%20logo_preview_rev_1.png" alt="Logo" class="navbar-brand" style="width:70px" /> <h1 class="header__title">Bricks<span class="header__light">.io</span></h1></div> 
+<div class="header__logo"><img src="../Images/ODS%20Soft%20logo_preview_rev_1.png" alt="Logo" class="navbar-brand" style="width:70px" /> </div> 
      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>

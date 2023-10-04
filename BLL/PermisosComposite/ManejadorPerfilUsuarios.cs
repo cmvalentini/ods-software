@@ -10,12 +10,7 @@ namespace BLL.PermisosComposite
     {
         DAL.Permisos.ManejadorPerfilUsuariosDAL ManejadorPerfilUsuariosDAL = new DAL.Permisos.ManejadorPerfilUsuariosDAL();
         List<BE.Permisos.Component> listapermisos = new List<BE.Permisos.Component>();
-        public List<BE.Permisos.Component> MostrarListaOperaciones(BE.Familia.Familia perfilBE)
-        {
-            listapermisos.Clear();
-            listapermisos = ManejadorPerfilUsuariosDAL.MostrarListaOperaciones(perfilBE);
-            return listapermisos;
-        }
+       
 
         public List<BE.Permisos.Component> GetOperaciones()
         {
@@ -33,5 +28,22 @@ namespace BLL.PermisosComposite
         {
             ManejadorPerfilUsuariosDAL.UpdatePermisosUsuario(usuariobe, listaoperacionesperfil);
         }
+
+        public List<BE.Permisos.Component> MostrarListaOperacionesUsuario(BE.Usuario usuariobe)
+        {
+            listapermisos.Clear();
+            listapermisos = ManejadorPerfilUsuariosDAL.MostrarListaOperacionesUsuario(usuariobe);
+            return listapermisos;
+        }
+
+        public List<BE.Permisos.Component> MostrarListaOperaciones(BE.Familia.Familia perfilBE)
+        {
+            listapermisos.Clear();
+            listapermisos = ManejadorPerfilUsuariosDAL.MostrarListaOperaciones(perfilBE);
+            return listapermisos;
+        }
+
+
+
     }
 }

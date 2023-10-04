@@ -27,7 +27,7 @@
                                     <asp:Button UseSubmitBehavior="False" ID="BtnPermisos" CssClass="btn btn-secondary" Visible="false" runat="server" Text="Permisos" Height="35px" Width="231px" OnClick="BtnPermisos_Click" />
                                     <asp:Button UseSubmitBehavior="False" ID="BtnasignarPermisos" CssClass="btn btn-secondary" Visible="false" runat="server" Text="Asignar Permisos a Familia" OnClick="BtnasignarPermisos_Click" Height="35px" Width="231px" />
                                     <asp:Button UseSubmitBehavior="False" ID="BtnasignarPermisosusuario" CssClass="btn btn-secondary" Visible="false" runat="server" Text="Asignar permisos a Usuario" Height="35px" Width="231px" OnClick="BtnasignarPermisosusuario_Click" />
-                                    <asp:Button UseSubmitBehavior="False" ID="Button8" CssClass="btn btn-secondary" Visible="false" runat="server" Text="Facturacion" Height="35px" Width="231px" />
+                                    <asp:Button UseSubmitBehavior="False" ID="btnDigitosverificadores" CssClass="btn btn-secondary" Visible="false" runat="server" Text="Digitos Verificadores" Height="35px" Width="231px" OnClick="btnDigitosverificadores_Click" />
                                     <asp:Button UseSubmitBehavior="False" ID="btnlogout" CssClass="btn btn-dark"  runat="server" Text="LogOut" OnClick="btnlogout_Click" />
                                 <li class="nav-item"><a class="nav-link" href="#">Link</a> </li>
                                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown </a>

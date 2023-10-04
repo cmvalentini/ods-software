@@ -14,7 +14,14 @@
         <h2 class="h2 align-content-center">Bitacora</h2>
     </div>
     
-    <div class="container">
+   
+    <div class="col-sm-10">
+     
+    </div>
+    <br />
+        <uc1:CalendarControl ID="CalendarC" runat="server" />
+    <br />
+     <div class="container">
         <div class="row">
             <div class="col align-self-end">
 
@@ -26,16 +33,11 @@
 
         </div>
     </div >
-    <div class="col-sm-10">
-     
-    </div>
-    <br />
-        <uc1:CalendarControl ID="CalendarC" runat="server" />
     <br />
     <div class="container row">
         <div class="table small table-striped">
             <asp:GridView runat="server" ID="dvgBitacora" AllowSorting="True" OnSorting="GridView1_Sorting" AllowPaging="true" OnPageIndexChanging="GridView1_PageIndexChanging" CssClass="table  table-bordered table-hover">
-                  <HeaderStyle BackColor="#4fca15" Font-Bold="True" ForeColor="White" />
+                  <HeaderStyle BackColor="#47a176" Font-Bold="True" ForeColor="Black" />
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" ButtonType="Image" ShowCancelButton="False" SelectImageUrl="~/Images/Select.png" ItemStyle-Height="10" ItemStyle-Width="10">
                         <ControlStyle BorderStyle="None" />
@@ -43,8 +45,8 @@
                     </asp:CommandField>
                 </Columns>
                
-                <PagerStyle CssClass="pagination pagination-lg" />
-                <SelectedRowStyle BackColor="#CC0099" />
+                <PagerStyle CssClass="pagination pagination-lg" HorizontalAlign="Center" />
+                <SelectedRowStyle BackColor="#c3e0cf" HorizontalAlign="Center" />
             </asp:GridView>
         </div>
     </div>

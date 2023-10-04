@@ -23,9 +23,11 @@
                 <asp:Label ID="Label2" runat="server" Text="Clave: "></asp:Label>
                 <asp:TextBox ID="txtclave" runat="server" CssClass="form-control" required TextMode="Password"></asp:TextBox>
                 <br />
-                <asp:Button Text="Aceptar" runat="server" CssClass="btn form-control btn-success btn-sm" ID="btnaceptar" OnClick="btnaceptar_Click"  />
-               
-            </div>
+                <asp:Button Text="Aceptar" runat="server" CssClass="btn form-control btn-sm btn-outline-info" BackColor="#3A9FF" ID="btnaceptar" OnClick="btnaceptar_Click"  />
+                <br />
+                 <br />
+                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Para cambiar su Contraseña, ingrese Aquí</asp:LinkButton>
+                </div>
 
         </div>
        

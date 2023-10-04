@@ -126,7 +126,10 @@ namespace BLL.Seguridad
                 {
                     //Busco el registro completo en la tabla que se genero
                     DataRow reg = digDAL.BuscarRegistro(tabla, id);
-
+                    if (id == 2356)
+                    {
+                        DataRow entra = reg;
+                    }
                     if (reg != null)
                     {
                         string hash = CalcularDVH(reg);

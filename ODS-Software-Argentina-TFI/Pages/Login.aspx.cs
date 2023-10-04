@@ -14,6 +14,8 @@ namespace ODS_Software_Argentina_TFI.Pages
         BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
         BLL.Usuario.Usuario usuariobll = new BLL.Usuario.Usuario();
         BLL.Seguridad.DigitosVerificadoresBLL digitos = new BLL.Seguridad.DigitosVerificadoresBLL();
+        BLL.Services.EmailSeviceBLL emailSevice = new BLL.Services.EmailSeviceBLL();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -37,7 +39,6 @@ namespace ODS_Software_Argentina_TFI.Pages
                     if (usu.FlagIntentosLogin >= 3)
                     {
                         (this.Master as MP).mostrarmodal("El usuario se encuentra Bloqueado, se le enviará un correo a la casilla", BE.ControlException.TipoEventoException.Error);
-                        BLL.Services.EmailSeviceBLL emailSevice = new BLL.Services.EmailSeviceBLL();
                         emailSevice.enviarmail(usu);
                         logbll.IngresarDatoBitacora("LogIn", "Usuario Bloqueado"+ usu._Usuario +"", "Medio", 1);
                         digitos.RecalcularDigitosunatabla("Usuario");
@@ -49,8 +50,9 @@ namespace ODS_Software_Argentina_TFI.Pages
                     }
                 }
                 else if (usu._Usuario is null) {
-                    (this.Master as MP).mostrarmodal("Usuario no encontrado", BE.ControlException.TipoEventoException.Error);
                     logbll.IngresarDatoBitacora("LogIn", "Usuario no encontrado", "Medio", 1);
+
+                    (this.Master as MP).mostrarmodal("Usuario no encontrado", BE.ControlException.TipoEventoException.Error);
                     digitos.RecalcularDigitosunatabla("Bitacora");
                 }
                 else if (usu.FlagIntentosLogin >= 3) {
@@ -61,12 +63,13 @@ namespace ODS_Software_Argentina_TFI.Pages
                 }
                 else if (usu._Usuario != null && usu.FlagIntentosLogin < 3)
                 {
+                    logbll.IngresarDatoBitacora("LogIn", "Login Exitoso", "Bajo", usu.UsuarioID);
+
                     //entra
                     Session["Usuarionombre"] = usu.Nombre;
                     Session["Usuario"] = usu._Usuario;
                     Session["UsuarioID"] = usu.UsuarioID;
                     Session["PerfilID"] = usu.PerfilID;
-                    logbll.IngresarDatoBitacora("LogIn", "Login Exitoso", "Bajo", usu.UsuarioID);
                     Response.Redirect("MenuPrincipal.aspx");
                     digitos.RecalcularDigitosunatabla("Bitacora");
                 }
@@ -76,10 +79,17 @@ namespace ODS_Software_Argentina_TFI.Pages
             {
                 (this.Master as MP).mostrarmodal("Ocurrio un error, por favor reintentar",BE.ControlException.TipoEventoException.Error);
                 logbll.IngresarDatoBitacora("LogIn", "Ocurrio un error, por favor reintentar", "Medio",0);
+                digitos.RecalcularDigitosunatabla("Bitacora");
 
             }
 
 
+
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("BlanquearClave.aspx");
 
         }
     }

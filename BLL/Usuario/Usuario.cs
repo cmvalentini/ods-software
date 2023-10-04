@@ -20,6 +20,17 @@ namespace BLL.Usuario
             return listausuarios;
         }
 
+        public BE.Usuario CambiarClave(BE.Usuario usube, string ClaveNueva) //Usuario, ClaveNueva,Usuarioid
+        {
+           
+            usube.Clave = ClaveNueva;
+
+            usube = UsuarioDAL.CambiarClave(usube);
+
+            return usube;
+        }
+
+
         public BE.Usuario GetbyID(BE.Usuario usube)
         {
             usube = UsuarioDAL.GetbyID(usube);

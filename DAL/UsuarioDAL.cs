@@ -42,16 +42,26 @@ namespace DAL
             return listausuarios;
         }
 
+        public Usuario CambiarClave(Usuario usu)
+        {
+            string sql = "Update Usuario set Clave = '" + usu.Clave + "' " +
+                 " where Usuario = '" + usu._Usuario + "'";
+                  
+
+            usu.Result = con.Ejecutar(sql);
+             
+            return usu;
+        }
+
         public void UpdateUserwithpassword(Usuario usube)
         {
-            string sql = "update usuario set Clave = '" + usube.clavesinencriptar + "'" +
+            string sql = "update usuario set Clave = '" + usube.clavesinencriptar + "',FlagIntentosLogin = 0 " +
                          " where Usuarioid = " + usube.UsuarioID + "";
 
             usube.OResult = con.Ejecutar(sql);
-            // dv.RecalcularDVH();
-
              
 
+            
         }
 
         public Usuario GetbyUser(Usuario USUBE)
@@ -174,7 +184,17 @@ namespace DAL
                 UsuBE.Dni = Convert.ToInt32(dt.Rows[0][5].ToString());
                 UsuBE.Habilitado = Convert.ToBoolean(dt.Rows[0][7].ToString());
                 UsuBE.FlagIntentosLogin = Convert.ToInt32(dt.Rows[0][8].ToString());
-                UsuBE.PerfilID = Convert.ToInt32(dt.Rows[0][9].ToString());
+           
+
+                if (dt.Rows[0][9].ToString() == "")
+                {
+                    UsuBE.PerfilID = 0;
+                }
+                else
+                {
+                    UsuBE.PerfilID = Convert.ToInt32(dt.Rows[0][9].ToString());
+                }
+               
                 return UsuBE;
 
             }

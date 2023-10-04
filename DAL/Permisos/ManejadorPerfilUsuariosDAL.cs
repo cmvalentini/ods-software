@@ -44,6 +44,34 @@ namespace DAL.Permisos
             return hijos;
         }
 
+        public List<Component> MostrarListaOperacionesUsuario(Usuario usuariobe)
+        {
+            listapermisos.Clear();
+            string sql = " select p.Descripcion from usuariopatente up inner join  Usuario u  " +
+                           " on up.UsuarioID = u.UsuarioID " +
+                   "  inner join patente p on up.PatenteID = p.PatenteID" +
+           " where u.Usuario = '" + usuariobe._Usuario + "'";
+            dt = con.Ejecutarreader(sql);
+
+            if (dt.Rows.Count > 0)
+            {
+                Console.WriteLine("entró reader MPUDAL" + Convert.ToString(dt.Rows[0][0].ToString()));
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    BE.Permisos.Component componente = new BE.Permisos.Component("");
+
+                    componente.Nombre = dt.Rows[i]["Descripcion"].ToString();
+
+                    listapermisos.Add(componente);
+                }
+
+            }
+
+
+            return listapermisos;
+        }
+
         public void UpdatePermisosUsuario(Usuario usuariobe, List<Component> listaoperacionesperfil)
         {
             con.Conectar();

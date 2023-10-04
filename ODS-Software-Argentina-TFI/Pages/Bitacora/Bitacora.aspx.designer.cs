@@ -15,6 +15,15 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
     {
 
         /// <summary>
+        /// Control CalendarC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::ODS_Software_Argentina_TFI.Controllers.CalendarControl CalendarC;
+
+        /// <summary>
         /// Control btnConsultarBitacora.
         /// </summary>
         /// <remarks>
@@ -49,15 +58,6 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnexportxls;
-
-        /// <summary>
-        /// Control CalendarC.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::ODS_Software_Argentina_TFI.Controllers.CalendarControl CalendarC;
 
         /// <summary>
         /// Control dvgBitacora.

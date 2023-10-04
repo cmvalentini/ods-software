@@ -88,7 +88,9 @@
     <Content Include="Pages\BackupRestore\RealizarBackUp.aspx" />
     <Content Include="Pages\BackupRestore\RealizarRestore.aspx" />
     <Content Include="Pages\Bitacora\Bitacora.aspx" />
+    <Content Include="Pages\BlanquearClave.aspx" />
     <Content Include="Pages\Carrito\Carrito.aspx" />
+    <Content Include="Pages\DigitosVerificadores\RecalcularDigitosVerificadores.aspx" />
     <Content Include="Pages\ExceptionModal.ascx" />
     <Content Include="Pages\Familia\AsignarPermisosFamilia.aspx" />
     <Content Include="Pages\Familia\AsignarPermisosUsuario.aspx" />
@@ -172,12 +174,26 @@
     <Compile Include="Pages\Bitacora\Bitacora.aspx.designer.cs">
       <DependentUpon>Bitacora.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\BlanquearClave.aspx.cs">
+      <DependentUpon>BlanquearClave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\BlanquearClave.aspx.designer.cs">
+      <DependentUpon>BlanquearClave.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Carrito\Carrito.aspx.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Carrito\Carrito.aspx.designer.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DigitosVerificadores\RecalcularDigitosVerificadores.aspx.cs">
+      <DependentUpon>RecalcularDigitosVerificadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\DigitosVerificadores\RecalcularDigitosVerificadores.aspx.designer.cs">
+      <DependentUpon>RecalcularDigitosVerificadores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ExceptionModal.ascx.cs">
       <DependentUpon>ExceptionModal.ascx</DependentUpon>

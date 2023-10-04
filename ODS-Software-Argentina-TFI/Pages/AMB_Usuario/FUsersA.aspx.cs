@@ -148,8 +148,9 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
             
             logbll.IngresarDatoBitacora("Actualizacion de Usuario", "Actualización de usuario exitosa :" + txtUsuario.Text + " ", "Medio", Convert.ToInt32(Session["UsuarioID"]));
             (this.Master as Menu_operaciones).mostrarmodal("Modificación usuario exitosa", BE.ControlException.TipoEventoException.Aviso);
-            digBLL.RecalcularDigitosunatabla("Usuario");
             digBLL.RecalcularDigitosunatabla("Bitacora");
+            digBLL.RecalcularDigitosunatabla("Usuario");
+          
         }
 
         protected void BtnDelete_Click(object sender, EventArgs e)
@@ -182,7 +183,7 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
                 chkHabilitado.Checked = true;
             }
             logbll.IngresarDatoBitacora("Carga de datos Usuario", " "+txtnombre.Text + txtUsuario.Text + " ", "Bajo", Convert.ToInt32(Session["UsuarioID"]));
-
+            digBLL.RecalcularDigitosunatabla("Bitacora");
         }
 
     }

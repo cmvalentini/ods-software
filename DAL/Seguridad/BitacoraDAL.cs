@@ -74,7 +74,7 @@ namespace DAL.Seguridad
             DataTable dt = new DataTable();
 
             string sql =
-         "select NombreOperacion, Descripcion, u.UsuarioID, Criticidad, FechayHora from Bitacora b " +
+         "select NombreOperacion, Descripcion, b.UsuarioID, Criticidad, FechayHora from Bitacora b " +
          " inner join Usuario u ON b.UsuarioID = u.UsuarioID " +
          " where fechayhora BETWEEN '" + fechadesde + "' AND '" + fechahasta +
          " 23:59' " +
