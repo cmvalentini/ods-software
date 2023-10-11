@@ -45,6 +45,7 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="EmailSevice.cs" />
     <Compile Include="GenericRepository.cs" />
+    <Compile Include="Pedido\PedidoDal.cs" />
     <Compile Include="Permisos\FamiliaDal.cs" />
     <Compile Include="Permisos\ManejadorPerfilUsuariosDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

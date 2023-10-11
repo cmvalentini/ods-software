@@ -23,7 +23,8 @@ namespace BLL.Seguridad
             ,"PerfilPatente"
             ,"PerfilUsuario"
             ,"usuariopatente"
-            
+            ,"Pedido"
+
         };
 
         //Este metodo es sumamente pesado, usar solo luego de operaciones transaccionales

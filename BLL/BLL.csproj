@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Familia\FamiliaBLL.cs" />
+    <Compile Include="Pedido\PedidoBLL.cs" />
     <Compile Include="PermisosComposite\Component.cs" />
     <Compile Include="PermisosComposite\Composite.cs" />
     <Compile Include="PermisosComposite\Leaf.cs" />
@@ -68,5 +69,6 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -42,10 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Cliente.cs" />
     <Compile Include="ControlException\TipoEventoException.cs" />
     <Compile Include="Familia\Familia.cs" />
     <Compile Include="idioma\idioma.cs" />
     <Compile Include="idioma\traduccion.cs" />
+    <Compile Include="Pedido\Empresa.cs" />
+    <Compile Include="Pedido\PedidoBE.cs" />
     <Compile Include="Permisos\Component.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

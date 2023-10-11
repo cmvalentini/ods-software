@@ -71,24 +71,26 @@ body {
 }
 
 .price-box {
-    padding: 0px 25px;
+    padding: 30px 45px;
 }
 
 .price-box__wrap {
+    width: 150px;
+    height: 170px;
     background-color: #fff;
     border-radius: 6px;
     box-shadow: 0 4px 8px 0px rgba(0,0,0,0.2); /*0px 22px 20px -10px rgba(0, 0, 0,0.2)*/
-    padding: 35px 35px 40px 35px;
-    text-align: center;
+    padding: 25px 25px 30px 25px;
+    text-align: right;
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
+    -moz-transition: all 0.4s;
     -o-transition: all 0.4s;
 }
 
 .price-box__img {
-    display: inline-block;
+    display: inline;
 }
 
 .price-box__img {
