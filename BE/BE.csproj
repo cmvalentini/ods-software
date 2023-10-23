@@ -46,6 +46,7 @@
     <Compile Include="ControlException\TipoEventoException.cs" />
     <Compile Include="Familia\Familia.cs" />
     <Compile Include="idioma\idioma.cs" />
+    <Compile Include="idioma\TiposdeIdioma.cs" />
     <Compile Include="idioma\traduccion.cs" />
     <Compile Include="Pedido\Empresa.cs" />
     <Compile Include="Pedido\PedidoBE.cs" />

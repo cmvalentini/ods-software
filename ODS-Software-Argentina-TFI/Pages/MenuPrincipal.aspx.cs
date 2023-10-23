@@ -23,6 +23,16 @@ namespace ODS_Software_Argentina_TFI.Pages
             
             if (!this.IsPostBack)
             {
+                if (Session["IdiomaID"] is null)
+                {
+                    Session["IdiomaID"] = 0;
+                    TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                }
+                else
+                {
+                    TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                }
+
                 traerpermisos();
                 Familia.FamiliaID = (int)Session["PerfilID"];
                 if (Familia.FamiliaID == 0)

@@ -15,10 +15,12 @@ namespace ODS_Software_Argentina_TFI.Pages
         BLL.Usuario.Usuario usuariobll = new BLL.Usuario.Usuario();
         BLL.Seguridad.DigitosVerificadoresBLL digitos = new BLL.Seguridad.DigitosVerificadoresBLL();
         BLL.Services.EmailSeviceBLL emailSevice = new BLL.Services.EmailSeviceBLL();
+        BLL.IdiomaBLL IdiomaBLL = new BLL.IdiomaBLL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            
         }
 
         protected void btnaceptar_Click(object sender, EventArgs e)
@@ -70,8 +72,12 @@ namespace ODS_Software_Argentina_TFI.Pages
                     Session["Usuario"] = usu._Usuario;
                     Session["UsuarioID"] = usu.UsuarioID;
                     Session["PerfilID"] = usu.PerfilID;
-                    Response.Redirect("MenuPrincipal.aspx");
+                    
                     digitos.RecalcularDigitosunatabla("Bitacora");
+
+                   
+
+                    Response.Redirect("MenuPrincipal.aspx");
                 }
                
             }
@@ -91,6 +97,30 @@ namespace ODS_Software_Argentina_TFI.Pages
         {
             Response.Redirect("BlanquearClave.aspx");
 
+        }
+
+        protected void DropIdiom_TextChanged(object sender, EventArgs e)
+        {
+
+            TraductorWeb.TraducirPagina(0,this);
+        }
+
+        protected void DropIdiom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+ 
+        }
+
+        protected void imgEnglish_Click(object sender, ImageClickEventArgs e)
+        {
+            Session["IdiomaID"] = 1;
+            TraductorWeb.TraducirPagina(1,this);
+        }
+
+        protected void imgSpanish_Click(object sender, ImageClickEventArgs e)
+        {
+            Session["IdiomaID"] = 0;
+            TraductorWeb.TraducirPagina(0, this);
         }
     }
 }

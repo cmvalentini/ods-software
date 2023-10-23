@@ -14,10 +14,18 @@ namespace ODS_Software_Argentina_TFI.Pages
         BLL.Seguridad.DigitosVerificadoresBLL digitos = new BLL.Seguridad.DigitosVerificadoresBLL();
         BLL.Seguridad.BitacoraBLL bitacora = new BLL.Seguridad.BitacoraBLL();
         BLL.sesion sesionusuario = BLL.sesion.GetInstance();
-
+         
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["IdiomaID"] is null)
+            {
+                Session["IdiomaID"] = 0;
+                TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+            }
+            else
+            {
+                TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+            }
         }
 
        

@@ -5,8 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     
-    <link href="../../assets/css/landing.css" rel="stylesheet" />
-    <script src="../../assets/js/landing.js"></script>
+ 
+    <link href="../../assets/css/Carrito.css" rel="stylesheet" />
+ 
+    
   <meta name="viewport" content="width=device-width, initial-scale=1">
    
 <meta name="theme-color" content="#1885ed">
@@ -16,88 +18,102 @@
 
 <body>
     <form id="form1" runat="server">
-    <header class="header">
+<header class="hheader">
   <div class="container header__container">
-<div class="header__logo"><img src="../../Images/ods_soft_logo.png" alt="Logo" class="navbar-brand" style="width:70px" /> </div> 
-     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+<div class="hheader__logo"><img src="../../Images/ODS Soft logo_preview_rev_1.png" alt="Logo" class="navbar-brand" style="width:70px" /> </div> 
+
   
   <div class="header__menu">
     <nav id="navbar" class="header__nav collapse">
-      <ul class="header__elenco">
-        <li class="header__el"><a href="#" class="header__link">Home</a></li>
-        <li class="header__el"><a href="#" class="header__link">Pricing</a></li>
-        <li class="header__el"><a href="#" class="header__link">Success stories</a></li>
-        <li class="header__el"><a href="#" class="header__link">Blog</a></li>
-        <li class="header__el"><a href="#" class="header__link">Contact us</a></li>
-        <asp:Button ID="Button1" runat="server" CssClass="btn btn--white" Text="Sign In →" OnClick="btnLogin_Click" />
+      <ul class="hheader__elenco">
+        <li class="hheader__el"><a href="#" class="hheader__link">Home</a></li>
+        <li class="hheader__el"><a href="#" class="hheader__link">Pricing</a></li>
+        <li class="hheader__el"><a href="#" class="hheader__link">Success stories</a></li>
+        <li class="hheader__el"><a href="#" class="hheader__link">Blog</a></li>
+        <li class="hheader__el"><a href="#" class="hheader__link">Contact us</a></li>
+  <asp:Button ID="Button1" runat="server" CssClass="btn btn--white" Text="Sign In →" OnClick="btnLogin_Click" />
       </ul>
     </nav>
   </div>
     </div>
 </header>
      
-        
-  <div>
+     <div class="contenedorPadre">    
+   
+      <div class="contenedorHijo" >
  <div class="price-box price-box--purple">
     <div class="price-box__wrap">
       <div class="price-box__img"></div>
-      <h1 class="price-box__title">
+      <h1 class="price-box__title text-center">
         Startup
       </h1>
-      <p class="price-box__people">
+      <p class="price-box__people text-center">
        1 User
       </p>
-      <h2 class="price-box__discount">
-        <span class="price-box__dollar">$</span>49<span class="price-box__discount--light">/mo</span>
+      <h2 class="price-box__discount text-center">
+        <span class="price-box__dollar text-center">$</span>49<span class="price-box__discount--light text-center">/mo</span>
       </h2>
-      <h3 class="price-box__price">
+      <h3 class="price-box__price text-center">
         Free
       </h3>
-      <p class="price-box__feat">
+      <p class="price-box__feat text-center">
         Features
       </p>
-       
-        <asp:Label ID="lbllicense" CssClass="price-box__list-el" runat="server" Text=" 1 ODS License"></asp:Label>
-      <asp:Label ID="lblcommunity" CssClass="price-box__list-el" runat="server" Text="  Community Blog"></asp:Label>
-       <asp:Label ID="lbltast" CssClass="price-box__list-el" runat="server" Text="  tasks limit"></asp:Label>
-       <asp:Label ID="lblcontractors" CssClass="price-box__list-el" runat="server" Text=" Contractors limit"></asp:Label>
-         
-       
+       <p class="text-center">
+        <asp:Label ID="lbllicense" CssClass=" price-box__list-el text-center" runat="server" Text=" 1 ODS License"></asp:Label>
+    </p>
+        <p class="text-center">
+        <asp:Label ID="lblcommunity" CssClass="price-box__list-el text-center" runat="server" Text="  Community Blog"></asp:Label>
+       </p>
+        <p class="text-center">
+        <asp:Label ID="lbltast" CssClass="price-box__list-el " runat="server" Text="  tasks limit"></asp:Label>
+       </p>
+        <p class="text-center">
+        <asp:Label ID="lblcontractors" CssClass="price-box__list-el" runat="server" Text=" Contractors limit"></asp:Label>
+      </p>
+         </div>
   </div>
   </div>
-
-        </div>
-        <div class="mb-3">
-            <asp:Label ID="lblarchivoCliente" runat="server" Text="Por favor, subir el Comprobante con los datos de la empresa"></asp:Label>
-            <asp:FileUpload ID="FileUploadEmpresa" runat="server" />
-            <br />
-             <asp:Label ID="lblPayment" runat="server" Text="Por favor, subir el Comprobante de deposito"></asp:Label>
-             <asp:FileUpload ID="FileUploadComprobante" runat="server" />
-            
-            <asp:Label ID="lblRepresentantenombre" runat="server" Text="Nombre Representante Legal :" required></asp:Label>
-            <asp:TextBox ID="txtrepresentantelegalnombre" runat="server"></asp:TextBox>
-             <asp:Label ID="lblRepresentantenombreApellido" runat="server" Text="Apellido Representante Legal:"></asp:Label>
-            <asp:TextBox ID="txtrepresentantelegalApellido" runat="server" ></asp:TextBox>
-
-            <asp:Label ID="lblnumerofiscalempresa" runat="server" Text="Numero fiscal Empresa:"></asp:Label>
-            <asp:TextBox ID="txtDniEmpresa" runat="server"></asp:TextBox>
-              <asp:Label ID="lblEmail" runat="server" Text="Email:"></asp:Label>
-            <asp:TextBox ID="txtemail" runat="server" required></asp:TextBox>
-
-        </div>
-    <div>
+ 
         
-       
-         <asp:Button ID="btnCompreas" runat="server" Text="Solicitar" OnClick="btnCompreas_Click" />
-        <asp:Label ID="lblCliente" runat="server" Text="Nombre Empresa : "></asp:Label>
+       <div class="price-box__wrap__texto">
+              <h1 class="price-box__title text-center">
+         <asp:Label ID="Label1" CssClass="fs-2 " runat="server" Text="Complete los campos"></asp:Label>
+      </h1>
+              
+           <br />
+            <asp:Label ID="lblarchivoCliente" CssClass="price-box__feat text-center" runat="server" Text="Por favor, subir el Comprobante con los datos de la empresa"></asp:Label>
+            <asp:FileUpload ID="FileUploadEmpresa" CssClass="btn btn-primary btn-lg btn3d" runat="server" />
+            <br />
+             <asp:Label ID="lblPayment"  CssClass="price-box__feat text-center" runat="server" Text="Por favor, subir el Comprobante de deposito"></asp:Label>
+             <asp:FileUpload ID="FileUploadComprobante" CssClass="btn btn-primary btn-lg btn3d" runat="server" />
+            <br />
+            <asp:Label ID="lblRepresentantenombre"  CssClass="price-box__feat text-center" runat="server" Text="Nombre Representante Legal :" required></asp:Label>
+            <asp:TextBox ID="txtrepresentantelegalnombre" runat="server"></asp:TextBox>
+            <br /> 
+           <asp:Label ID="lblRepresentantenombreApellido"  CssClass="price-box__feat text-center" runat="server" Text="Apellido Representante Legal:"></asp:Label>
+            <asp:TextBox ID="txtrepresentantelegalApellido" runat="server" ></asp:TextBox>
+            <br />
+            <asp:Label ID="lblnumerofiscalempresa"  CssClass="price-box__feat text-center" runat="server" Text="Numero fiscal Empresa:"></asp:Label>
+            <asp:TextBox ID="txtDniEmpresa" runat="server"></asp:TextBox>
+            <br />  
+           <asp:Label ID="lblEmail"  CssClass="price-box__feat text-center" runat="server" Text="Email:"></asp:Label>
+            <asp:TextBox ID="txtemail" runat="server" required></asp:TextBox>
+          <br />
+           <asp:Label ID="lbladdress"  CssClass="price-box__feat text-center" runat="server" Text="Address:"></asp:Label>
+            <asp:TextBox ID="txtaddress" runat="server" required></asp:TextBox>
+   <br />
+           <asp:Label ID="lblCliente"  CssClass="price-box__feat text-center" runat="server" Text="Nombre Empresa : "></asp:Label>
         <asp:TextBox ID="txtEmpresa" runat="server"></asp:TextBox>
-    </div>
+        <br />
+         <asp:Button ID="btnCompreas" CssClass="btn btn-primary btn-lg btn3d" runat="server" Text="Solicitar" OnClick="btnCompreas_Click" />
+       
+         <asp:Button ID="btndownload" runat="server" Visible="false" CssClass="btn btn-primary btn-lg btn3d" OnClick="PRINT_Click" Text="Descargar Comprobante" />
 
+    
+                    </div>
+        
+        </div>
     </form>
 </body>
 </html>

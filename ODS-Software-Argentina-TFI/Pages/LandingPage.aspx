@@ -4,6 +4,7 @@
 <html lang="en">
 <head>
     <link href="../assets/css/landing.css" rel="stylesheet" />
+
     <script src="../assets/js/landing.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
    
@@ -15,14 +16,7 @@
     <form runat="server" >
 <header class="header">
   <div class="container header__container">
-<div class="header__logo"><img src="../Images/ODS%20Soft%20logo_preview_rev_1.png" alt="Logo" class="navbar-brand" style="width:70px" /> </div> 
-     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-  
+<div class="header__logo"><img src="../Images/ODS%20Soft%20logo_preview_rev_1.png" alt="Logo" class="navbar-brand" style=" width:90px ; padding:10px 10px 10px 10px"/>    </div> 
   <div class="header__menu">
     <nav id="navbar" class="header__nav collapse">
       <ul class="header__elenco">
@@ -31,12 +25,14 @@
         <li class="header__el"><a href="#" class="header__link">Success stories</a></li>
         <li class="header__el"><a href="#" class="header__link">Blog</a></li>
         <li class="header__el"><a href="#" class="header__link">Contact us</a></li>
-        <asp:Button ID="btnLogin" runat="server" CssClass="btn btn--white" Text="Sign In →" OnClick="btnLogin_Click" />
+  <asp:Button ID="Button1" runat="server" CssClass="btn btn--white" Text="Sign In →" OnClick="btnLogin_Click" />
       </ul>
     </nav>
   </div>
     </div>
+    
 </header>
+
 
 <div class="sect sect--padding-top">
   <div class="container">
@@ -55,6 +51,7 @@
     </div>
   </div>
 </div>
+
 
 <div class="sect sect--padding-bottom">
 <div class="container">

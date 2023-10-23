@@ -15,13 +15,13 @@ namespace ODS_Software_Argentina_TFI.Pages
     {
 
         /// <summary>
-        /// Control Label1.
+        /// Control lblusuomail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblusuomail;
 
         /// <summary>
         /// Control txtusuario.
@@ -33,13 +33,13 @@ namespace ODS_Software_Argentina_TFI.Pages
         protected global::System.Web.UI.WebControls.TextBox txtusuario;
 
         /// <summary>
-        /// Control Label2.
+        /// Control lblingreseclaveactual.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lblingreseclaveactual;
 
         /// <summary>
         /// Control txtclavevieja.
@@ -51,13 +51,13 @@ namespace ODS_Software_Argentina_TFI.Pages
         protected global::System.Web.UI.WebControls.TextBox txtclavevieja;
 
         /// <summary>
-        /// Control Label3.
+        /// Control lblclavenueva.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label lblclavenueva;
 
         /// <summary>
         /// Control txtclavenueva.

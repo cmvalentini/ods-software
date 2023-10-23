@@ -20,6 +20,15 @@ namespace ODS_Software_Argentina_TFI.Pages.BackupRestore
                 {
                     Response.Redirect("LogIn");
                 }
+                if (Session["IdiomaID"] is null)
+                {
+                    Session["IdiomaID"] = 0;
+                    TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                }
+                else
+                {
+                    TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                }
             }
         }
 

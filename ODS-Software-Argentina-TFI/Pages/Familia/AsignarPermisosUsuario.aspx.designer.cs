@@ -15,13 +15,13 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
     {
 
         /// <summary>
-        /// Control Label2.
+        /// Control lblseleccionarfamilia.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lblseleccionarfamilia;
 
         /// <summary>
         /// Control ddlRolList.
@@ -42,13 +42,13 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
         protected global::System.Web.UI.WebControls.Button btnAplicarFamilia;
 
         /// <summary>
-        /// Control Label4.
+        /// Control lblseleccionarusuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label lblseleccionarusuario;
 
         /// <summary>
         /// Control ddlUserList.
@@ -60,22 +60,22 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
         protected global::System.Web.UI.WebControls.DropDownList ddlUserList;
 
         /// <summary>
-        /// Control Label3.
+        /// Control lblpermisosNOasignados.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label lblpermisosNOasignados;
 
         /// <summary>
-        /// Control Label1.
+        /// Control lblpermisosAsignados.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblpermisosAsignados;
 
         /// <summary>
         /// Control listNotAssing.

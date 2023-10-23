@@ -43,7 +43,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="eng-lang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eng-lang.resx</DependentUpon>
+    </Compile>
+    <Compile Include="esp-lang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>esp-lang.resx</DependentUpon>
+    </Compile>
     <Compile Include="Familia\FamiliaBLL.cs" />
+    <Compile Include="IdiomaBLL.cs" />
     <Compile Include="Pedido\PedidoBLL.cs" />
     <Compile Include="PermisosComposite\Component.cs" />
     <Compile Include="PermisosComposite\Composite.cs" />
@@ -69,6 +80,15 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="eng-lang.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>eng-lang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="esp-lang.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>esp-lang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

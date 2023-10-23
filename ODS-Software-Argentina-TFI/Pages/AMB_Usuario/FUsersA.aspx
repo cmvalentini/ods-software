@@ -13,25 +13,25 @@
        <br />
         <div class="mx-auto d-flex flex-column align-items-center justify-content-center" >
                  <div class="mb-3">
-            <label class="form-label">Usuario</label>
+            <label class="form-label" id="lblusuario">Usuario</label>
             <asp:TextBox runat="server" CssClass="form-control" ID="txtUsuario" ></asp:TextBox>
         </div>
 
         <div class="mb-3">
-            <label class="form-label">Nombre</label>
+            <label class="form-label" id="lblnombre">Nombre</label>
             <asp:TextBox runat="server" CssClass="form-control" ID="txtnombre" ></asp:TextBox>
         </div>
           <div class="mb-3">
-            <label class="form-label">Apellido</label>
+            <label class="form-label" id="lblapellido">Apellido</label>
             <asp:TextBox runat="server" CssClass="form-control" ID="txtapellido"></asp:TextBox>
         </div>
         <div class="mb-3">
-            <label class="form-label">Mail</label>
+            <label class="form-label" id="lblmail">Mail</label>
             <asp:TextBox runat="server" CssClass="form-control" ID="txtemail"></asp:TextBox>
         </div>
      
         <div class="mb-3">
-            <label class="form-label">Habilitado : </label>
+            <label class="form-label" id="lblhabilitado">Habilitado : </label>
             <asp:CheckBox Text="" ID="chkHabilitado" runat="server" />    
         </div>
         <asp:Button Text="Crear" ID="BtnCreate" CssClass="btn form-control-sm btn-info" Visible="false" runat="server" OnClick="BtnCreate_Click" />  

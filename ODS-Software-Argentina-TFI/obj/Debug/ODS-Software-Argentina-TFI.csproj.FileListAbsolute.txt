@@ -63,3 +63,5 @@ C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\ODS-Software-Argentina-T
 C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\ODS-Software-Argentina-TFI\bin\BE.pdb
 C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\ODS-Software-Argentina-TFI\bin\BLL.pdb
 C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\ODS-Software-Argentina-TFI\bin\DAL.pdb
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\ODS-Software-Argentina-TFI\bin\Newtonsoft.Json.dll
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\ODS-Software-Argentina-TFI\bin\Newtonsoft.Json.xml

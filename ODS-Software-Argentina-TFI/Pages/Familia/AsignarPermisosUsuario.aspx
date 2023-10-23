@@ -12,7 +12,7 @@
             <tr class="table">
                 <td>
                     <strong>
-                        <asp:Label ID="Label2" runat="server" Text="Seleccionar Familia"></asp:Label>
+                        <asp:Label ID="lblseleccionarfamilia" runat="server" Text="Seleccionar Familia"></asp:Label>
                     </strong>
                     <br />
                         <asp:DropDownList ID="ddlRolList" class="auto-style4" runat="server" OnSelectedIndexChanged="ddlRolList_SelectedIndexChanged" AutoPostBack="True" ></asp:DropDownList>
@@ -20,7 +20,7 @@
                     <asp:Button ID="btnAplicarFamilia" runat="server" Text="Aplicar Familia" CssClass="btn btn-light" OnClick="btnAplicarFamilia_Click" />
                     <br />
                     <strong>
-                        <asp:Label ID="Label4" runat="server" Text="Seleccionar Usuario"></asp:Label>
+                        <asp:Label ID="lblseleccionarusuario" runat="server" Text="Seleccionar Usuario"></asp:Label>
                     </strong>
                      <br />
                         <asp:DropDownList ID="ddlUserList" class="auto-style4" runat="server" OnSelectedIndexChanged="ddlUserList_SelectedIndexChanged" AutoPostBack="True" ></asp:DropDownList>
@@ -35,7 +35,7 @@
             <tr>
                 <td>
                     <strong>
-                        <asp:Label ID="Label3" runat="server" Text="PERMISOS NO ASIGNADOS"></asp:Label>
+                        <asp:Label ID="lblpermisosNOasignados" runat="server" Text="PERMISOS NO ASIGNADOS"></asp:Label>
                         <br />
                     </strong>
                 </td>
@@ -43,7 +43,7 @@
                 <td class="auto-style1"></td>
                 <td>
                     <strong>
-                        <asp:Label ID="Label1" runat="server" Text="PERMISOS ASIGNADOS"></asp:Label>
+                        <asp:Label ID="lblpermisosAsignados" runat="server" Text="PERMISOS ASIGNADOS"></asp:Label>
                         <br />
                     </strong>
                 </td>

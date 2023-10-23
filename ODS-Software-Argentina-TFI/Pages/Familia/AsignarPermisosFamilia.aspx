@@ -26,7 +26,7 @@
             <tr>
                 <td>
                     <strong>
-                        <asp:Label ID="Label3" runat="server" Text="PERMISOS NO ASIGNADOS"></asp:Label>
+                        <asp:Label ID="lblpermisosNOasignados" runat="server" Text="PERMISOS NO ASIGNADOS"></asp:Label>
                         <br />
                     </strong>
                 </td>
@@ -34,7 +34,7 @@
                 <td class="auto-style1"></td>
                 <td>
                     <strong>
-                        <asp:Label ID="Label1" runat="server" Text="PERMISOS ASIGNADOS"></asp:Label>
+                        <asp:Label ID="lblpermisosAsignados" runat="server" Text="PERMISOS ASIGNADOS"></asp:Label>
                         <br />
                     </strong>
                 </td>

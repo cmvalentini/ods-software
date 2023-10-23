@@ -9,3 +9,6 @@ C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\bin\Debug\DAL.pdb
 C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\obj\Debug\BLL.dll
 C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\obj\Debug\BLL.pdb
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\obj\Debug\BLL.eng-lang.resources
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\obj\Debug\BLL.esp-lang.resources
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\obj\Debug\BLL.csproj.GenerateResource.cache

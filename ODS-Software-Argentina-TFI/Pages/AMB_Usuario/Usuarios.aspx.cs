@@ -13,6 +13,15 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
         List<BE.Usuario> listausuarios = new List<BE.Usuario>();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["IdiomaID"] is null)
+            {
+                Session["IdiomaID"] = 0;
+                TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+            }
+            else
+            {
+                TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+            }
             GetUsuarios();
         }
 

@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
 {
@@ -55,7 +59,16 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
                         }
 
                     }
-           
+                    if (Session["IdiomaID"] is null)
+                    {
+                        Session["IdiomaID"] = 0;
+                        TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                    }
+                    else
+                    {
+                        TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                    }
+
                 }
             }
             catch (Exception)
@@ -90,6 +103,9 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
                 (this.Master as Menu_operaciones).mostrarmodal("Creación usuario exitosa", BE.ControlException.TipoEventoException.Aviso);
                 digBLL.RecalcularDigitosunatabla("Bitacora");
                 digBLL.RecalcularDigitosunatabla("Usuario");
+                exportarxml(usube);
+
+
             }
             catch (Exception)
             {
@@ -185,6 +201,42 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
             logbll.IngresarDatoBitacora("Carga de datos Usuario", " "+txtnombre.Text + txtUsuario.Text + " ", "Bajo", Convert.ToInt32(Session["UsuarioID"]));
             digBLL.RecalcularDigitosunatabla("Bitacora");
         }
+
+
+        private void exportarxml(BE.Usuario usu) {
+            #region exportarxml
+
+            XmlSerializer xsSubmit = new XmlSerializer(typeof(BE.Usuario));
+            var xml = "";
+
+            using (var sww = new StringWriter())
+            {
+                using (XmlWriter writer = XmlWriter.Create(sww))
+                {
+                    xsSubmit.Serialize(writer, usu);
+                    xml = sww.ToString(); // Your XML
+                }
+            }
+
+            XmlDocument xdoc = new XmlDocument();
+            xdoc.LoadXml(xml);
+
+            string filePath = Server.MapPath("~/"+usu._Usuario+"__usuario.xml");
+
+            xdoc.Save(filePath);
+           
+             
+            // Provide a download link for the generated XML file
+            Response.Clear();
+            Response.ContentType = "application/xml";
+            Response.AppendHeader("Content-Disposition", "attachment; filename=__usuario.xml");
+            Response.TransmitFile(filePath);
+            Response.End();
+            #endregion
+
+
+        }
+
 
     }
 }

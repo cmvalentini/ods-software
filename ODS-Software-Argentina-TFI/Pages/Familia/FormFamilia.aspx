@@ -19,7 +19,7 @@
         </div>
 
         <div class="mb-3">
-            <label class="form-label">Descripcion de la familia:</label>
+            <label id="lbldescfamilia" class="form-label">Descripcion de la familia:</label>
             <asp:TextBox runat="server" CssClass="form-control" ID="txtDescPerfil" Height="100px" MaxLength="200" TextMode="MultiLine" ></asp:TextBox>
         </div>
        

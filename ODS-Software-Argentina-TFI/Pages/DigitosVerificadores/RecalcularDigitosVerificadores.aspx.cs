@@ -12,7 +12,15 @@ namespace ODS_Software_Argentina_TFI.Pages.DigitosVerificadores
         BLL.Seguridad.DigitosVerificadoresBLL digitos = new BLL.Seguridad.DigitosVerificadoresBLL();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["IdiomaID"] is null)
+            {
+                Session["IdiomaID"] = 0;
+                TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+            }
+            else
+            {
+                TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+            }
         }
 
         protected void btnVolver_Click(object sender, EventArgs e)

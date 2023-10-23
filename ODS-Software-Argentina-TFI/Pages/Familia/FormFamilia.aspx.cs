@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace ODS_Software_Argentina_TFI.Pages.Familia
 {
@@ -23,6 +26,16 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
             {
                 if (!Page.IsPostBack)
                 {
+                    if (Session["IdiomaID"] is null)
+                    {
+                        Session["IdiomaID"] = 0;
+                        TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                    }
+                    else
+                    {
+                        TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                    }
+
                     if (Request.QueryString["id"] != null)
                     {
                         id = Request.QueryString["id"].ToString();
@@ -127,6 +140,8 @@ protected void BtnBack_Click(object sender, EventArgs e)
                 logbll.IngresarDatoBitacora("Creación Familia", "Creacion Familia exitosa :" + txtNombrePerfil.Text + " ", "Medio", Convert.ToInt32(Session["UsuarioID"]));
                 (this.Master as Menu_operaciones).mostrarmodal("Familia Creada exitosamente", BE.ControlException.TipoEventoException.Info);
                 digBLL.RecalcularDigitosunatabla("PerfilUsuario");
+
+                exportarxml(familybe);
             }
             catch (Exception)
             {
@@ -135,5 +150,43 @@ protected void BtnBack_Click(object sender, EventArgs e)
             }
 
         }
+
+        private void exportarxml(BE.Familia.Familia familiabe)
+        {
+            #region exportarxml
+
+            XmlSerializer xsSubmit = new XmlSerializer(typeof(BE.Familia.Familia));
+            var xml = "";
+
+            using (var sww = new StringWriter())
+            {
+                using (XmlWriter writer = XmlWriter.Create(sww))
+                {
+                    xsSubmit.Serialize(writer, familiabe);
+                    xml = sww.ToString(); // Your XML
+                }
+            }
+
+            XmlDocument xdoc = new XmlDocument();
+            xdoc.LoadXml(xml);
+
+            string filePath = Server.MapPath("~/" + familiabe.NombrePerfil + "__familia.xml");
+
+            xdoc.Save(filePath);
+
+
+            // Provide a download link for the generated XML file
+            Response.Clear();
+            Response.ContentType = "application/xml";
+            Response.AppendHeader("Content-Disposition", "attachment; filename=__familia.xml");
+            Response.TransmitFile(filePath);
+            Response.End();
+            #endregion
+
+
+        }
+
+
+
     }
 }

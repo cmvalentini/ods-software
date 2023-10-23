@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -68,11 +71,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\backgroundyotros.css" />
+    <Content Include="assets\css\Carrito.css" />
     <Content Include="assets\css\landing.css" />
+    <Content Include="assets\css\Login.css" />
     <Content Include="assets\js\landing.js" />
+    <Content Include="Comprobantes\ExpPedidos.html" />
     <Content Include="Controllers\CalendarControl.ascx" />
     <Content Include="Controllers\ModalHeader.aspx" />
+    <Content Include="Images\american.png" />
     <Content Include="Images\Calendar.png" />
+    <Content Include="Images\espico.png" />
     <Content Include="Images\Home.png" />
     <Content Include="Images\info-icon-svg-27.jpg" />
     <Content Include="Images\New.png" />
@@ -258,6 +267,7 @@
     <Compile Include="Pages\MenuPrincipal.aspx.designer.cs">
       <DependentUpon>MenuPrincipal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TraductorWeb.cs" />
     <Compile Include="Pages\WebFormPrueba.aspx.cs">
       <DependentUpon>WebFormPrueba.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

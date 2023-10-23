@@ -33,22 +33,22 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
         protected global::System.Web.UI.WebControls.DropDownList ddlRolList;
 
         /// <summary>
-        /// Control Label3.
+        /// Control lblpermisosNOasignados.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label lblpermisosNOasignados;
 
         /// <summary>
-        /// Control Label1.
+        /// Control lblpermisosAsignados.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblpermisosAsignados;
 
         /// <summary>
         /// Control listNotAssing.
