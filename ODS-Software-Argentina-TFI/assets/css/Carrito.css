@@ -127,29 +127,26 @@ body {
 }
 
 .price-box__wrap__texto {
-    width: 500px;
-    height: 380px;
-    background-color: #fff;
-    border-radius: 6px;
+    width: 450px;
+    height: 500px;
+    background-color: #E2EFF7;
+    border-radius: 8px;
     box-shadow: 0 4px 8px 0px rgba(0,0,0,0.2); /*0px 22px 20px -10px rgba(0, 0, 0,0.2)*/
-    /*padding: 25px 25px 30px 25px;*/
-    text-align: right;
-    transition: all 0.4s;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -o-transition: all 0.4s;
+
+    padding: 50px 50px 50px 50px;
+    text-align: left;
+     
 }
 
 
 .price-box__wrap {
-    width: 150px;
-    height: 380px;
-    background-color: #fff;
-    border-radius: 6px;
+    width: 350px;
+    height: 510px;
+    background-color: #E2EFF7;
+    border-radius: 8px;
     box-shadow: 0 4px 8px 0px rgba(0,0,0,0.2); /*0px 22px 20px -10px rgba(0, 0, 0,0.2)*/
-    padding: 25px 25px 30px 25px;
-    text-align: right;
+    padding: 35px 35px 40px 30px;
+    text-align: justify;
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
@@ -243,6 +240,7 @@ body {
 .price-box__feat {
     margin-top: 30px;
     font-size: 16px;
+    align-content:flex-start;
 }
 
 .price-box__list {
@@ -389,7 +387,7 @@ body {
 }
 
 .row--text-center {
-    text-align: center;
+    text-align: left;
 }
 
 .carousel-control {
@@ -506,7 +504,7 @@ body {
 
 .item__people {
     margin: 0;
-    text-align: center;
+    text-align: left;
     font-weight: 700;
     font-size: 16px;
 }
@@ -514,7 +512,7 @@ body {
 .item__occupation {
     font-size: 14px;
     color: #8198ae;
-    text-align: center;
+    text-align: left;
 }
 
 .site {
@@ -524,14 +522,14 @@ body {
 .site__title {
     font-size: 30px;
     margin: 0;
-    text-align: center;
+    text-align: left;
 }
 
 .site__subtitle {
     font-size: 22px;
     color: #8198ae;
     margin: 15px 0 40px 0;
-    text-align: center;
+    text-align: left;
 }
 
 .site__img {
@@ -785,7 +783,6 @@ body {
 
 .form__field--half {
     width: 50%;
-    float: left;
 }
 
     .form__field--half:first-of-type {

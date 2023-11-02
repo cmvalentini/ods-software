@@ -19,19 +19,28 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
         private const string DESCENDING = " DESC";
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!this.IsPostBack)
+            try
             {
-                if (Session["IdiomaID"] is null)
+                if (!this.IsPostBack)
                 {
-                    Session["IdiomaID"] = 0;
-                    TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
-                }
-                else
-                {
-                    TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
-                }
+                    if (Session["IdiomaID"] is null)
+                    {
+                        Session["IdiomaID"] = 0;
+                        TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                    }
+                    else
+                    {
+                        TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                    }
 
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        
         }
 
    

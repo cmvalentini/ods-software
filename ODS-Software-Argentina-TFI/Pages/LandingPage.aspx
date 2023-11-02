@@ -61,18 +61,18 @@
   </h1>
   <h2 class="row__sub">What fits your business the best?</h2>
 </div>
-<div class="row row--center row--margin">
+<div class="row row--center row--margin custom-grid">
   <div class="col-md-4 col-sm-4 price-box price-box--purple">
     <div class="price-box__wrap">
       <div class="price-box__img"></div>
       <h1 class="price-box__title">
-        Startup
+        Free
       </h1>
       <p class="price-box__people">
        1 User
       </p>
       <h2 class="price-box__discount">
-        <span class="price-box__dollar">$</span>49<span class="price-box__discount--light">/mo</span>
+        <span class="price-box__dollar">$</span>0<span class="price-box__discount--light">/mo</span>
       </h2>
       <h3 class="price-box__price">
         Free
@@ -103,10 +103,10 @@
         100 - 500 people
       </p>
       <h2 class="price-box__discount">
-      <span class="price-box__dollar">$</span>149<span class="price-box__discount--light">/mo</span>
+      <span class="price-box__dollar">$</span>$2.500.000<span class="price-box__discount--light"></span>
       </h2>
       <h3 class="price-box__price">
-        $225/mo
+        $3.500.000 
       </h3>
       <p class="price-box__feat">
         Features
@@ -135,10 +135,10 @@
         500+ people
       </p>
       <h2 class="price-box__discount">
-      <span class="price-box__dollar">$</span>399<span class="price-box__discount--light">/mo</span>
+      <span class="price-box__dollar">$</span>$5.000.000<span class="price-box__discount--light"></span>
       </h2>
       <h3 class="price-box__price">
-        $499/mo
+        $5.000.000
       </h3>
       <p class="price-box__feat">
         Features

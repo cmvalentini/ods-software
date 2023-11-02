@@ -17,6 +17,8 @@ namespace ODS_Software_Argentina_TFI.Pages
         BLL.Familia.FamiliaBLL familybll = new BLL.Familia.FamiliaBLL();
         BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
         BLL.Seguridad.DigitosVerificadoresBLL digBLL = new BLL.Seguridad.DigitosVerificadoresBLL();
+        Web_Services.EstadisticaMVS estadisticaconcreto = new Web_Services.EstadisticaMVS();
+        Web_Services.TicketsSoporte ticketsSoporte = new Web_Services.TicketsSoporte();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -56,6 +58,27 @@ namespace ODS_Software_Argentina_TFI.Pages
                 rptErrores.DataSource = listaErrores;
                 rptErrores.DataBind();
             }
+
+            //Cargo los Web Services
+           lblServicio.Text =  estadisticaconcreto.DevolverEstadisticaMVS();
+            switch (lblServicio.Text)
+            {
+                case "S":
+                    lblServicio.Text = "Standard";    
+                        break;
+
+                case "P":
+                    lblServicio.Text = "Premium";
+                        break;
+
+                default :
+                    lblServicio.Text = "Free";
+                    break;
+            }
+
+            //2do web service
+            lblticketssoporte.Text = ticketsSoporte.DevolverTicketsSoportenoLeidos();
+
         }
 
         private void traerpermisos()

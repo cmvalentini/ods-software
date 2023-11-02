@@ -213,3 +213,15 @@ BEGIN
 	set @SQL = 'Select * from ' + @tabla
 	exec sp_executesql @sql
 END
+
+create table TicketsSoportes(
+TicketID int not null identity,
+ClienteUsuarioid int not null ,
+Leido int not null,
+Pregunta varchar(1000),
+ResponsableUsuarioID int null ,
+DVH VARCHAR(1500) null,
+FOREIGN KEY (ClienteUsuarioid) REFERENCES Usuario(UsuarioID),
+FOREIGN KEY (ResponsableUsuarioID) REFERENCES Usuario(UsuarioID),
+
+)

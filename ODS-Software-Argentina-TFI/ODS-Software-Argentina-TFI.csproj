@@ -75,8 +75,10 @@
     <Content Include="assets\css\Carrito.css" />
     <Content Include="assets\css\landing.css" />
     <Content Include="assets\css\Login.css" />
+    <Content Include="assets\css\MenuPrincipal.css" />
     <Content Include="assets\js\landing.js" />
     <Content Include="Comprobantes\ExpPedidos.html" />
+    <Content Include="Controllers\AlertControl.ascx" />
     <Content Include="Controllers\CalendarControl.ascx" />
     <Content Include="Controllers\ModalHeader.aspx" />
     <Content Include="Images\american.png" />
@@ -110,9 +112,18 @@
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\MenuPrincipal.aspx" />
     <Content Include="Pages\WebFormPrueba.aspx" />
+    <Content Include="Web Services\EstadisticaMVS.asmx" />
+    <Content Include="Web Services\TicketsSoporte.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AlertControl.ascx.cs">
+      <DependentUpon>AlertControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controllers\AlertControl.ascx.designer.cs">
+      <DependentUpon>AlertControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\CalendarControl.ascx.cs">
       <DependentUpon>CalendarControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -276,6 +287,14 @@
       <DependentUpon>WebFormPrueba.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web Services\EstadisticaMVS.asmx.cs">
+      <DependentUpon>EstadisticaMVS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Web Services\TicketsSoporte.asmx.cs">
+      <DependentUpon>TicketsSoporte.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MP.Master" />

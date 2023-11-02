@@ -53,6 +53,7 @@
     <Compile Include="Seguridad\BitacoraDAL.cs" />
     <Compile Include="Seguridad\DigitosDAL.cs" />
     <Compile Include="UsuarioDAL.cs" />
+    <Compile Include="WebServices\WebServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BE\BE.csproj">

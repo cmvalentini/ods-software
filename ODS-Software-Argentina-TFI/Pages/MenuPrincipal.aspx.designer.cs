@@ -114,6 +114,24 @@ namespace ODS_Software_Argentina_TFI.Pages
         protected global::System.Web.UI.WebControls.Button btnlogout;
 
         /// <summary>
+        /// Control lblServicio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblServicio;
+
+        /// <summary>
+        /// Control lblticketssoporte.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblticketssoporte;
+
+        /// <summary>
         /// Control panelErrores.
         /// </summary>
         /// <remarks>

@@ -24,6 +24,7 @@ namespace BLL.Seguridad
             ,"PerfilUsuario"
             ,"usuariopatente"
             ,"Pedido"
+            ,"TicketsSoporte"
 
         };
 

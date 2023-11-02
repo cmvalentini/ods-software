@@ -23,7 +23,7 @@
         <uc1:ExceptionModal runat="server" ID="ExceptionModal" />
         <form runat="server">
        
-             <div class="container body-content">
+             <div class="container body-content" style="margin-top:100px">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />

@@ -25,8 +25,8 @@ namespace ODS_Software_Argentina_TFI.Pages
                         if (control is GridView gridview)
                         {
                             //Saco columnas de gridview
-                            List<TemplateField> columnas = (control as GridView).Columns.Cast<TemplateField>().ToList();
-                            nombresControles.AddRange(columnas.Select(c => c.HeaderText));
+                          //  List<TemplateField> columnas = (control as GridView).Columns.Cast<TemplateField>().ToList();
+                          //  nombresControles.AddRange(columnas.Select(c => c.HeaderText));
                         }
                         else
                         {
