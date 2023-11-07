@@ -51,5 +51,27 @@ namespace DAL.WebServices
             return servicio;
 
         }
+
+        public string DevolverUsuariosActivos_ContretoStrategy()
+        {
+            string sql = "  select count(*) from ClientSession  where Activo = 1 ";
+
+            Conexion con = new Conexion();
+            dt = con.Ejecutarreader(sql);
+
+            if (dt.Rows.Count > 0)
+            {
+
+                foreach (DataRow item in dt.Rows)
+                {
+                    servicio = item[0].ToString();
+                }
+            }
+            return servicio;
+
+        }
+
+
+
     }
 }

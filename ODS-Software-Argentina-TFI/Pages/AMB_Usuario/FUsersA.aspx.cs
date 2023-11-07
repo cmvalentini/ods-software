@@ -15,50 +15,56 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
     {
         public static string id;
         public static string op;
+        public static string permiso = "abmusuario";
         BLL.Usuario.Usuario usuariobll = new BLL.Usuario.Usuario();
         BE.Usuario usube = new BE.Usuario();
         BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
         BLL.Seguridad.DigitosVerificadoresBLL digBLL = new BLL.Seguridad.DigitosVerificadoresBLL();
-
- 
+        BLL.Seguridad.StateController state = new BLL.Seguridad.StateController();
+       
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
+
                 if (!Page.IsPostBack)
                 {
-                    if (Request.QueryString["id"] != null)
+                   
+                    if (state.verificarpermisos(permiso, (int)Session["UsuarioID"]) == 1)
                     {
-                        id = Request.QueryString["id"].ToString();
-                    }
-                    if (Request.QueryString["op"] != null)
-                    {
-                        op = Request.QueryString["op"].ToString();
-                        switch (op)
+                        if (Request.QueryString["id"] != null)
                         {
-                            case "C":
-                                this.lbltitulo.Text = "Crear nuevo Usuario";
-                                this.BtnCreate.Visible = true;
-                                break;
-                            case "R":
-                                this.lbltitulo.Text = "Consultar Usuario";
-                                mostrarinfo();
-                                //this.btnRead.Visible = true;
-                                break;
-                            case "U":
-                                this.lbltitulo.Text = "Modificar Usuario";
-                                mostrarinfo();
-                                this.BtnUpdate.Visible = true;
-                                break;
-                            case "D":
-                                this.lbltitulo.Text = "Eliminar Usuario";
-                                mostrarinfo();
-                                this.BtnDelete.Visible = true;
-                                break;
+                            id = Request.QueryString["id"].ToString();
+                        }
+                        if (Request.QueryString["op"] != null)
+                        {
+                            op = Request.QueryString["op"].ToString();
+                            switch (op)
+                            {
+                                case "C":
+                                    this.lbltitulo.Text = "Crear nuevo Usuario";
+                                    this.BtnCreate.Visible = true;
+                                    break;
+                                case "R":
+                                    this.lbltitulo.Text = "Consultar Usuario";
+                                    mostrarinfo();
+                                    //this.btnRead.Visible = true;
+                                    break;
+                                case "U":
+                                    this.lbltitulo.Text = "Modificar Usuario";
+                                    mostrarinfo();
+                                    this.BtnUpdate.Visible = true;
+                                    break;
+                                case "D":
+                                    this.lbltitulo.Text = "Eliminar Usuario";
+                                    mostrarinfo();
+                                    this.BtnDelete.Visible = true;
+                                    break;
+
+                            }
 
                         }
-
-                    }
+                    
                     if (Session["IdiomaID"] is null)
                     {
                         Session["IdiomaID"] = 0;
@@ -67,6 +73,11 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
                     else
                     {
                         TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                    }
+                    }
+                    else
+                    {
+                        Response.Redirect("~/Pages/Login.aspx");
                     }
 
                 }

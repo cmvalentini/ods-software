@@ -33,6 +33,15 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
         protected global::System.Web.UI.WebControls.TextBox txtUsuario;
 
         /// <summary>
+        /// Control rvUser.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator rvUser;
+
+        /// <summary>
         /// Control txtnombre.
         /// </summary>
         /// <remarks>
@@ -51,6 +60,15 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
         protected global::System.Web.UI.WebControls.TextBox txtapellido;
 
         /// <summary>
+        /// Control rvlastname.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator rvlastname;
+
+        /// <summary>
         /// Control txtemail.
         /// </summary>
         /// <remarks>
@@ -58,6 +76,15 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtemail;
+
+        /// <summary>
+        /// Control remail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator remail;
 
         /// <summary>
         /// Control chkHabilitado.

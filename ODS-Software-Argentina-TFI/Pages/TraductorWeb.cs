@@ -78,7 +78,7 @@ namespace ODS_Software_Argentina_TFI.Pages
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }

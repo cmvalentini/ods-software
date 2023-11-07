@@ -15,15 +15,21 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
     {
         List<BE.Seguridad.BitacoraBE> listabitacora = new List<BE.Seguridad.BitacoraBE>();
         BLL.Seguridad.BitacoraBLL bitacoraBLL = new BLL.Seguridad.BitacoraBLL();
+        BLL.Seguridad.StateController state = new BLL.Seguridad.StateController();
         private const string ASCENDING = " ASC";
         private const string DESCENDING = " DESC";
+        private const string permiso = "consultarbitacora";
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
                 if (!this.IsPostBack)
                 {
-                    if (Session["IdiomaID"] is null)
+                    if (state.verificarpermisos(permiso, (int)Session["UsuarioID"]) == 1)
+                    {
+                        if (Session["IdiomaID"] is null)
                     {
                         Session["IdiomaID"] = 0;
                         TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
@@ -31,6 +37,19 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
                     else
                     {
                         TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                    }
+
+                    //redirect si no tiene permisos
+                    if (Session["UsuarioID"] == null)
+                    {
+                        Response.Redirect("~/Pages/Login.aspx");
+                    }
+                    
+
+                    }
+                    else
+                    {
+                        Response.Redirect("~/Pages/Login.aspx");
                     }
 
                 }

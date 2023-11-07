@@ -203,7 +203,7 @@ body {
 }
 
 .price-box__dollar {
-    font-size: 18px;
+    font-size: 50px;
     font-weight: 400;
     vertical-align: top;
     margin-right: 4px;
@@ -211,6 +211,7 @@ body {
 
 .price-box--purple .price-box__dollar {
     color: #8a3aff;
+
 }
 
 .price-box--violet .price-box__dollar {

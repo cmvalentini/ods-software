@@ -66,12 +66,14 @@
     <Compile Include="Seguridad\DigitosVerificadoresBLL.cs" />
     <Compile Include="Seguridad\EncriptacionBLL.cs" />
     <Compile Include="Seguridad\NotificationsManager.cs" />
+    <Compile Include="Seguridad\StateController.cs" />
     <Compile Include="Services\EmailSeviceBLL.cs" />
     <Compile Include="sesion.cs" />
     <Compile Include="Usuario\Usuario.cs" />
     <Compile Include="WebServices\EstadisticaMVS_ContretoStrategy.cs" />
     <Compile Include="WebServices\IStrategy.cs" />
     <Compile Include="WebServices\TicketsSoporteConcreto.cs" />
+    <Compile Include="WebServices\UsuariosActivos_ConcretoStrategy.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BE\BE.csproj">

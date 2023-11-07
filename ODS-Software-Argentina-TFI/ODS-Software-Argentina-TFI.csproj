@@ -114,6 +114,7 @@
     <Content Include="Pages\WebFormPrueba.aspx" />
     <Content Include="Web Services\EstadisticaMVS.asmx" />
     <Content Include="Web Services\TicketsSoporte.asmx" />
+    <Content Include="Web Services\UsuariosActivos.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -293,6 +294,10 @@
     </Compile>
     <Compile Include="Web Services\TicketsSoporte.asmx.cs">
       <DependentUpon>TicketsSoporte.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Web Services\UsuariosActivos.asmx.cs">
+      <DependentUpon>UsuariosActivos.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>

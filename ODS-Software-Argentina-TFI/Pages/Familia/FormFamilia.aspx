@@ -12,6 +12,11 @@
         <asp:Label runat="server" CssClass="h2" ID="lbltitulo"></asp:Label>
     </div>
    
+    <div class="container">
+     <asp:RegularExpressionValidator ID="rvUser" Display="Dynamic" runat="server" CssClass="validadores" ControlToValidate="txtNombrePerfil"
+                                        ErrorMessage="Solamente números y letras. Mínimo 6 caracteres [0003]" ValidationExpression="^[a-zA-Z0-9]{6,}$" />
+                
+
         <div class="h-100 d-flex align-items-center justify-content-center">
                  <div class="mb-3">
             <label class="form-label">Nombre de Familia:</label>
@@ -29,6 +34,7 @@
         
             <asp:Button Text="Volver" ID="BtnBack" CssClass="btn btn-primary btn-dark" Visible="true"  runat="server" OnClick="BtnBack_Click"/>  
         
+        </div>
         </div>
         <uc1:ExceptionModal runat="server" ID="ExceptionModal" />
   

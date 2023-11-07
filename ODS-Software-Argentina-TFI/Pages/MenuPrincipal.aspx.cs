@@ -19,7 +19,7 @@ namespace ODS_Software_Argentina_TFI.Pages
         BLL.Seguridad.DigitosVerificadoresBLL digBLL = new BLL.Seguridad.DigitosVerificadoresBLL();
         Web_Services.EstadisticaMVS estadisticaconcreto = new Web_Services.EstadisticaMVS();
         Web_Services.TicketsSoporte ticketsSoporte = new Web_Services.TicketsSoporte();
-
+        Web_Services.UsuariosActivos ActiveUsers = new Web_Services.UsuariosActivos();
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -78,6 +78,9 @@ namespace ODS_Software_Argentina_TFI.Pages
 
             //2do web service
             lblticketssoporte.Text = ticketsSoporte.DevolverTicketsSoportenoLeidos();
+
+            //3er web service
+            lblActiveUsers.Text = ActiveUsers.TraerUsuariosActivos();
 
         }
 

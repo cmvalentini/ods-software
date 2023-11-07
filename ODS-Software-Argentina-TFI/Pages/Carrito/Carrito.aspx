@@ -45,17 +45,16 @@
     <div class="price-box__wrap">
       <div class="price-box__img"></div>
       <h1 class="price-box__title text-center">
-        Free
+         <asp:Label ID="lblService2" CssClass="price-box__title text-center" runat="server" Text="Free"></asp:Label>
       </h1>
       <p class="price-box__people text-center">
        1 User
       </p>
       <h2 class="price-box__discount text-center">
-        <span class="price-box__dollar text-center">$</span>0<span class="price-box__discount--light text-center">/mo</span>
+        <span class="price-box__dollar text-center">$</span> 
+        <asp:Label ID="lblPrice" CssClass="price-box__dollar text-center" runat="server" Text="0"></asp:Label>
       </h2>
-      <h3 class="price-box__price text-center">
-        Free
-      </h3>
+       
           <br />
          <br />
       <p class="price-box__feat text-center">
@@ -104,9 +103,16 @@
             <asp:Label ID="lblnumerofiscalempresa"  CssClass="price-box__feat text-center" runat="server" Text="Numero fiscal Empresa:"></asp:Label>
             <br /> 
            <asp:TextBox ID="txtDniEmpresa" CssClass="form__field--half" runat="server"></asp:TextBox>
-            <br />  
+                     <asp:RegularExpressionValidator ID="rvlastname" Display="Dynamic" runat="server" CssClass="validadores" ControlToValidate="txtDniEmpresa"
+                                        ErrorMessage="Only Numbers Please" ValidationExpression="^[0-9]*$" />  
+      
+           <br />  
            <asp:Label ID="lblEmail"  CssClass="price-box__feat text-center" runat="server" Text="Email:"></asp:Label>
-            <br /> 
+                           <asp:RegularExpressionValidator ID="remail" Display="Dynamic" runat="server" CssClass="validadores" ControlToValidate="txtemail"
+                                        ErrorMessage="Please,check email" ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" />  
+      
+      
+           <br /> 
            <asp:TextBox ID="txtemail" CssClass="form__field--half" runat="server" required></asp:TextBox>
           <br />
            <asp:Label ID="lbladdress"  CssClass="price-box__feat text-center" runat="server" Text="Address:"></asp:Label>

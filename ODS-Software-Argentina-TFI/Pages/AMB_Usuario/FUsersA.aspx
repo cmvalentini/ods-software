@@ -19,15 +19,22 @@
 
         <div class="mb-3">
             <label class="form-label" id="lblnombre">Nombre</label>
+                      <asp:RegularExpressionValidator ID="rvUser" Display="Dynamic" runat="server" CssClass="validadores" ControlToValidate="txtnombre"
+                                        ErrorMessage="Only Characters Please. Mínimo 6 caracteres [0003]" ValidationExpression="^[a-zA-Z ]*$" />          
             <asp:TextBox runat="server" CssClass="form-control" ID="txtnombre" ></asp:TextBox>
         </div>
           <div class="mb-3">
             <label class="form-label" id="lblapellido">Apellido</label>
             <asp:TextBox runat="server" CssClass="form-control" ID="txtapellido"></asp:TextBox>
+               <asp:RegularExpressionValidator ID="rvlastname" Display="Dynamic" runat="server" CssClass="validadores" ControlToValidate="txtapellido"
+                                        ErrorMessage="Only Letters Please. Mínimo 6 caracteres [0003]" ValidationExpression="^[a-zA-Z ]*$" />  
         </div>
         <div class="mb-3">
             <label class="form-label" id="lblmail">Mail</label>
             <asp:TextBox runat="server" CssClass="form-control" ID="txtemail"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="remail" Display="Dynamic" runat="server" CssClass="validadores" ControlToValidate="txtapellido"
+                                        ErrorMessage="Please,check email" ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" />  
+      
         </div>
      
         <div class="mb-3">

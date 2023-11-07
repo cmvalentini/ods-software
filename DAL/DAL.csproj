@@ -52,6 +52,7 @@
     <Compile Include="Seguridad\BackRestoreDal.cs" />
     <Compile Include="Seguridad\BitacoraDAL.cs" />
     <Compile Include="Seguridad\DigitosDAL.cs" />
+    <Compile Include="Seguridad\StateControllerDAL.cs" />
     <Compile Include="UsuarioDAL.cs" />
     <Compile Include="WebServices\WebServices.cs" />
   </ItemGroup>

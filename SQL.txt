@@ -224,4 +224,25 @@ DVH VARCHAR(1500) null,
 FOREIGN KEY (ClienteUsuarioid) REFERENCES Usuario(UsuarioID),
 FOREIGN KEY (ResponsableUsuarioID) REFERENCES Usuario(UsuarioID),
 
-)
+);
+
+
+
+ create table ClientSession(
+ClientSessionID int not null primary key identity,
+UsuarioID int not null,
+Activo int not null,
+UltimaConexion date null,
+DVH varchar(600) null
+FOREIGN KEY (UsuarioID) REFERENCES Usuario(UsuarioID)
+);
+
+insert into ClientSession(UsuarioID,Activo,UltimaConexion, DVH)
+values (2,1,'2023-11-15',null)
+ 
+insert into ClientSession(UsuarioID,Activo,UltimaConexion, DVH)
+values (3,1,'2023-11-10',null)
+
+insert into ClientSession(UsuarioID,Activo,UltimaConexion, DVH)
+values (1011,1,'2023-11-15',null)
+ 

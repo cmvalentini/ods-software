@@ -11,6 +11,9 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
     {
         string id;
         List<BE.Usuario> listausuarios = new List<BE.Usuario>();
+        static string permiso = "abmusuario";
+        BLL.Seguridad.StateController state = new BLL.Seguridad.StateController();
+        // /Pages/Login.aspx
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["IdiomaID"] is null)
@@ -22,7 +25,21 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
             {
                 TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
             }
-            GetUsuarios();
+
+            //redirect si no tiene permisos
+            if (Session["UsuarioID"] == null)
+            {
+                Response.Redirect("~/Pages/Login.aspx");
+            }
+            if (state.verificarpermisos(permiso,(int)Session["UsuarioID"]) == 1)
+            {
+                GetUsuarios();
+            }
+            else
+            {
+                Response.Redirect("~/Pages/Login.aspx");
+            }
+            
         }
 
         protected void btnCreateUser_Click(object sender, EventArgs e)

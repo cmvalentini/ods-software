@@ -25,6 +25,7 @@ namespace BLL.Seguridad
             ,"usuariopatente"
             ,"Pedido"
             ,"TicketsSoporte"
+            ,"ClientSession"
 
         };
 

@@ -33,6 +33,24 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
+        /// Control lblService2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblService2;
+
+        /// <summary>
+        /// Control lblPrice.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPrice;
+
+        /// <summary>
         /// Control lbllicense.
         /// </summary>
         /// <remarks>
@@ -168,6 +186,15 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
         protected global::System.Web.UI.WebControls.TextBox txtDniEmpresa;
 
         /// <summary>
+        /// Control rvlastname.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator rvlastname;
+
+        /// <summary>
         /// Control lblEmail.
         /// </summary>
         /// <remarks>
@@ -175,6 +202,15 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblEmail;
+
+        /// <summary>
+        /// Control remail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator remail;
 
         /// <summary>
         /// Control txtemail.

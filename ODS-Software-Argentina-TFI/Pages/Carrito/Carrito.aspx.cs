@@ -32,27 +32,34 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
                     lblcommunity.Text = "Community Blog";
                     lbltast.Text = "Task Limit";
                     lblcontractors.Text = "Contractors Limit";
+                    lblPrice.Text = "2.500.000";
+                    lblService2.Text = "Standard";
                     break;
-                    break;
+                    
                 case "F":
 
                     lbllicense.Text = "1 ODS License";
                     lblcommunity.Text = "Community Blog";
                     lbltast.Text = "Task Limit";
                     lblcontractors.Text = "Contractors Limit";
-
+                    lblPrice.Text = "0";
+                    lblService2.Text = "Free";
                     break;
                 case "P":
                     lbllicense.Text = "Unlimited ODS License and 1 ISO License";
                     lblcommunity.Text = "Community Blog";
                     lbltast.Text = "Task Limit";
                     lblcontractors.Text = "Contractors Limit";
+                    lblPrice.Text = "5.000.000";
+                    lblService2.Text = "Premium";
                     break;
                 case "D":
                     lbllicense.Text = "Unlimited ODS License and 2 ISO License";
                     lblcommunity.Text = "Community Blog";
                     lbltast.Text = "Task Limit";
                     lblcontractors.Text = "Contractors Limit";
+                    
+                    lblService2.Text = "Premium";
                     break;
 
             }
