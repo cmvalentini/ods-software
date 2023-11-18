@@ -95,6 +95,13 @@
       <LastGenOutput>esp-lang.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Assets\CSS\InvoiceController.js" />
+    <Content Include="Assets\CSS\InvoiceStyle.css" />
+    <EmbeddedResource Include="Invoice.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\js\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -40,5 +40,22 @@ namespace DAL.Pedido
             }
 
         }
+
+        public int GetLastInvoiceNumer()
+        {
+            string sql = "select top(1)PedidoID from Pedido order by 1 desc";
+
+            dt = con.Ejecutarreader(sql);
+            int numerofactura = 5;
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow item in dt.Rows)
+                {
+
+                    numerofactura = Convert.ToInt32(item[0].ToString());
+                }
+            }
+            return numerofactura;
+        }
     }
 }

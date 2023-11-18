@@ -33,26 +33,6 @@
   <Table1>
     <_x0026_nbsp_x003B_ />
     <Column1>&amp;nbsp;</Column1>
-    <Column2>Medio</Column2>
-    <Column3>Usuario no encontrado</Column3>
-    <Column4>03/10/2023 9:35:32</Column4>
-    <Column5>LogIn</Column5>
-    <Column6>1</Column6>
-    <Column7>&amp;nbsp;</Column7>
-  </Table1>
-  <Table1>
-    <_x0026_nbsp_x003B_ />
-    <Column1>&amp;nbsp;</Column1>
-    <Column2>Medio</Column2>
-    <Column3>Usuario BloqueadoTestUser</Column3>
-    <Column4>03/10/2023 9:35:53</Column4>
-    <Column5>LogIn</Column5>
-    <Column6>1</Column6>
-    <Column7>&amp;nbsp;</Column7>
-  </Table1>
-  <Table1>
-    <_x0026_nbsp_x003B_ />
-    <Column1>&amp;nbsp;</Column1>
     <Column2>Bajo</Column2>
     <Column3>Login Exitoso</Column3>
     <Column4>03/10/2023 10:21:12</Column4>
@@ -83,9 +63,9 @@
   <Table1>
     <_x0026_nbsp_x003B_ />
     <Column1>&amp;nbsp;</Column1>
-    <Column2>Medio</Column2>
-    <Column3>Usuario no encontrado</Column3>
-    <Column4>03/10/2023 11:02:38</Column4>
+    <Column2>Bajo</Column2>
+    <Column3>Login Exitoso</Column3>
+    <Column4>15/11/2023 10:58:06</Column4>
     <Column5>LogIn</Column5>
     <Column6>1</Column6>
     <Column7>&amp;nbsp;</Column7>
@@ -93,9 +73,29 @@
   <Table1>
     <_x0026_nbsp_x003B_ />
     <Column1>&amp;nbsp;</Column1>
-    <Column2>Medio</Column2>
-    <Column3>Contrase&amp;#241;a incorrecta para usuario testtesttest</Column3>
-    <Column4>03/10/2023 11:02:38</Column4>
+    <Column2>Bajo</Column2>
+    <Column3>Login Exitoso</Column3>
+    <Column4>15/11/2023 14:05:09</Column4>
+    <Column5>LogIn</Column5>
+    <Column6>1</Column6>
+    <Column7>&amp;nbsp;</Column7>
+  </Table1>
+  <Table1>
+    <_x0026_nbsp_x003B_ />
+    <Column1>&amp;nbsp;</Column1>
+    <Column2>Bajo</Column2>
+    <Column3>Login Exitoso</Column3>
+    <Column4>15/11/2023 18:47:43</Column4>
+    <Column5>LogIn</Column5>
+    <Column6>1</Column6>
+    <Column7>&amp;nbsp;</Column7>
+  </Table1>
+  <Table1>
+    <_x0026_nbsp_x003B_ />
+    <Column1>&amp;nbsp;</Column1>
+    <Column2>Bajo</Column2>
+    <Column3>Login Exitoso</Column3>
+    <Column4>12/11/2023 10:57:55</Column4>
     <Column5>LogIn</Column5>
     <Column6>1</Column6>
     <Column7>&amp;nbsp;</Column7>

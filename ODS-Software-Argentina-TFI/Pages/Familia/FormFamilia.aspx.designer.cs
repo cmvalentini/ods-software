@@ -24,15 +24,6 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
         protected global::System.Web.UI.WebControls.Label lbltitulo;
 
         /// <summary>
-        /// Control rvUser.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator rvUser;
-
-        /// <summary>
         /// Control txtNombrePerfil.
         /// </summary>
         /// <remarks>
@@ -40,6 +31,15 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNombrePerfil;
+
+        /// <summary>
+        /// Control rvUser.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator rvUser;
 
         /// <summary>
         /// Control txtDescPerfil.

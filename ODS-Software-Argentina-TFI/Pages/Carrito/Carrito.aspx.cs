@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using IronPdf;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using SelectPdf;
+using HtmlToPdf = SelectPdf.HtmlToPdf;
 
 namespace ODS_Software_Argentina_TFI.Pages.Carrito
 {
     public partial class Carrito : System.Web.UI.Page
     {
+        BE.Pedido.Empresa empresa = new BE.Pedido.Empresa();
         string op = "S"; //valor por defecto 
         BLL.Seguridad.DigitosVerificadoresBLL digBLL = new BLL.Seguridad.DigitosVerificadoresBLL();
         BE.Seguridad.Encriptacion encriptacion = new BE.Seguridad.Encriptacion();
@@ -20,10 +25,13 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
         BLL.Seguridad.EncriptacionBLL cryp = new BLL.Seguridad.EncriptacionBLL();
         BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
         BLL.Seguridad.DigitosVerificadoresBLL dvbll = new BLL.Seguridad.DigitosVerificadoresBLL();
+        BLL.Pedido.PedidoBLL pedidoBLL = new BLL.Pedido.PedidoBLL();
+        int IVA;
+        int preciosiniva;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
             op = Request.QueryString["op"].ToString();
             switch (op)
             {
@@ -33,6 +41,8 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
                     lbltast.Text = "Task Limit";
                     lblcontractors.Text = "Contractors Limit";
                     lblPrice.Text = "2.500.000";
+                    IVA = 525000;
+                    preciosiniva = 1975000;
                     lblService2.Text = "Standard";
                     break;
                     
@@ -44,21 +54,27 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
                     lblcontractors.Text = "Contractors Limit";
                     lblPrice.Text = "0";
                     lblService2.Text = "Free";
+                    IVA = 0;
+                    preciosiniva = 0;
                     break;
                 case "P":
+
                     lbllicense.Text = "Unlimited ODS License and 1 ISO License";
                     lblcommunity.Text = "Community Blog";
                     lbltast.Text = "Task Limit";
                     lblcontractors.Text = "Contractors Limit";
                     lblPrice.Text = "5.000.000";
                     lblService2.Text = "Premium";
+                    IVA = 1050000;
+                    preciosiniva = 3950000;
                     break;
                 case "D":
                     lbllicense.Text = "Unlimited ODS License and 2 ISO License";
                     lblcommunity.Text = "Community Blog";
                     lbltast.Text = "Task Limit";
                     lblcontractors.Text = "Contractors Limit";
-                    
+                    IVA = 1050000;
+                    preciosiniva = 3950000;
                     lblService2.Text = "Premium";
                     break;
 
@@ -102,19 +118,18 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
                 USUARIO.PerfilID = 2;
                 USUARIO.Habilitado = true;
 
-                BE.Pedido.Empresa empresa = new BE.Pedido.Empresa();
+               
                 empresa.Nombre = txtEmpresa.Text;
                 empresa.URLComprobante = PathComprobante;
                 empresa.URLDatosEmpresa = PathArchivo;
 
                 BE.Pedido.PedidoBE pedido = new BE.Pedido.PedidoBE(USUARIO, empresa, op);
-                BLL.Pedido.PedidoBLL pedidoBLL = new BLL.Pedido.PedidoBLL();
+            
 
                 pedidoBLL.IngresarPedido(pedido);
 
                 logbll.IngresarDatoBitacora("Compra Servicio", "Creación Servicio Pendiente verificacion:" + txtEmpresa.Text + " ", "Medio", Convert.ToInt32(Session["UsuarioID"]));
-                // (this.Master as Menu_operaciones).mostrarmodal("Creación usuario exitosa", BE.ControlException.TipoEventoException.Aviso);
-
+                
                 digBLL.RecalcularDigitosunatabla("Bitacora");
                 digBLL.RecalcularDigitosunatabla("Usuario");
                 digBLL.RecalcularDigitosunatabla("Pedido");
@@ -127,61 +142,78 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
 
             }
         }
-
+ 
         protected void PRINT_Click(object sender, EventArgs e)
         {
-            #region Exportar PDF
-            const String API_KEY = "valentini.carlos.marcelo@gmail.com_16a241fce21f64f57c002ec4955def6d11cf1555deea4451a8baf62311d0034794c65331";
-            const string DestinationFile = @"C:\Users\Public\Downloads\_Sales_Document.pdf";
-            WebClient webClient = new WebClient();
-            webClient.Headers.Add("x-api-key", API_KEY);
-            //template html
-            string url = "https://api.pdf.co/v1/pdf/convert/from/html";
+            #region ArmarComprobante
 
-            Dictionary<string, object> parameters = new Dictionary<string, object>();
-            parameters.Add("templateId", 1);
-            parameters.Add("name", Path.GetFileName(DestinationFile));
-            parameters.Add("margins", "40px 20px 20px 20px");
-            parameters.Add("paperSize", "Letter");
-            parameters.Add("orientation", "Portrait");
-            parameters.Add("header", "");
-            parameters.Add("printBackground", true);
-            parameters.Add("footer", "");
-            parameters.Add("async", false);
-            parameters.Add("encrypt", false);
+            string html = ObtenerRecursoHTML("ODS_Software_Argentina_TFI.Invoice.html");
 
-            //  parameters.Add("templateData", "{\"paid\": true,\"invoice_id\": \"0021\",\"invoice_date\": \"August 29, 2041\",\"invoice_dateDue\": \"September 29, 2041\",\"issuer_name\": \"ODS SOFTWARE\",\"issuer_company\": \"Research Lab\",\"issuer_address\": \"435 South La Fayette Park Place, Argentina, CA 90057\",\"issuer_website\": \"www.example.com\",\"issuer_email\": \"info@odssoft.com\",\"client_name\": \"Cyberdyne Systems\",\"client_company\": \"Cyberdyne Systems\",\"client_address\": \"18144 El Camino Real, Sunnyvale, California\",\"client_email\": \"sales@example.com\",\"items\": [    {    \"name\": \"T-800 Prototype Research\",    \"price\": 1000.00     },   {    \"name\": \"T-800 Cloud Sync Setup\",   \"price\": 300.00     }  ],\"discount\": 100,\"tax\": 87,\"total\": 1287,\"note\": \"thank you for choosing us\"}"
-            DateTime fechaemision =  DateTime.Now;
-            DateTime fechavencimiento = DateTime.Now;
-            fechavencimiento.AddDays(5);
-            parameters.Add("templateData", "{\"paid\": true,\"invoice_id\": \"0021\",\"invoice_date\": \"" + fechaemision + "\",\"invoice_dateDue\": \"" + fechavencimiento + "\",\"issuer_name\": \"ODS SOFTWARE\",\"issuer_company\": \"ODS SOFTWARE\",\"issuer_address\": \"Lorenzini 1709 Buenos Aires, Argentina, CA 90057\",\"issuer_website\": \"www.example.com\",\"issuer_email\": \"info@odssoft.com\",\"client_name\": \"" + txtrepresentantelegalApellido.Text + "\",\"client_company\": \"" + txtEmpresa.Text + "\",\"client_address\": \"" + txtaddress.Text + "\",\"client_email\": \"" + txtEmpresa.Text + "\",\"items\": [    {    \"name\": \"Servicio ODS Standard\",    \"price\": 3500.00     }  ],\"discount\": 0,\"tax\": 200,\"total\": 3700,\"note\": \"thank you for choosing us\"}"
-
-) ;
-
-            string jsonPayload = JsonConvert.SerializeObject(parameters);
+            int n_factura =  pedidoBLL.GetLastInvoiceNumer();
 
 
-            string response = webClient.UploadString(url, jsonPayload);
-            JObject json = JObject.Parse(response);
-            if (json["error"].ToObject<bool>() == false)
+            n_factura = n_factura + 1;
+            string final = html.Replace("{{FECHA_OPERACION}}", DateTime.Now.ToString())
+               .Replace("{{NOMBRE_NEGOCIO}}", txtEmpresa.Text)
+               .Replace("{{DIRECCION_NEGOCIO}}", txtaddress.Text)
+               .Replace("{{EMAIL_NEGOCIO}}", txtemail.Text)
+               .Replace("{{N_FACTURA}}", n_factura.ToString())
+               .Replace("{{MONTO_TOTAL}}", lblPrice.Text)
+               .Replace("{{SERVICIO}}", lblService2.Text)
+               .Replace("{{SERVICIO_DESCRIPCION}}", "Servicio Implementación ")
+               .Replace("{{SERVICIO-SIN-IVA}}", preciosiniva.ToString())
+               .Replace("{{MONTO_TOTAL}}",lblPrice.Text)
+               .Replace("{{IVA}}", IVA.ToString());
+
+
+            using (MemoryStream ms = new MemoryStream())
             {
-                string resultFileUrl = json["url"].ToString();
-                Console.WriteLine(resultFileUrl);
-                webClient.DownloadFile(resultFileUrl, DestinationFile);
-                Console.WriteLine("Generated PDF file saved as \"{0}\" file.", DestinationFile);
+                HtmlToPdf converter = new HtmlToPdf();
 
-                webClient.Dispose();
+                // convierte el HTML a PDF
+                SelectPdf.PdfDocument doc = converter.ConvertHtmlString(final);
+                doc.Save(ms);
+                 
+                byte[] DocumentoPDF = ms.ToArray();
 
-                Console.WriteLine();
+                BLL.Services.EmailSeviceBLL emailbll = new BLL.Services.EmailSeviceBLL();
 
+                emailbll.enviarmailconadjunto(DocumentoPDF, txtemail.Text);
+ 
             }
-            else
-            {
 
-            }
+
 
             #endregion
 
         }
+
+        private static string ObtenerRecursoHTML(string recurso)
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            string[] lista = assembly.GetManifestResourceNames();
+
+            string[] lista2 = Assembly.GetExecutingAssembly().GetManifestResourceNames();
+             
+            //var lista = assembly.GetManifestResourceNames();
+            using (var stream = assembly.GetManifestResourceStream(recurso))
+            {
+                if (stream == null)
+                {
+                    throw new Exception("Recurso no encontrado");
+                }
+                using (var reader = new StreamReader(stream))
+                {
+                    return reader.ReadToEnd();
+                }
+            }
+
+
+
+        }
+        
+
+
+
     }
 }

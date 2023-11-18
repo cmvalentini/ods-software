@@ -16,5 +16,10 @@ namespace BLL.Pedido
 
         }
 
+        public int GetLastInvoiceNumer()
+        {
+
+            return PedidoDal.GetLastInvoiceNumer();
+        }
     }
 }

@@ -63,7 +63,7 @@
                 
                   <asp:Label ID="lblServicio" CssClass="mb-0 h3" runat="server" Text="S"></asp:Label>
               </div>
-              <p class="fs-normal mb-0">Servicio mas Vendido</p>
+              <p class="fs-normal mb-0">Best Selling Service</p>
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@
                <asp:Label ID="lblticketssoporte" CssClass="m-0 h3" runat="server" Text="0"></asp:Label>
               <span class="d-block ms-2 h3">Tickets</span>
               </div>
-              <p class="fs-normal mb-0">Tickets de soporte no Leídos</p>
+              <p class="fs-normal mb-0">Unread support Tickets</p>
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@
                 <asp:Label ID="lblActiveUsers" CssClass="mb-0 h3 " runat="server" Text="0"></asp:Label>
                 <span class="d-block ms-2 h3">Users</span>
               </div>
-              <p class="fs-normal mb-0">Usuarios Activos</p>
+              <p class="fs-normal mb-0">Active Users</p>
             </div>
           </div>
         </div>

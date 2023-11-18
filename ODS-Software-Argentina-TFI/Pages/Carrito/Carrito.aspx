@@ -80,27 +80,27 @@
         
        <div class="price-box__wrap__texto">
               <h1 class="price-box__title text-center">
-         <asp:Label ID="Label1" CssClass="fs-2 " runat="server" Text="Complete los campos"></asp:Label>
+         <asp:Label ID="Label1" CssClass="fs-2 " runat="server" Text="Complete the Fileds"></asp:Label>
       </h1>
               
            <br />
-            <asp:Label ID="lblarchivoCliente" CssClass="price-box__feat text-center" runat="server" Text="Por favor, subir el Comprobante con los datos de la empresa"></asp:Label>
+            <asp:Label ID="lblarchivoCliente" CssClass="price-box__feat text-center" runat="server" Text="Please Upload the Company Document  "></asp:Label>
             <br /> 
            <asp:FileUpload ID="FileUploadEmpresa" CssClass="btn btn-primary btn-lg btn3d" runat="server" />
             <br />
-             <asp:Label ID="lblPayment"  CssClass="price-box__feat text-center" runat="server" Text="Por favor, subir el Comprobante de deposito"></asp:Label>
+             <asp:Label ID="lblPayment"  CssClass="price-box__feat text-center" runat="server" Text="Please upload the deposit receipt"></asp:Label>
             <br />  
            <asp:FileUpload ID="FileUploadComprobante" CssClass="btn btn-primary btn-lg btn3d" runat="server" />
             <br />
-            <asp:Label ID="lblRepresentantenombre"  CssClass="price-box__feat text-center" runat="server" Text="Nombre Representante Legal :" required></asp:Label>
+            <asp:Label ID="lblRepresentantenombre"  CssClass="price-box__feat text-center" runat="server" Text="legal representative Name :" required></asp:Label>
             <br />
            <asp:TextBox ID="txtrepresentantelegalnombre" CssClass="form__field--half" runat="server"></asp:TextBox>
             <br /> 
-           <asp:Label ID="lblRepresentantenombreApellido"  CssClass="price-box__feat text-center" runat="server" Text="Apellido Representante Legal:"></asp:Label>
+           <asp:Label ID="lblRepresentantenombreApellido"  CssClass="price-box__feat text-center" runat="server" Text="legal representative Lastname :"></asp:Label>
             <br /> 
            <asp:TextBox ID="txtrepresentantelegalApellido" CssClass="form__field--half" runat="server" ></asp:TextBox>
             <br />
-            <asp:Label ID="lblnumerofiscalempresa"  CssClass="price-box__feat text-center" runat="server" Text="Numero fiscal Empresa:"></asp:Label>
+            <asp:Label ID="lblnumerofiscalempresa"  CssClass="price-box__feat text-center" runat="server" Text="Company Tax Number:"></asp:Label>
             <br /> 
            <asp:TextBox ID="txtDniEmpresa" CssClass="form__field--half" runat="server"></asp:TextBox>
                      <asp:RegularExpressionValidator ID="rvlastname" Display="Dynamic" runat="server" CssClass="validadores" ControlToValidate="txtDniEmpresa"
@@ -119,16 +119,16 @@
             <br />
             <asp:TextBox ID="txtaddress" CssClass="form__field--half" runat="server" required></asp:TextBox>
    <br />
-           <asp:Label ID="lblCliente" CssClass="price-box__feat text-center" runat="server" Text="Nombre Empresa : "></asp:Label>
+           <asp:Label ID="lblCliente" CssClass="price-box__feat text-center" runat="server" Text="Company Name : "></asp:Label>
            <br />
            <br />
         <asp:TextBox ID="txtEmpresa" CssClass="form__field--half" runat="server"></asp:TextBox>
         <br />
           
            <br />
-         <asp:Button ID="btnCompreas" CssClass="btn btn-primary btn-lg btn3d" runat="server" Text="Solicitar" OnClick="btnCompreas_Click" />
+         <asp:Button ID="btnCompreas" CssClass="btn btn-primary btn-lg btn3d" runat="server" Text="Submit" OnClick="btnCompreas_Click" />
        <br />
-         <asp:Button ID="btndownload" runat="server" Visible="false" CssClass="btn btn-primary btn-lg btn3d" OnClick="PRINT_Click" Text="Descargar Comprobante" />
+         <asp:Button ID="btndownload" runat="server" Visible="false" CssClass="btn btn-primary btn-lg btn3d" OnClick="PRINT_Click" Text="Send Billing" />
 
     
                     </div>

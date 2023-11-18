@@ -32,5 +32,12 @@ namespace BLL.Services
 
         }
 
+        public void enviarmailconadjunto(byte[] documentoPDF, string correo)
+        {
+
+            es.enviarmailconadjunto(documentoPDF, correo);
+
+
+        }
     }
 }
