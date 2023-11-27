@@ -12,25 +12,33 @@ namespace ODS_Software_Argentina_TFI.Pages
     {
         public static void TraducirPagina(int idiomaid,System.Web.UI.Page pagina)
         {
-
+            List<Type> tiposBuscados = new List<Type>() { typeof(Label), typeof(GridView), typeof(Button) };
             try
             {
                 if (pagina.HasControls())
                 {
                     //busco controles
-                    List<WebControl> controles = BuscarControles(pagina);
+                    List<WebControl> controlesTotal = BuscarControles(pagina);
                     List<string> nombresControles = new List<string>();
+                    List<WebControl> controles = controlesTotal.Where(x => x.GetType() != typeof(GridViewRow) && tiposBuscados.Contains(x.GetType())).ToList();
+
+
                     foreach (var control in controles)
                     {
                         if (control is GridView gridview)
                         {
-                            //Saco columnas de gridview
-                          //  List<TemplateField> columnas = (control as GridView).Columns.Cast<TemplateField>().ToList();
-                          //  nombresControles.AddRange(columnas.Select(c => c.HeaderText));
+                           //  Saco columnas de gridview
+                             List<TemplateField> columnas = (control as GridView).Columns.Cast<TemplateField>().ToList();
+                             nombresControles.AddRange(columnas.Select(c => c.HeaderText));
                         }
+                                            
                         else
                         {
-                            nombresControles.Add(control.ID);
+                            if (control.ID != null)
+                            {
+                                nombresControles.Add(control.ID);
+                            }
+                           
                         }
                     }
                     
@@ -50,19 +58,20 @@ namespace ODS_Software_Argentina_TFI.Pages
                             if (control is GridView)
                             {
                                 //Grdviews
-                                List<BoundField> columnas = (control as GridView).Columns.Cast<BoundField>().ToList();
+                                List<TemplateField> columnas = (control as GridView).Columns.Cast<TemplateField>().ToList();
                                 foreach (var col in columnas)
                                 {
-                                    if (dict.TryGetValue(col.DataField, out val))
+                                    if (dict.TryGetValue(col.HeaderText, out val) && col.HeaderText != null)
                                     {
                                         col.HeaderText = val;
                                     }
                                 }
                             }
+                  
                             else
                             {
                                 //Labels, TextBox, Buttons, etc.
-                                if (dict.TryGetValue(control.ID, out val))
+                                if (control != null && dict.TryGetValue(control.ID.ToString(), out val))
                                 {
                                     PropertyInfo proptxt = control.GetType().GetProperty("Text");
                                     if (proptxt != null)

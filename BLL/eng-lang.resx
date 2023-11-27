@@ -117,26 +117,113 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Admin Options" xml:space="preserve">
+    <value>Admin Options</value>
+  </data>
   <data name="btnaceptar" xml:space="preserve">
     <value>Login</value>
+  </data>
+  <data name="btnaceptar1" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="btnAsignar" xml:space="preserve">
+    <value>Assign</value>
+  </data>
+  <data name="BtnasignarPermisos" xml:space="preserve">
+    <value>Config User Profile</value>
+  </data>
+  <data name="BtnasignarPermisosusuario" xml:space="preserve">
+    <value>Assign User Operatios</value>
   </data>
   <data name="BtnBack" xml:space="preserve">
     <value>Back</value>
   </data>
+  <data name="btnback1" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="BtnBack2" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="btnBackUp" xml:space="preserve">
+    <value>BackUp</value>
+  </data>
+  <data name="btnBackup1" xml:space="preserve">
+    <value>Make Back Up</value>
+  </data>
+  <data name="btnBitacora" xml:space="preserve">
+    <value>Log</value>
+  </data>
   <data name="BtnCreate" xml:space="preserve">
     <value>Create</value>
+  </data>
+  <data name="BtnCreate1" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="btnCreateUser" xml:space="preserve">
+    <value>Create User</value>
   </data>
   <data name="BtnDelete" xml:space="preserve">
     <value>Delete</value>
   </data>
+  <data name="BtnDelete1" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="btnDeleteFamily" xml:space="preserve">
+    <value>Delete Family</value>
+  </data>
+  <data name="btnDeleteUser" xml:space="preserve">
+    <value>Delete User</value>
+  </data>
+  <data name="btnDesasignar" xml:space="preserve">
+    <value>Unassign </value>
+  </data>
+  <data name="btnDigitosverificadores" xml:space="preserve">
+    <value>Check Digits</value>
+  </data>
   <data name="btnLogin" xml:space="preserve">
     <value>Login</value>
+  </data>
+  <data name="btnModal" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="BtnPermisos" xml:space="preserve">
+    <value>Profile Users</value>
   </data>
   <data name="btnRead" xml:space="preserve">
     <value>Read</value>
   </data>
+  <data name="btnRead1" xml:space="preserve">
+    <value> Read</value>
+  </data>
+  <data name="btnReadUser" xml:space="preserve">
+    <value>Read User</value>
+  </data>
+  <data name="btnRecalcularDigitos" xml:space="preserve">
+    <value>Recheck Digits</value>
+  </data>
+  <data name="BtnRestore" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="btnRestore1" xml:space="preserve">
+    <value>Make Restore</value>
+  </data>
   <data name="BtnUpdate" xml:space="preserve">
     <value>Update</value>
+  </data>
+  <data name="BtnUpdate1" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="btnUpdateFamily" xml:space="preserve">
+    <value>Update Family</value>
+  </data>
+  <data name="btnUpdateUser" xml:space="preserve">
+    <value>Update User</value>
+  </data>
+  <data name="btnUsuarios" xml:space="preserve">
+    <value>Users Operations</value>
+  </data>
+  <data name="btnVolver" xml:space="preserve">
+    <value>Back</value>
   </data>
   <data name="chkHabilitado" xml:space="preserve">
     <value>Enabled</value>
@@ -150,10 +237,22 @@
   <data name="lblapellido" xml:space="preserve">
     <value>Surname</value>
   </data>
+  <data name="lblapellido1" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
   <data name="lblClave" xml:space="preserve">
-    <value>Key : </value>
+    <value>Key</value>
+  </data>
+  <data name="LblClaveUsuario" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="lbldescfamilia" xml:space="preserve">
+    <value>Profile Name</value>
   </data>
   <data name="lblhabilitado" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="lblhabilitado1" xml:space="preserve">
     <value>Enabled</value>
   </data>
   <data name="lblLogin" xml:space="preserve">
@@ -165,10 +264,31 @@
   <data name="lblnombre" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="lblnombre1" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="lblpermisosAsignados" xml:space="preserve">
+    <value>Assigned Permissions</value>
+  </data>
+  <data name="lblpermisosNOasignados" xml:space="preserve">
+    <value>Unassigned Permissions</value>
+  </data>
+  <data name="lblRutabackup" xml:space="preserve">
+    <value>Default Path</value>
+  </data>
+  <data name="lblRutarestore" xml:space="preserve">
+    <value>Default Path</value>
+  </data>
+  <data name="LblSeleccionarFamilia" xml:space="preserve">
+    <value>Select Rol</value>
+  </data>
   <data name="lblUsuario" xml:space="preserve">
-    <value>Username : </value>
+    <value>Username</value>
   </data>
   <data name="lblusuario1" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="lblUsuario2" xml:space="preserve">
     <value>User</value>
   </data>
   <data name="LinkButton1" xml:space="preserve">
@@ -177,7 +297,25 @@
   <data name="Mensaje" xml:space="preserve">
     <value>Message</value>
   </data>
+  <data name="MensajeCuerpo" xml:space="preserve">
+    <value>MensajeCuerpo</value>
+  </data>
+  <data name="MensajeHeader" xml:space="preserve">
+    <value>MensajeHeader</value>
+  </data>
+  <data name="null" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="Opciones del Administrador" xml:space="preserve">
+    <value>Admin Options</value>
+  </data>
   <data name="TipoEventoSt" xml:space="preserve">
     <value>Type of Event</value>
+  </data>
+  <data name="txtDescPerfil" xml:space="preserve">
+    <value>Description Profile</value>
+  </data>
+  <data name="txtemail" xml:space="preserve">
+    <value>E-mail</value>
   </data>
 </root>

@@ -61,11 +61,65 @@ namespace BLL {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a  .
+        /// </summary>
+        internal static string _null {
+            get {
+                return ResourceManager.GetString("null", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Admin Options.
+        /// </summary>
+        internal static string Admin_Options {
+            get {
+                return ResourceManager.GetString("Admin Options", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Login.
         /// </summary>
         internal static string btnaceptar {
             get {
                 return ResourceManager.GetString("btnaceptar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Login.
+        /// </summary>
+        internal static string btnaceptar1 {
+            get {
+                return ResourceManager.GetString("btnaceptar1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Assign.
+        /// </summary>
+        internal static string btnAsignar {
+            get {
+                return ResourceManager.GetString("btnAsignar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Config User Profile.
+        /// </summary>
+        internal static string BtnasignarPermisos {
+            get {
+                return ResourceManager.GetString("BtnasignarPermisos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Assign User Operatios.
+        /// </summary>
+        internal static string BtnasignarPermisosusuario {
+            get {
+                return ResourceManager.GetString("BtnasignarPermisosusuario", resourceCulture);
             }
         }
         
@@ -79,11 +133,74 @@ namespace BLL {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Back.
+        /// </summary>
+        internal static string btnback1 {
+            get {
+                return ResourceManager.GetString("btnback1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Back.
+        /// </summary>
+        internal static string BtnBack2 {
+            get {
+                return ResourceManager.GetString("BtnBack2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a BackUp.
+        /// </summary>
+        internal static string btnBackUp {
+            get {
+                return ResourceManager.GetString("btnBackUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Make Back Up.
+        /// </summary>
+        internal static string btnBackup1 {
+            get {
+                return ResourceManager.GetString("btnBackup1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Log.
+        /// </summary>
+        internal static string btnBitacora {
+            get {
+                return ResourceManager.GetString("btnBitacora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Create.
         /// </summary>
         internal static string BtnCreate {
             get {
                 return ResourceManager.GetString("BtnCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Create.
+        /// </summary>
+        internal static string BtnCreate1 {
+            get {
+                return ResourceManager.GetString("BtnCreate1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Create User.
+        /// </summary>
+        internal static string btnCreateUser {
+            get {
+                return ResourceManager.GetString("btnCreateUser", resourceCulture);
             }
         }
         
@@ -97,11 +214,74 @@ namespace BLL {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Delete.
+        /// </summary>
+        internal static string BtnDelete1 {
+            get {
+                return ResourceManager.GetString("BtnDelete1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Delete Family.
+        /// </summary>
+        internal static string btnDeleteFamily {
+            get {
+                return ResourceManager.GetString("btnDeleteFamily", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Delete User.
+        /// </summary>
+        internal static string btnDeleteUser {
+            get {
+                return ResourceManager.GetString("btnDeleteUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Unassign .
+        /// </summary>
+        internal static string btnDesasignar {
+            get {
+                return ResourceManager.GetString("btnDesasignar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Check Digits.
+        /// </summary>
+        internal static string btnDigitosverificadores {
+            get {
+                return ResourceManager.GetString("btnDigitosverificadores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Login.
         /// </summary>
         internal static string btnLogin {
             get {
                 return ResourceManager.GetString("btnLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Accept.
+        /// </summary>
+        internal static string btnModal {
+            get {
+                return ResourceManager.GetString("btnModal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Profile Users.
+        /// </summary>
+        internal static string BtnPermisos {
+            get {
+                return ResourceManager.GetString("BtnPermisos", resourceCulture);
             }
         }
         
@@ -115,11 +295,101 @@ namespace BLL {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a  Read.
+        /// </summary>
+        internal static string btnRead1 {
+            get {
+                return ResourceManager.GetString("btnRead1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Read User.
+        /// </summary>
+        internal static string btnReadUser {
+            get {
+                return ResourceManager.GetString("btnReadUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Recheck Digits.
+        /// </summary>
+        internal static string btnRecalcularDigitos {
+            get {
+                return ResourceManager.GetString("btnRecalcularDigitos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Restore.
+        /// </summary>
+        internal static string BtnRestore {
+            get {
+                return ResourceManager.GetString("BtnRestore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Make Restore.
+        /// </summary>
+        internal static string btnRestore1 {
+            get {
+                return ResourceManager.GetString("btnRestore1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Update.
         /// </summary>
         internal static string BtnUpdate {
             get {
                 return ResourceManager.GetString("BtnUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Update.
+        /// </summary>
+        internal static string BtnUpdate1 {
+            get {
+                return ResourceManager.GetString("BtnUpdate1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Update Family.
+        /// </summary>
+        internal static string btnUpdateFamily {
+            get {
+                return ResourceManager.GetString("btnUpdateFamily", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Update User.
+        /// </summary>
+        internal static string btnUpdateUser {
+            get {
+                return ResourceManager.GetString("btnUpdateUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Users Operations.
+        /// </summary>
+        internal static string btnUsuarios {
+            get {
+                return ResourceManager.GetString("btnUsuarios", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Back.
+        /// </summary>
+        internal static string btnVolver {
+            get {
+                return ResourceManager.GetString("btnVolver", resourceCulture);
             }
         }
         
@@ -160,11 +430,38 @@ namespace BLL {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Key : .
+        ///   Busca una cadena traducida similar a Last Name.
+        /// </summary>
+        internal static string lblapellido1 {
+            get {
+                return ResourceManager.GetString("lblapellido1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Key.
         /// </summary>
         internal static string lblClave {
             get {
                 return ResourceManager.GetString("lblClave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Password.
+        /// </summary>
+        internal static string LblClaveUsuario {
+            get {
+                return ResourceManager.GetString("LblClaveUsuario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Profile Name.
+        /// </summary>
+        internal static string lbldescfamilia {
+            get {
+                return ResourceManager.GetString("lbldescfamilia", resourceCulture);
             }
         }
         
@@ -174,6 +471,15 @@ namespace BLL {
         internal static string lblhabilitado {
             get {
                 return ResourceManager.GetString("lblhabilitado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enabled.
+        /// </summary>
+        internal static string lblhabilitado1 {
+            get {
+                return ResourceManager.GetString("lblhabilitado1", resourceCulture);
             }
         }
         
@@ -205,7 +511,61 @@ namespace BLL {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Username : .
+        ///   Busca una cadena traducida similar a Name.
+        /// </summary>
+        internal static string lblnombre1 {
+            get {
+                return ResourceManager.GetString("lblnombre1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Assigned Permissions.
+        /// </summary>
+        internal static string lblpermisosAsignados {
+            get {
+                return ResourceManager.GetString("lblpermisosAsignados", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Unassigned Permissions.
+        /// </summary>
+        internal static string lblpermisosNOasignados {
+            get {
+                return ResourceManager.GetString("lblpermisosNOasignados", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Default Path.
+        /// </summary>
+        internal static string lblRutabackup {
+            get {
+                return ResourceManager.GetString("lblRutabackup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Default Path.
+        /// </summary>
+        internal static string lblRutarestore {
+            get {
+                return ResourceManager.GetString("lblRutarestore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Select Rol.
+        /// </summary>
+        internal static string LblSeleccionarFamilia {
+            get {
+                return ResourceManager.GetString("LblSeleccionarFamilia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Username.
         /// </summary>
         internal static string lblUsuario {
             get {
@@ -219,6 +579,15 @@ namespace BLL {
         internal static string lblusuario1 {
             get {
                 return ResourceManager.GetString("lblusuario1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a User.
+        /// </summary>
+        internal static string lblUsuario2 {
+            get {
+                return ResourceManager.GetString("lblUsuario2", resourceCulture);
             }
         }
         
@@ -241,11 +610,56 @@ namespace BLL {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a MensajeCuerpo.
+        /// </summary>
+        internal static string MensajeCuerpo {
+            get {
+                return ResourceManager.GetString("MensajeCuerpo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a MensajeHeader.
+        /// </summary>
+        internal static string MensajeHeader {
+            get {
+                return ResourceManager.GetString("MensajeHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Admin Options.
+        /// </summary>
+        internal static string Opciones_del_Administrador {
+            get {
+                return ResourceManager.GetString("Opciones del Administrador", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Type of Event.
         /// </summary>
         internal static string TipoEventoSt {
             get {
                 return ResourceManager.GetString("TipoEventoSt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Description Profile.
+        /// </summary>
+        internal static string txtDescPerfil {
+            get {
+                return ResourceManager.GetString("txtDescPerfil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a E-mail.
+        /// </summary>
+        internal static string txtemail {
+            get {
+                return ResourceManager.GetString("txtemail", resourceCulture);
             }
         }
     }

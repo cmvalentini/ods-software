@@ -12,7 +12,7 @@
             <tr>
                 <td>
                     <strong>
-                        <asp:Label ID="Label2" runat="server" Text="SELECCIONAR Familia"></asp:Label>
+                        <asp:Label ID="LblSeleccionarFamilia" runat="server" Text="SELECCIONAR FAMILIA"></asp:Label>
                     </strong>
                     <br />
                         <asp:DropDownList ID="ddlRolList" class="auto-style4" runat="server" OnSelectedIndexChanged="ddlRolList_SelectedIndexChanged" AutoPostBack="True" ></asp:DropDownList>
@@ -72,8 +72,8 @@
           
         </table>
      <div>
-                        <asp:Button ID="btnupdate" CssClass="btn btn-success" runat="server" Text="Guardar" OnClick="btnUpdate_Click" />
-                        <asp:Button ID="btnback" CssClass="btn btn-dark" runat="server" Text="Volver" OnClick="btnBack_Click" />
+                        <asp:Button ID="BtnUpdate" CssClass="btn btn-success" runat="server" Text="Guardar" OnClick="btnUpdate_Click" />
+                        <asp:Button ID="BtnBack" CssClass="btn btn-dark" runat="server" Text="Volver" OnClick="btnBack_Click" />
                                            
      </div>
          <br />

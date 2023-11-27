@@ -15,13 +15,13 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
     {
 
         /// <summary>
-        /// Control Label2.
+        /// Control LblSeleccionarFamilia.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label LblSeleccionarFamilia;
 
         /// <summary>
         /// Control ddlRolList.
@@ -87,21 +87,21 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
         protected global::System.Web.UI.WebControls.ListBox listAssing;
 
         /// <summary>
-        /// Control btnupdate.
+        /// Control BtnUpdate.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnupdate;
+        protected global::System.Web.UI.WebControls.Button BtnUpdate;
 
         /// <summary>
-        /// Control btnback.
+        /// Control BtnBack.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnback;
+        protected global::System.Web.UI.WebControls.Button BtnBack;
     }
 }

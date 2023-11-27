@@ -12,13 +12,14 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
 {
     public partial class FormFamilia : System.Web.UI.Page
     {
-
+        public static string permiso = "ABMFamilias";
         public static string id;
         public static string op;
         BLL.Familia.FamiliaBLL familybll = new BLL.Familia.FamiliaBLL();
         BE.Familia.Familia familybe = new BE.Familia.Familia();
         BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
         BLL.Seguridad.DigitosVerificadoresBLL digBLL = new BLL.Seguridad.DigitosVerificadoresBLL();
+        BLL.Seguridad.StateController state = new BLL.Seguridad.StateController();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,50 +27,59 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
             {
                 if (!Page.IsPostBack)
                 {
-                    if (Session["IdiomaID"] is null)
+                    if (state.verificarpermisos(permiso, (int)Session["UsuarioID"]) == 1)
                     {
-                        Session["IdiomaID"] = 0;
-                        TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
-                    }
-                    else
-                    {
-                        TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
-                    }
-
-                    if (Request.QueryString["id"] != null)
-                    {
-                        id = Request.QueryString["id"].ToString();
-                    }
-                    if (Request.QueryString["op"] != null)
-                    {
-                        op = Request.QueryString["op"].ToString();
-                        switch (op)
+                        if (Session["IdiomaID"] is null)
                         {
-                            case "C":
-                                this.lbltitulo.Text = "Crear nueva Familia";
-                                this.BtnCreate.Visible = true;
-                                break;
-                            case "R":
-                                this.lbltitulo.Text = "Consultar Familia";
-                                mostrarinfo();
-                                //this.btnRead.Visible = true;
-                                break;
-                            case "U":
-                                this.lbltitulo.Text = "Modificar Familia";
-                                mostrarinfo();
-                                this.BtnUpdate.Visible = true;
-                                break;
-                            case "D":
-                                this.lbltitulo.Text = "Eliminar Familia";
-                                mostrarinfo();
-                                this.BtnDelete.Visible = true;
-                                break;
+                            Session["IdiomaID"] = 0;
+                            TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                        }
+                        else
+                        {
+                            TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                        }
+
+                        if (Request.QueryString["id"] != null)
+                        {
+                            id = Request.QueryString["id"].ToString();
+                        }
+                        if (Request.QueryString["op"] != null)
+                        {
+                            op = Request.QueryString["op"].ToString();
+                            switch (op)
+                            {
+                                case "C":
+                                    this.lbltitulo.Text = "Crear nueva Familia";
+                                    this.BtnCreate.Visible = true;
+                                    break;
+                                case "R":
+                                    this.lbltitulo.Text = "Consultar Familia";
+                                    mostrarinfo();
+                                    //this.btnRead.Visible = true;
+                                    break;
+                                case "U":
+                                    this.lbltitulo.Text = "Modificar Familia";
+                                    mostrarinfo();
+                                    this.BtnUpdate.Visible = true;
+                                    break;
+                                case "D":
+                                    this.lbltitulo.Text = "Eliminar Familia";
+                                    mostrarinfo();
+                                    this.BtnDelete.Visible = true;
+                                    break;
+
+                            }
 
                         }
 
                     }
+                    else
+                    {
+                        Response.Redirect("~/Pages/Login.aspx");
 
+                    }
                 }
+               
             }
             catch (Exception)
             {

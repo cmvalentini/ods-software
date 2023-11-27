@@ -9,7 +9,7 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
 {
     public partial class AsignarPermisosUsuario : System.Web.UI.Page
     {
-
+        public static string permiso = "AsignarPermisos";
         BLL.PermisosComposite.ManejadorPerfilUsuarios mpu = new BLL.PermisosComposite.ManejadorPerfilUsuarios();
         List<BE.Permisos.Component> listaoperaciones = new List<BE.Permisos.Component>();
         List<BE.Permisos.Component> listaoperacionesperfil = new List<BE.Permisos.Component>();
@@ -22,27 +22,34 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
         BE.Usuario usuariobe = new BE.Usuario();
         BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
         BLL.Seguridad.DigitosVerificadoresBLL digBLL = new BLL.Seguridad.DigitosVerificadoresBLL();
+        BLL.Seguridad.StateController state = new BLL.Seguridad.StateController();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             if (!this.IsPostBack)
             {
-                listafamilias = familiaBLL.GetFamilias(listafamilias);
+                if (state.verificarpermisos(permiso, (int)Session["UsuarioID"]) == 1)
+                {
+                    listafamilias = familiaBLL.GetFamilias(listafamilias);
 
-                ddlRolList.DataSource = listafamilias;
-                ddlRolList.DataTextField = "NombrePerfil";
-                ddlRolList.DataValueField = "NombrePerfil";
-                ddlRolList.DataBind();
+                    ddlRolList.DataSource = listafamilias;
+                    ddlRolList.DataTextField = "NombrePerfil";
+                    ddlRolList.DataValueField = "NombrePerfil";
+                    ddlRolList.DataBind();
 
-                listausuarios = usuariobll.GetUsuarios(listausuarios);
+                    listausuarios = usuariobll.GetUsuarios(listausuarios);
 
-                ddlUserList.DataSource = listausuarios;
-                ddlUserList.DataTextField = "_Usuario";
-                ddlUserList.DataValueField = "_Usuario";
-                ddlUserList.DataBind();
+                    ddlUserList.DataSource = listausuarios;
+                    ddlUserList.DataTextField = "_Usuario";
+                    ddlUserList.DataValueField = "_Usuario";
+                    ddlUserList.DataBind();
 
-
-
+                }
+                else
+                {
+                    Response.Redirect("~/Pages/Login.aspx");
+                }
             }
 
         }

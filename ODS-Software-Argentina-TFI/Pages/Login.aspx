@@ -20,13 +20,13 @@
         </div>
              <br />
             <div class="mb-3" >
-                <asp:Label CssClass="texto-color user-box" ID="Label1" runat="server" Text="Usuario : " ></asp:Label>
-                <asp:TextBox ID="txtusuario" runat="server" CssClass="form-control" required></asp:TextBox>
+                <asp:Label CssClass="texto-color user-box" ID="lblUsuario" runat="server" Text="Usuario : " ></asp:Label>
+                <asp:TextBox ID="txtusuario" runat="server" ValidationGroup="VLogin" CssClass="form-control" required></asp:TextBox>
                 <br />
-                <asp:Label CssClass="texto-color user-box" ID="Label2" runat="server" Text="Clave : "></asp:Label>
-                <asp:TextBox ID="txtclave" runat="server" CssClass="form-control" required TextMode="Password"></asp:TextBox>
+                <asp:Label CssClass="texto-color user-box" ID="LblClaveUsuario" runat="server" Text="Clave : "></asp:Label>
+                <asp:TextBox ID="txtclave" runat="server" CssClass="form-control" required ValidationGroup="VLogin" TextMode="Password"></asp:TextBox>
                 <br />
-                <asp:Button Text="Aceptar" runat="server" CssClass="btn form-control btn-sm btn-outline-info" BackColor="#3A9FF" ID="btnaceptar" OnClick="btnaceptar_Click"  />
+                <asp:Button Text="Aceptar" runat="server" CssClass="btn form-control btn-sm btn-outline-info" BackColor="#3A9FF" ID="btnaceptar" ValidationGroup="VLogin" OnClick="btnaceptar_Click"  />
                 <br />
                  <br />
                 <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Para cambiar su Contraseña, ingrese Aquí</asp:LinkButton>

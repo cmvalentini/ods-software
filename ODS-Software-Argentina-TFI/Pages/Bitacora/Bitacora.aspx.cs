@@ -44,7 +44,6 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
                     {
                         Response.Redirect("~/Pages/Login.aspx");
                     }
-                    
 
                     }
                     else

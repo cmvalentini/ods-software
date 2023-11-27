@@ -11,20 +11,28 @@ namespace ODS_Software_Argentina_TFI.Pages.BackupRestore
     {
         BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
         BLL.Seguridad.DigitosVerificadoresBLL digBLL = new BLL.Seguridad.DigitosVerificadoresBLL();
-   
-
+        public static string permiso = "HacerRestore";
+        BLL.Seguridad.StateController state = new BLL.Seguridad.StateController();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                if (Session["IdiomaID"] is null)
+                if (state.verificarpermisos(permiso, (int)Session["UsuarioID"]) == 1)
                 {
-                    Session["IdiomaID"] = 0;
-                    TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                    if (Session["IdiomaID"] is null)
+                    {
+                        Session["IdiomaID"] = 0;
+                        TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                    }
+                    else
+                    {
+                        TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                    }
+
                 }
                 else
                 {
-                    TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                    Response.Redirect("~/Pages/Login.aspx");
                 }
             }
         }

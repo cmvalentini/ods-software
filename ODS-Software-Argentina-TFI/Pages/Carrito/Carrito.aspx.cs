@@ -151,7 +151,7 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
 
             int n_factura =  pedidoBLL.GetLastInvoiceNumer();
 
-
+          
             n_factura = n_factura + 1;
             string final = html.Replace("{{FECHA_OPERACION}}", DateTime.Now.ToString())
                .Replace("{{NOMBRE_NEGOCIO}}", txtEmpresa.Text)
@@ -179,13 +179,24 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
                 BLL.Services.EmailSeviceBLL emailbll = new BLL.Services.EmailSeviceBLL();
 
                 emailbll.enviarmailconadjunto(DocumentoPDF, txtemail.Text);
- 
+
+                //create your file at filePath
+               
+                //  File(DocumentoPDF, System.Net.Mime.MediaTypeNames.Application.Octet, "Invoice"+ n_factura + ".pdf");
+
+
+
             }
 
 
 
             #endregion
 
+        }
+
+        private void File(byte[] fileBytes, string octet, string v)
+        {
+            throw new NotImplementedException();
         }
 
         private static string ObtenerRecursoHTML(string recurso)

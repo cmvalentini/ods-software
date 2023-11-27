@@ -9,17 +9,19 @@ namespace ODS_Software_Argentina_TFI.Pages.BackupRestore
 {
     public partial class Backup : System.Web.UI.Page
     {
-        BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
 
+        public static string permiso = "HacerBackUp";
+        BLL.Seguridad.BitacoraBLL logbll = new BLL.Seguridad.BitacoraBLL();
+        BLL.Seguridad.StateController state = new BLL.Seguridad.StateController();
         BLL.Seguridad.DigitosVerificadoresBLL digBLL = new BLL.Seguridad.DigitosVerificadoresBLL();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                if (Session["idUsuario"] == null)
+                if (state.verificarpermisos(permiso, (int)Session["UsuarioID"]) == 1)
                 {
-                    Response.Redirect("LogIn");
-                }
+                    
+               
                 if (Session["IdiomaID"] is null)
                 {
                     Session["IdiomaID"] = 0;
@@ -28,6 +30,12 @@ namespace ODS_Software_Argentina_TFI.Pages.BackupRestore
                 else
                 {
                     TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                }
+
+                }
+                else
+                {
+                    Response.Redirect("~/Pages/Login.aspx");
                 }
             }
         }

@@ -17,28 +17,35 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
         List<BE.Familia.Familia> listafamilias = new List<BE.Familia.Familia>();
         BLL.Familia.FamiliaBLL familiaBLL = new BLL.Familia.FamiliaBLL();
         BLL.Seguridad.DigitosVerificadoresBLL digBLL = new BLL.Seguridad.DigitosVerificadoresBLL();
-        
+        public static string permiso = "AsignarPermisos";
+        BLL.Seguridad.StateController state = new BLL.Seguridad.StateController();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!this.IsPostBack)
             {
-
-                if (Session["IdiomaID"] is null)
+                if (state.verificarpermisos(permiso, (int)Session["UsuarioID"]) == 1)
                 {
-                    Session["IdiomaID"] = 0;
-                    TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
-                }
-                else
-                {
-                    TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
-                }
-                listafamilias = familiaBLL.GetFamilias(listafamilias);
+                    if (Session["IdiomaID"] is null)
+                    {
+                        Session["IdiomaID"] = 0;
+                        TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                    }
+                    else
+                    {
+                        TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                    }
+                    listafamilias = familiaBLL.GetFamilias(listafamilias);
 
-                ddlRolList.DataSource = listafamilias;
-                ddlRolList.DataTextField = "NombrePerfil";
-                ddlRolList.DataValueField = "NombrePerfil";
-                ddlRolList.DataBind();
+                    ddlRolList.DataSource = listafamilias;
+                    ddlRolList.DataTextField = "NombrePerfil";
+                    ddlRolList.DataValueField = "NombrePerfil";
+                    ddlRolList.DataBind();
+                }
+                else {
+                    Response.Redirect("~/Pages/Login.aspx");
 
+                }
                
             }
          

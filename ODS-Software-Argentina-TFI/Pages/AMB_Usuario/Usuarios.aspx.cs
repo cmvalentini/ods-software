@@ -14,6 +14,7 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
         static string permiso = "abmusuario";
         BLL.Seguridad.StateController state = new BLL.Seguridad.StateController();
         // /Pages/Login.aspx
+       
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["IdiomaID"] is null)
@@ -27,12 +28,9 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
             }
 
             //redirect si no tiene permisos
-            if (Session["UsuarioID"] == null)
+            if (state.verificarpermisos(permiso, (int)Session["UsuarioID"]) == 1)
             {
-                Response.Redirect("~/Pages/Login.aspx");
-            }
-            if (state.verificarpermisos(permiso,(int)Session["UsuarioID"]) == 1)
-            {
+                
                 GetUsuarios();
             }
             else

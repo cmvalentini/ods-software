@@ -10,16 +10,30 @@ namespace ODS_Software_Argentina_TFI.Pages.DigitosVerificadores
     public partial class RecalcularDigitosVerificadores : System.Web.UI.Page
     {
         BLL.Seguridad.DigitosVerificadoresBLL digitos = new BLL.Seguridad.DigitosVerificadoresBLL();
+        public static string permiso = "digitosverificadores";
+        BLL.Seguridad.StateController state = new BLL.Seguridad.StateController();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["IdiomaID"] is null)
+            if (!IsPostBack)
             {
-                Session["IdiomaID"] = 0;
-                TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
-            }
-            else
-            {
-                TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                if (state.verificarpermisos(permiso, (int)Session["UsuarioID"]) == 1)
+                {
+                    if (Session["IdiomaID"] is null)
+                    {
+                        Session["IdiomaID"] = 0;
+                        TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                    }
+                    else
+                    {
+                        TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
+                    }
+
+                }
+                else
+                {
+                    Response.Redirect("~/Pages/Login.aspx");
+                }
             }
         }
 
