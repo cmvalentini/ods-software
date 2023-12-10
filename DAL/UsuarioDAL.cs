@@ -113,8 +113,8 @@ namespace DAL
 
         public Usuario CreateUser(Usuario usube)
         {
-            string sql = "insert into Usuario values( '" + usube._Usuario + "',"
-               + "'" + usube.Clave + "','" + usube.Nombre + "','" + usube.Apellido + "'," + usube.Dni + ",'" + usube.Email + "','" + usube.Habilitado + "',0," + "'_DVH')";
+            string sql = "insert into Usuario  (Usuario,Clave,Nombre,Apellido,DNI,Email,Habilitado,FlagIntentosLogin,PerfilID,DVH) values( '" + usube._Usuario + "',"
+               + "'" + usube.Clave + "','" + usube.Nombre + "','" + usube.Apellido + "'," + usube.Dni + ",'" + usube.Email + "',1,0,0,'_DVH')";
 
             usube.OResult = con.Ejecutar(sql);
             // dv.RecalcularDVH();

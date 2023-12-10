@@ -15,6 +15,15 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
     {
 
         /// <summary>
+        /// Control lblbitacoratitulo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblbitacoratitulo;
+
+        /// <summary>
         /// Control CalendarC.
         /// </summary>
         /// <remarks>
@@ -24,13 +33,13 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
         protected global::ODS_Software_Argentina_TFI.Controllers.CalendarControl CalendarC;
 
         /// <summary>
-        /// Control btnConsultarBitacora.
+        /// Control btnconsultarbitacora.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConsultarBitacora;
+        protected global::System.Web.UI.WebControls.Button btnconsultarbitacora;
 
         /// <summary>
         /// Control btnback.
@@ -42,13 +51,13 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
         protected global::System.Web.UI.WebControls.Button btnback;
 
         /// <summary>
-        /// Control btnExport.
+        /// Control btnexportlog.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExport;
+        protected global::System.Web.UI.WebControls.Button btnexportlog;
 
         /// <summary>
         /// Control btnexportxls.

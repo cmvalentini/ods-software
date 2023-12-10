@@ -98,20 +98,14 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
 
         protected void btnCompreas_Click(object sender, EventArgs e)
         {
-            if (FileUploadComprobante.HasFile && FileUploadEmpresa.HasFile)
-            {
-                string ruta = Server.MapPath("~/ClientImages/");
-                string PathArchivo = Path.Combine(ruta + txtEmpresa.Text + FileUploadEmpresa.FileName);
-                string PathComprobante = Path.Combine(ruta + txtEmpresa.Text + FileUploadComprobante.FileName);
-
-                FileUploadEmpresa.SaveAs(PathArchivo);
-                FileUploadComprobante.SaveAs(PathComprobante);
+            
+               
 
 
-                USUARIO._Usuario = txtEmpresa.Text;
+                USUARIO._Usuario = txtempresa.Text;
                 USUARIO.Nombre = txtrepresentantelegalnombre.Text;
-                USUARIO.Apellido = txtrepresentantelegalApellido.Text;
-                USUARIO.Dni = Convert.ToInt32(txtDniEmpresa.Text);
+                USUARIO.Apellido = txtrepresentantelegalapellido.Text;
+                USUARIO.Dni = Convert.ToInt32(txtdniempresa.Text);
                 USUARIO.Email = txtemail.Text;
                 encriptacion = cryp.CrearPassword();
                 USUARIO.Clave = encriptacion.Result;
@@ -119,16 +113,16 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
                 USUARIO.Habilitado = true;
 
                
-                empresa.Nombre = txtEmpresa.Text;
-                empresa.URLComprobante = PathComprobante;
-                empresa.URLDatosEmpresa = PathArchivo;
+                empresa.Nombre = txtempresa.Text;
+                empresa.URLComprobante = @"C:\Users\Charly\Downloads\" + txtempresa.Text ;
+                empresa.URLDatosEmpresa = @"C:\Users\Charly\Downloads\" + txtempresa.Text;
 
                 BE.Pedido.PedidoBE pedido = new BE.Pedido.PedidoBE(USUARIO, empresa, op);
             
 
                 pedidoBLL.IngresarPedido(pedido);
 
-                logbll.IngresarDatoBitacora("Compra Servicio", "Creación Servicio Pendiente verificacion:" + txtEmpresa.Text + " ", "Medio", Convert.ToInt32(Session["UsuarioID"]));
+                logbll.IngresarDatoBitacora("Compra Servicio", "Creación Servicio Pendiente verificacion:" + txtempresa.Text + " ", "Medio", Convert.ToInt32(Session["UsuarioID"]));
                 
                 digBLL.RecalcularDigitosunatabla("Bitacora");
                 digBLL.RecalcularDigitosunatabla("Usuario");
@@ -140,7 +134,7 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Gracias por su Compra, un representante se pondrá en contacto')", true);
 
 
-            }
+            
         }
  
         protected void PRINT_Click(object sender, EventArgs e)
@@ -154,7 +148,7 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
           
             n_factura = n_factura + 1;
             string final = html.Replace("{{FECHA_OPERACION}}", DateTime.Now.ToString())
-               .Replace("{{NOMBRE_NEGOCIO}}", txtEmpresa.Text)
+               .Replace("{{NOMBRE_NEGOCIO}}", txtempresa.Text)
                .Replace("{{DIRECCION_NEGOCIO}}", txtaddress.Text)
                .Replace("{{EMAIL_NEGOCIO}}", txtemail.Text)
                .Replace("{{N_FACTURA}}", n_factura.ToString())

@@ -15,13 +15,13 @@ namespace ODS_Software_Argentina_TFI.Pages.BackupRestore1
     {
 
         /// <summary>
-        /// Control lblTitulo.
+        /// Control lblbackuptittle.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTitulo;
+        protected global::System.Web.UI.WebControls.Label lblbackuptittle;
 
         /// <summary>
         /// Control lblError.
@@ -33,22 +33,22 @@ namespace ODS_Software_Argentina_TFI.Pages.BackupRestore1
         protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
-        /// Control txtPath.
+        /// Control txtbackuppath.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPath;
+        protected global::System.Web.UI.WebControls.TextBox txtbackuppath;
 
         /// <summary>
-        /// Control Label1.
+        /// Control lblrutabackup.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblrutabackup;
 
         /// <summary>
         /// Control lblBackup.
@@ -60,21 +60,21 @@ namespace ODS_Software_Argentina_TFI.Pages.BackupRestore1
         protected global::System.Web.UI.WebControls.Label lblBackup;
 
         /// <summary>
-        /// Control btnBackup.
+        /// Control btnbackup.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBackup;
+        protected global::System.Web.UI.WebControls.Button btnbackup;
 
         /// <summary>
-        /// Control btnVolver.
+        /// Control btnvolver.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVolver;
+        protected global::System.Web.UI.WebControls.Button btnvolver;
     }
 }

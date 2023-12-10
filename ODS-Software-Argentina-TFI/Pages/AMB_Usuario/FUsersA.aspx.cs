@@ -42,21 +42,21 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
                             switch (op)
                             {
                                 case "C":
-                                    this.lbltitulo.Text = "Crear nuevo Usuario";
+                                    this.lbltituloUsuario.Text = "Create New User";
                                     this.BtnCreate.Visible = true;
                                     break;
                                 case "R":
-                                    this.lbltitulo.Text = "Consultar Usuario";
+                                    this.lbltituloUsuario.Text = "User";
                                     mostrarinfo();
                                     //this.btnRead.Visible = true;
                                     break;
                                 case "U":
-                                    this.lbltitulo.Text = "Modificar Usuario";
+                                    this.lbltituloUsuario.Text = "Update User";
                                     mostrarinfo();
                                     this.BtnUpdate.Visible = true;
                                     break;
                                 case "D":
-                                    this.lbltitulo.Text = "Eliminar Usuario";
+                                    this.lbltituloUsuario.Text = "Drop User";
                                     mostrarinfo();
                                     this.BtnDelete.Visible = true;
                                     break;
@@ -111,11 +111,11 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
 
     
                 logbll.IngresarDatoBitacora("Creación Usuario", "Creación usuario exitosa :"+txtUsuario.Text+" ", "Medio", Convert.ToInt32(Session["UsuarioID"]));
-                (this.Master as Menu_operaciones).mostrarmodal("Creación usuario exitosa", BE.ControlException.TipoEventoException.Aviso);
                 digBLL.RecalcularDigitosunatabla("Bitacora");
                 digBLL.RecalcularDigitosunatabla("Usuario");
                 exportarxml(usube);
 
+                (this.Master as Menu_operaciones).mostrarmodal("Creación usuario exitosa", BE.ControlException.TipoEventoException.Aviso);
 
             }
             catch (Exception)
@@ -126,7 +126,7 @@ namespace ODS_Software_Argentina_TFI.Pages.AMB_Usuario
             }
 
 
-        }
+}
 
         private void mostrarinfo() {
             try

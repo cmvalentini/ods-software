@@ -5,14 +5,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-        <div class="container">
+        <div class="card mb-3">
     <br />
-    
+      <div class="mx-auto d-flex flex-column align-items-center justify-content-center" >
         <table class="auto-style7">
             <tr>
                 <td>
                     <strong>
-                        <asp:Label ID="LblSeleccionarFamilia" runat="server" Text="SELECCIONAR FAMILIA"></asp:Label>
+                        <asp:Label ID="lblseleccionarfamilia" runat="server" Text="SELECCIONAR FAMILIA"></asp:Label>
                     </strong>
                     <br />
                         <asp:DropDownList ID="ddlRolList" class="auto-style4" runat="server" OnSelectedIndexChanged="ddlRolList_SelectedIndexChanged" AutoPostBack="True" ></asp:DropDownList>
@@ -26,7 +26,7 @@
             <tr>
                 <td>
                     <strong>
-                        <asp:Label ID="lblpermisosNOasignados" runat="server" Text="PERMISOS NO ASIGNADOS"></asp:Label>
+                        <asp:Label ID="lblpermisosnoasignados" runat="server" Text="PERMISOS NO ASIGNADOS"></asp:Label>
                         <br />
                     </strong>
                 </td>
@@ -34,7 +34,7 @@
                 <td class="auto-style1"></td>
                 <td>
                     <strong>
-                        <asp:Label ID="lblpermisosAsignados" runat="server" Text="PERMISOS ASIGNADOS"></asp:Label>
+                        <asp:Label ID="lblpermisosasignados" runat="server" Text="PERMISOS ASIGNADOS"></asp:Label>
                         <br />
                     </strong>
                 </td>
@@ -54,12 +54,12 @@
                            <br />
                            <br />
 
-                    <asp:Button ID="btnAsignar" class="btn btn-primary" runat="server" Text="--&gt; Asignar Permiso" Width="232px" OnClick="btnAsignar_Click" />
+                    <asp:Button ID="btnasignar" class="btn btn-primary" runat="server" Text="--&gt; Asignar Permiso" Width="232px" OnClick="btnAsignar_Click" />
                            <br />
                     <br />
                     <br />
                     <br />
-                    <asp:Button ID="btnDesasignar" class="btn btn-primary" runat="server" Text="&lt;-- Desasignar permiso" Width="232px" OnClick="btnDesasignar_Click" />
+                    <asp:Button ID="btndesasignar" class="btn btn-primary" runat="server" Text="&lt;-- Desasignar permiso" Width="232px" OnClick="btnDesasignar_Click" />
                       </div>                
 
                 </td>
@@ -72,13 +72,12 @@
           
         </table>
      <div>
-                        <asp:Button ID="BtnUpdate" CssClass="btn btn-success" runat="server" Text="Guardar" OnClick="btnUpdate_Click" />
-                        <asp:Button ID="BtnBack" CssClass="btn btn-dark" runat="server" Text="Volver" OnClick="btnBack_Click" />
+                        <asp:Button ID="btnupdate" CssClass="btn btn-success" runat="server" Text="Guardar" OnClick="btnUpdate_Click" />
+                        <asp:Button ID="btnback" CssClass="btn btn-dark" runat="server" Text="Volver" OnClick="btnBack_Click" />
                                            
      </div>
-         <br />
-         <br />
+       
     </div>
-
+ </div>
 
 </asp:Content>

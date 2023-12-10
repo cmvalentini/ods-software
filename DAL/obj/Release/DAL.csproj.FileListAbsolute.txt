@@ -1,0 +1,9 @@
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\DAL\bin\Release\DAL.dll
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\DAL\bin\Release\DAL.pdb
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\DAL\bin\Release\BE.dll
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\DAL\bin\Release\BE.pdb
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\DAL\obj\Release\DAL.csproj.AssemblyReference.cache
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\DAL\obj\Release\DAL.csproj.CopyComplete
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\DAL\obj\Release\DAL.dll
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\DAL\obj\Release\DAL.pdb

@@ -50,7 +50,7 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
                             {
                                 case "C":
                                     this.lbltitulo.Text = "Crear nueva Familia";
-                                    this.BtnCreate.Visible = true;
+                                    this.btncreate.Visible = true;
                                     break;
                                 case "R":
                                     this.lbltitulo.Text = "Consultar Familia";
@@ -60,12 +60,12 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
                                 case "U":
                                     this.lbltitulo.Text = "Modificar Familia";
                                     mostrarinfo();
-                                    this.BtnUpdate.Visible = true;
+                                    this.btnupdate.Visible = true;
                                     break;
                                 case "D":
                                     this.lbltitulo.Text = "Eliminar Familia";
                                     mostrarinfo();
-                                    this.BtnDelete.Visible = true;
+                                    this.btndelete.Visible = true;
                                     break;
 
                             }

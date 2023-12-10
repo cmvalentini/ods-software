@@ -24,13 +24,13 @@ namespace ODS_Software_Argentina_TFI.Controllers
         protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
-        /// Control lblDesde.
+        /// Control lbldesde.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDesde;
+        protected global::System.Web.UI.WebControls.Label lbldesde;
 
         /// <summary>
         /// Control tbDesde.
@@ -60,13 +60,13 @@ namespace ODS_Software_Argentina_TFI.Controllers
         protected global::System.Web.UI.WebControls.Calendar CalDesde;
 
         /// <summary>
-        /// Control lblHasta.
+        /// Control lblhasta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHasta;
+        protected global::System.Web.UI.WebControls.Label lblhasta;
 
         /// <summary>
         /// Control tbHasta.
@@ -96,13 +96,13 @@ namespace ODS_Software_Argentina_TFI.Controllers
         protected global::System.Web.UI.WebControls.Calendar CalHasta;
 
         /// <summary>
-        /// Control lblUser.
+        /// Control lbluser.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUser;
+        protected global::System.Web.UI.WebControls.Label lbluser;
 
         /// <summary>
         /// Control DropUsuario.
@@ -114,13 +114,13 @@ namespace ODS_Software_Argentina_TFI.Controllers
         protected global::System.Web.UI.WebControls.DropDownList DropUsuario;
 
         /// <summary>
-        /// Control lblCriticidad.
+        /// Control lblcriticidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCriticidad;
+        protected global::System.Web.UI.WebControls.Label lblcriticidad;
 
         /// <summary>
         /// Control DropCriticidad.

@@ -51,13 +51,13 @@ namespace DAL.Seguridad
                 com.ExecuteReader();
 
                 con1.Close();
-               
+
             }
 
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                
+
             }
 
         }

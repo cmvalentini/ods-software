@@ -96,49 +96,49 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Control lblarchivoCliente.
+        /// Control lblarchivocliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblarchivoCliente;
+        protected global::System.Web.UI.WebControls.Label lblarchivocliente;
 
         /// <summary>
-        /// Control FileUploadEmpresa.
+        /// Control fileuploadempresa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUploadEmpresa;
+        protected global::System.Web.UI.WebControls.FileUpload fileuploadempresa;
 
         /// <summary>
-        /// Control lblPayment.
+        /// Control lblpayment.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPayment;
+        protected global::System.Web.UI.WebControls.Label lblpayment;
 
         /// <summary>
-        /// Control FileUploadComprobante.
+        /// Control fileuploadcomprobante.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUploadComprobante;
+        protected global::System.Web.UI.WebControls.FileUpload fileuploadcomprobante;
 
         /// <summary>
-        /// Control lblRepresentantenombre.
+        /// Control lblrepresentantenombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRepresentantenombre;
+        protected global::System.Web.UI.WebControls.Label lblrepresentantenombre;
 
         /// <summary>
         /// Control txtrepresentantelegalnombre.
@@ -150,22 +150,22 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
         protected global::System.Web.UI.WebControls.TextBox txtrepresentantelegalnombre;
 
         /// <summary>
-        /// Control lblRepresentantenombreApellido.
+        /// Control lblrepresentantenombreapellido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRepresentantenombreApellido;
+        protected global::System.Web.UI.WebControls.Label lblrepresentantenombreapellido;
 
         /// <summary>
-        /// Control txtrepresentantelegalApellido.
+        /// Control txtrepresentantelegalapellido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtrepresentantelegalApellido;
+        protected global::System.Web.UI.WebControls.TextBox txtrepresentantelegalapellido;
 
         /// <summary>
         /// Control lblnumerofiscalempresa.
@@ -177,13 +177,13 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
         protected global::System.Web.UI.WebControls.Label lblnumerofiscalempresa;
 
         /// <summary>
-        /// Control txtDniEmpresa.
+        /// Control txtdniempresa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDniEmpresa;
+        protected global::System.Web.UI.WebControls.TextBox txtdniempresa;
 
         /// <summary>
         /// Control rvlastname.
@@ -195,13 +195,13 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
         protected global::System.Web.UI.WebControls.RegularExpressionValidator rvlastname;
 
         /// <summary>
-        /// Control lblEmail.
+        /// Control lblemail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmail;
+        protected global::System.Web.UI.WebControls.Label lblemail;
 
         /// <summary>
         /// Control remail.
@@ -240,31 +240,31 @@ namespace ODS_Software_Argentina_TFI.Pages.Carrito
         protected global::System.Web.UI.WebControls.TextBox txtaddress;
 
         /// <summary>
-        /// Control lblCliente.
+        /// Control lblcliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCliente;
+        protected global::System.Web.UI.WebControls.Label lblcliente;
 
         /// <summary>
-        /// Control txtEmpresa.
+        /// Control txtempresa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmpresa;
+        protected global::System.Web.UI.WebControls.TextBox txtempresa;
 
         /// <summary>
-        /// Control btnCompreas.
+        /// Control btncompreas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCompreas;
+        protected global::System.Web.UI.WebControls.Button btncompreas;
 
         /// <summary>
         /// Control btndownload.

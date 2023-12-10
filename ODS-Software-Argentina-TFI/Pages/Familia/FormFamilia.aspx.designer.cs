@@ -51,40 +51,40 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
         protected global::System.Web.UI.WebControls.TextBox txtDescPerfil;
 
         /// <summary>
-        /// Control BtnCreate.
+        /// Control btncreate.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnCreate;
+        protected global::System.Web.UI.WebControls.Button btncreate;
 
         /// <summary>
-        /// Control BtnUpdate.
+        /// Control btnupdate.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnUpdate;
+        protected global::System.Web.UI.WebControls.Button btnupdate;
 
         /// <summary>
-        /// Control BtnDelete.
+        /// Control btndelete.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnDelete;
+        protected global::System.Web.UI.WebControls.Button btndelete;
 
         /// <summary>
-        /// Control BtnBack.
+        /// Control btnback.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnBack;
+        protected global::System.Web.UI.WebControls.Button btnback;
 
         /// <summary>
         /// Control ExceptionModal.

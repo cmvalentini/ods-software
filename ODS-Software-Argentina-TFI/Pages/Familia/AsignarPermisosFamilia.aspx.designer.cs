@@ -15,13 +15,13 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
     {
 
         /// <summary>
-        /// Control LblSeleccionarFamilia.
+        /// Control lblseleccionarfamilia.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblSeleccionarFamilia;
+        protected global::System.Web.UI.WebControls.Label lblseleccionarfamilia;
 
         /// <summary>
         /// Control ddlRolList.
@@ -33,22 +33,22 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
         protected global::System.Web.UI.WebControls.DropDownList ddlRolList;
 
         /// <summary>
-        /// Control lblpermisosNOasignados.
+        /// Control lblpermisosnoasignados.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblpermisosNOasignados;
+        protected global::System.Web.UI.WebControls.Label lblpermisosnoasignados;
 
         /// <summary>
-        /// Control lblpermisosAsignados.
+        /// Control lblpermisosasignados.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblpermisosAsignados;
+        protected global::System.Web.UI.WebControls.Label lblpermisosasignados;
 
         /// <summary>
         /// Control listNotAssing.
@@ -60,22 +60,22 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
         protected global::System.Web.UI.WebControls.ListBox listNotAssing;
 
         /// <summary>
-        /// Control btnAsignar.
+        /// Control btnasignar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAsignar;
+        protected global::System.Web.UI.WebControls.Button btnasignar;
 
         /// <summary>
-        /// Control btnDesasignar.
+        /// Control btndesasignar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDesasignar;
+        protected global::System.Web.UI.WebControls.Button btndesasignar;
 
         /// <summary>
         /// Control listAssing.
@@ -87,21 +87,21 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
         protected global::System.Web.UI.WebControls.ListBox listAssing;
 
         /// <summary>
-        /// Control BtnUpdate.
+        /// Control btnupdate.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnUpdate;
+        protected global::System.Web.UI.WebControls.Button btnupdate;
 
         /// <summary>
-        /// Control BtnBack.
+        /// Control btnback.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnBack;
+        protected global::System.Web.UI.WebControls.Button btnback;
     }
 }

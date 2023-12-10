@@ -21,8 +21,8 @@
                             
                             <div class="form-horizontal form-label-left">
                                 <div class="item form-group">
-                                    <asp:TextBox ID="txtPath" CssClass="text-body" Height="35px" Width="300px" runat="server" Enabled="false" Text="C:\Users\Public\Desktop\BackUp" ></asp:TextBox>
-                                    <asp:Label ID="lblRutarestore" runat="server" Text="  Ruta por defecto"></asp:Label>
+                                    <asp:TextBox ID="txtrestorepath" CssClass="text-body" Height="35px" Width="300px" runat="server" Enabled="false" Text="C:\Users\Public\Desktop\BackUp" ></asp:TextBox>
+                                    <asp:Label ID="lblrutarestore" runat="server" Text="  Ruta por defecto"></asp:Label>
                                     <br />
                                     <asp:Label ID="lblRestore" CssClass="col-form-label label-align" runat="server" Text="" Font-Size="Medium"></asp:Label>
                                 </div>
@@ -31,8 +31,8 @@
                                 <div class="item form-group">
                                     <div class="col-md-6 col-sm-6 offset-md-3">
 
-                                        <asp:Button ID="btnRestore" CssClass="btn btn-primary" runat="server" Text="Realizar Restore"  OnClick="btnRestore_Click"/>
-                                        <asp:Button ID="btnVolver" CssClass="btn btn-dark" runat="server" Text="Volver" OnClick="btnVolver_Click" />
+                                        <asp:Button ID="btnrestore" CssClass="btn btn-primary" runat="server" Text="Realizar Restore"  OnClick="btnRestore_Click"/>
+                                        <asp:Button ID="btnvolver" CssClass="btn btn-dark" runat="server" Text="Volver" OnClick="btnVolver_Click" />
                                     </div>
                                 </div>
                             </div>

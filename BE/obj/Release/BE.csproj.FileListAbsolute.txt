@@ -1,0 +1,6 @@
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BE\bin\Release\BE.dll
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BE\bin\Release\BE.pdb
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BE\obj\Release\BE.csproj.AssemblyReference.cache
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BE\obj\Release\BE.csproj.CoreCompileInputs.cache
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BE\obj\Release\BE.dll
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BE\obj\Release\BE.pdb

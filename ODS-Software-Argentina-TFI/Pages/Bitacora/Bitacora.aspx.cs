@@ -19,7 +19,7 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
         private const string ASCENDING = " ASC";
         private const string DESCENDING = " DESC";
         private const string permiso = "consultarbitacora";
-
+        private string _sortDirection = "ASC";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,6 +27,11 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
             {
                 if (!this.IsPostBack)
                 {
+                    //redirect si no tiene permisos
+                    if (Session["UsuarioID"] == null)
+                    {
+                        Response.Redirect("~/Pages/Login.aspx");
+                    }
                     if (state.verificarpermisos(permiso, (int)Session["UsuarioID"]) == 1)
                     {
                         if (Session["IdiomaID"] is null)
@@ -37,13 +42,7 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
                     else
                     {
                         TraductorWeb.TraducirPagina((int)Session["IdiomaID"], this);
-                    }
-
-                    //redirect si no tiene permisos
-                    if (Session["UsuarioID"] == null)
-                    {
-                        Response.Redirect("~/Pages/Login.aspx");
-                    }
+                    }                   
 
                     }
                     else
@@ -68,7 +67,7 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
             try
             {
 
-
+                 
                 string fechadesde =  CalendarC.GetFechaDesde();
                 string fechahasta =  CalendarC.GetFechaHasta();
                 string criticidad = CalendarC.GetCriticidad();
@@ -131,7 +130,7 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
         protected void ConsultarBitacora_click(object sender, EventArgs e)
         {
             cargar_data(1,3);
-            btnExport.Visible = true;
+            btnexportlog.Visible = true;
         }
 
         protected void GridView1_Sorting(object sender, GridViewSortEventArgs e)
@@ -151,6 +150,19 @@ namespace ODS_Software_Argentina_TFI.Pages.Bitacora
             dvgBitacora.DataSource = list;
             dvgBitacora.DataBind();
 
+
+        }
+
+        protected void SetSortDirection(string sortDirection)
+        {
+            if (sortDirection == "ASC")
+            {
+                _sortDirection = "DESC";
+            }
+            else
+            {
+                _sortDirection = "ASC";
+            }
         }
 
         public List<BE.Seguridad.BitacoraBE> Sort<TKey>(List<BE.Seguridad.BitacoraBE> list, string sortBy, SortDirection direction)

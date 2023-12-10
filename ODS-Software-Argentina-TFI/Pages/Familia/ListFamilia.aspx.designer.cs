@@ -15,6 +15,15 @@ namespace ODS_Software_Argentina_TFI.Pages.Familia
     {
 
         /// <summary>
+        /// Control lblgestorfamilias.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblgestorfamilias;
+
+        /// <summary>
         /// Control btnCreateFamily.
         /// </summary>
         /// <remarks>

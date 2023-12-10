@@ -70,7 +70,7 @@ namespace DAL
 
         public  DataTable SPListarFull(string NomProc)
         {
-            DataTable dt = new DataTable();  
+            DataTable dta = new DataTable();  
 
             try
             {
@@ -82,10 +82,10 @@ namespace DAL
                 Conectar();
 
                 SqlDataReader reader = com.ExecuteReader();
-                dt.Load(reader);
+                dta.Load(reader);
                 Desconectar();
 
-                return dt;
+                return dta;
 
                  
               
@@ -136,8 +136,8 @@ namespace DAL
             try
             {
                 string stringconexiontest = @"Data Source=DESKTOP-VF25GBN\SERVERCHARLY;Initial Catalog = ODS_SOFT; Integrated Security = True";
-
-               // string stringconexiontest = ConfigurationManager.ConnectionStrings["conexion"].ToString();
+         
+                // string stringconexiontest = ConfigurationManager.ConnectionStrings["conexion"].ToString();
 
                 return stringconexiontest;
             }

@@ -10,13 +10,13 @@
       <div class="card mb-3">
 
     <div class="mx-auto" style="width:250px" >
-        <asp:Label runat="server" CssClass="h2" ID="lbltitulo"></asp:Label>
+        <asp:Label runat="server" CssClass="h2" ID="lbltituloUsuario"></asp:Label>
     </div>
        <br />
           <div class="card-body">
         <div class="mx-auto d-flex flex-column align-items-center justify-content-center" >
                  <div class="mb-3">
-            <label class="form-label" id="lblusuario">Usuario</label>
+            <label class="form-label" id="lblusuario">User Name</label>
             <asp:TextBox runat="server" CssClass="form-control" ID="txtUsuario" ></asp:TextBox>
                                    <asp:RegularExpressionValidator ID="RegexUsuario" Display="Dynamic" runat="server" CssClass="validadores" ControlToValidate="txtUsuario"
                                         ErrorMessage="Only Characters Please. Mínimo 6 caracteres [0003]" ValidationGroup="VGuardar" ValidationExpression="^[a-zA-Z ]*$" />          
@@ -24,13 +24,13 @@
         </div>
 
         <div class="mb-3">
-            <label class="form-label" id="lblnombre">Nombre</label>
+            <label class="form-label" id="lblnombre" >Name</label>
                       <asp:RegularExpressionValidator ID="rvUser" Display="Dynamic" runat="server" CssClass="validadores" ControlToValidate="txtnombre"
                                         ErrorMessage="Only Characters Please. Mínimo 6 caracteres [0003]" ValidationExpression="^[a-zA-Z ]*$" ValidationGroup="VGuardar" />          
             <asp:TextBox runat="server" CssClass="form-control" ID="txtnombre" ></asp:TextBox>
         </div>
           <div class="mb-3">
-            <label class="form-label" id="lblapellido">Apellido</label>
+            <label class="form-label" id="lblapellido">Last Name</label>
             <asp:TextBox runat="server" CssClass="form-control" ID="txtapellido"></asp:TextBox>
                <asp:RegularExpressionValidator ID="rvlastname" Display="Dynamic" runat="server" CssClass="validadores" ValidationGroup="VGuardar" ControlToValidate="txtapellido"
                                         ErrorMessage="Only Letters Please. Mínimo 6 caracteres [0003]" ValidationExpression="^[a-zA-Z ]*$" />  
@@ -45,7 +45,7 @@
         </div>
      
         <div class="mb-3">
-            <label class="form-label" id="lblhabilitado">Habilitado : </label>
+            <label class="form-label" id="lblhabilitado">Enabled : </label>
             <asp:CheckBox Text="" ID="chkHabilitado" runat="server" />    
         </div>
         <asp:Button Text="Crear" ID="BtnCreate" CssClass="btn form-control-sm btn-info" Visible="false" runat="server" OnClick="BtnCreate_Click" />  
@@ -53,7 +53,7 @@
         <asp:Button Text="Eliminar" ID="BtnDelete" ValidationGroup="VGuardar" CssClass="btn form-control-sm btn-danger" Visible="false"  runat="server" OnClick="BtnDelete_Click"/>  
         <asp:Button Text="Leer" ID="btnRead" ValidationGroup="VGuardar" CssClass="btn form-control-sm btn-info" Visible="false"  runat="server" OnClick="BtnRead_Click"/>  
         
-            <asp:Button Text="Volver" ID="BtnBack" CssClass="btn btn-primary btn-dark" Visible="true"  runat="server" OnClick="BtnBack_Click"/>  
+            <asp:Button Text="Back" ID="BtnBack" CssClass="btn btn-primary btn-dark" Visible="true"  runat="server" OnClick="BtnBack_Click"/>  
         </div>
         </div>
           </div>

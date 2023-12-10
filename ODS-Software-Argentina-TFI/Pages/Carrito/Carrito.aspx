@@ -84,49 +84,49 @@
       </h1>
               
            <br />
-            <asp:Label ID="lblarchivoCliente" CssClass="price-box__feat text-center" runat="server" Text="Please Upload the Company Document  "></asp:Label>
+            <asp:Label ID="lblarchivocliente" CssClass="price-box__feat text-center" runat="server" Text="Please Upload the Company Document  "></asp:Label>
             <br /> 
-           <asp:FileUpload ID="FileUploadEmpresa" CssClass="btn btn-primary btn-lg btn3d" runat="server" />
+           <asp:FileUpload ID="fileuploadempresa" CssClass="btn btn-primary btn-lg btn3d" runat="server" />
             <br />
-             <asp:Label ID="lblPayment"  CssClass="price-box__feat text-center" runat="server" Text="Please upload the deposit receipt"></asp:Label>
+             <asp:Label ID="lblpayment"  CssClass="price-box__feat text-center" runat="server" Text="Please upload the deposit receipt"></asp:Label>
             <br />  
-           <asp:FileUpload ID="FileUploadComprobante" CssClass="btn btn-primary btn-lg btn3d" runat="server" />
+           <asp:FileUpload ID="fileuploadcomprobante" CssClass="btn btn-primary btn-lg btn3d" runat="server" />
             <br />
-            <asp:Label ID="lblRepresentantenombre"  CssClass="price-box__feat text-center" runat="server" Text="legal representative Name :" required></asp:Label>
+            <asp:Label ID="lblrepresentantenombre"  CssClass="price-box__feat text-center" runat="server" Text="legal representative Name :" required></asp:Label>
             <br />
            <asp:TextBox ID="txtrepresentantelegalnombre" CssClass="form__field--half" runat="server"></asp:TextBox>
             <br /> 
-           <asp:Label ID="lblRepresentantenombreApellido"  CssClass="price-box__feat text-center" runat="server" Text="legal representative Lastname :"></asp:Label>
+           <asp:Label ID="lblrepresentantenombreapellido"  CssClass="price-box__feat text-center" runat="server" Text="legal representative Lastname :"></asp:Label>
             <br /> 
-           <asp:TextBox ID="txtrepresentantelegalApellido" CssClass="form__field--half" runat="server" ></asp:TextBox>
+           <asp:TextBox ID="txtrepresentantelegalapellido" CssClass="form__field--half" runat="server" ></asp:TextBox>
             <br />
             <asp:Label ID="lblnumerofiscalempresa"  CssClass="price-box__feat text-center" runat="server" Text="Company Tax Number:"></asp:Label>
             <br /> 
-           <asp:TextBox ID="txtDniEmpresa" CssClass="form__field--half" runat="server"></asp:TextBox>
+           <asp:TextBox ID="txtdniempresa" ValidationGroup="VGuardar" CssClass="form__field--half" runat="server"></asp:TextBox>
                      <asp:RegularExpressionValidator ID="rvlastname" Display="Dynamic" runat="server" CssClass="validadores" ControlToValidate="txtDniEmpresa"
                                         ErrorMessage="Only Numbers Please" ValidationExpression="^[0-9]*$" />  
       
            <br />  
-           <asp:Label ID="lblEmail"  CssClass="price-box__feat text-center" runat="server" Text="Email:"></asp:Label>
+           <asp:Label ID="lblemail"  CssClass="price-box__feat text-center" runat="server" Text="Email:"></asp:Label>
                            <asp:RegularExpressionValidator ID="remail" Display="Dynamic" runat="server" CssClass="validadores" ControlToValidate="txtemail"
                                         ErrorMessage="Please,check email" ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" />  
       
       
            <br /> 
-           <asp:TextBox ID="txtemail" CssClass="form__field--half" runat="server" required></asp:TextBox>
+           <asp:TextBox ID="txtemail" ValidationGroup="VGuardar"  CssClass="form__field--half" runat="server" required></asp:TextBox>
           <br />
            <asp:Label ID="lbladdress"  CssClass="price-box__feat text-center" runat="server" Text="Address:"></asp:Label>
             <br />
             <asp:TextBox ID="txtaddress" CssClass="form__field--half" runat="server" required></asp:TextBox>
    <br />
-           <asp:Label ID="lblCliente" CssClass="price-box__feat text-center" runat="server" Text="Company Name : "></asp:Label>
+           <asp:Label ID="lblcliente" CssClass="price-box__feat text-center" runat="server" Text="Company Name : "></asp:Label>
            <br />
            <br />
-        <asp:TextBox ID="txtEmpresa" CssClass="form__field--half" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtempresa" CssClass="form__field--half" runat="server"></asp:TextBox>
         <br />
           
            <br />
-         <asp:Button ID="btnCompreas" CssClass="btn btn-primary btn-lg btn3d" runat="server" Text="Submit" OnClick="btnCompreas_Click" />
+         <asp:Button ID="btncompreas" ValidationGroup="VGuardar"  CssClass="btn btn-primary btn-lg btn3d" runat="server" Text="Submit" OnClick="btnCompreas_Click" />
        <br />
          <asp:Button ID="btndownload" runat="server" Visible="false" CssClass="btn btn-primary btn-lg btn3d" OnClick="PRINT_Click" Text="Send Billing" />
 

@@ -12,7 +12,7 @@
                     <div class="x_panel">
                         <div class="x_title">
                             <ul class="nav panel_toolbox">
-                                <asp:Label ID="lblTitulo" runat="server" CssClass="h2" Text="Back Up" Font-Bold="True" ForeColor="#003366"></asp:Label>
+                                <asp:Label ID="lblbackuptittle" runat="server" CssClass="h2" Text="Back Up" Font-Bold="True" ForeColor="#003366"></asp:Label>
                                 <asp:Label ID="lblError" CssClass="text-danger" runat="server" Text=""></asp:Label>
                             </ul>
                             <div class="clearfix"></div>
@@ -22,8 +22,8 @@
                             
                             <div class="form-horizontal form-label-left">
                                 <div class="item form-group">
-                                    <asp:TextBox ID="txtPath" CssClass="text-body" Height="35px" Width="300px" runat="server" Enabled="false" Text="C:\Users\Public\Desktop\BackUp" ></asp:TextBox>
-                                    <asp:Label ID="Label1" runat="server" Text="  Ruta por defecto"></asp:Label>
+                                    <asp:TextBox ID="txtbackuppath" CssClass="text-body" Height="35px" Width="300px" runat="server" Enabled="false" Text="C:\Users\Public\Desktop\BackUp" ></asp:TextBox>
+                                    <asp:Label ID="lblrutabackup" runat="server" Text="  Ruta por defecto"></asp:Label>
                                     <br />
                                     <asp:Label ID="lblBackup" CssClass="col-form-label label-align" runat="server" Text="" Font-Size="Medium"></asp:Label>
                                 </div>
@@ -32,8 +32,8 @@
                                 <div class="item form-group">
                                     <div class="col-md-6 col-sm-6 offset-md-3">
 
-                                        <asp:Button ID="btnBackup" CssClass="btn btn-primary" runat="server" Text="Realizar Backup"  OnClick="btnBackup_Click"/>
-                                        <asp:Button ID="btnVolver" CssClass="btn btn-dark" runat="server" Text="Volver" OnClick="btnVolver_Click" />
+                                        <asp:Button ID="btnbackup" CssClass="btn btn-primary" runat="server" Text="Realizar Backup"  OnClick="btnBackup_Click"/>
+                                        <asp:Button ID="btnvolver" CssClass="btn btn-dark" runat="server" Text="Volver" OnClick="btnVolver_Click" />
                                     </div>
                                 </div>
                             </div>

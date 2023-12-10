@@ -15,21 +15,30 @@ namespace ODS_Software_Argentina_TFI.Pages.DigitosVerificadores
     {
 
         /// <summary>
-        /// Control btnRecalcularDigitos.
+        /// Control lbltitulorecalculardigitos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRecalcularDigitos;
+        protected global::System.Web.UI.WebControls.Label lbltitulorecalculardigitos;
 
         /// <summary>
-        /// Control btnVolver.
+        /// Control btnrecalculardigitos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVolver;
+        protected global::System.Web.UI.WebControls.Button btnrecalculardigitos;
+
+        /// <summary>
+        /// Control btnvolver.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnvolver;
     }
 }

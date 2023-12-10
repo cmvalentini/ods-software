@@ -12,7 +12,7 @@ namespace ODS_Software_Argentina_TFI.Pages
     {
         public static void TraducirPagina(int idiomaid,System.Web.UI.Page pagina)
         {
-            List<Type> tiposBuscados = new List<Type>() { typeof(Label), typeof(GridView), typeof(Button) };
+            List<Type> tiposBuscados = new List<Type>() { typeof(Label), typeof(LinkButton), typeof(GridView), typeof(Button) };
             try
             {
                 if (pagina.HasControls())

@@ -37,21 +37,23 @@ namespace DAL.Seguridad
 
             try
             {
-                
+
                 dt = con.SPListarFull("ListarBitacora");
 
-                foreach (DataRow row in dt.Rows)
+                if (dt.Rows.Count > 0)
                 {
-                    BE.Seguridad.BitacoraBE bit = new BE.Seguridad.BitacoraBE();
-                    bit.Usuarioid = Convert.ToInt16(row[0].ToString());
-                    bit.Descripcion = row[1].ToString();
-                    bit.Criticidad = row[2].ToString();
-                    bit.NombreOperacion = row[3].ToString();
-                    bit.FechayHora = Convert.ToDateTime(row[4].ToString());
 
-                    Listar.Add(bit);
-                     
-
+                    foreach (DataRow item in dt.Rows)
+                    {
+                        BE.Seguridad.BitacoraBE BitacoraBE = new BE.Seguridad.BitacoraBE();
+                        BitacoraBE.NombreOperacion = item[4].ToString();
+                        BitacoraBE.Descripcion = item[2].ToString();
+                        BitacoraBE.Usuarioid = Convert.ToInt16(item[1].ToString());
+                        BitacoraBE.Criticidad = item[3].ToString();
+                        BitacoraBE.FechayHora = Convert.ToDateTime(item[5].ToString());
+                        Listar.Add(BitacoraBE);
+                    }
+                    Console.WriteLine("entró reader DAL.bitacora.ConsultarBitacora" + Convert.ToString(dt.Rows[0][0].ToString()));
 
                 }
             }

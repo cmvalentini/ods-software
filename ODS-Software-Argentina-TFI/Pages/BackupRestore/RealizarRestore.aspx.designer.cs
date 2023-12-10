@@ -33,22 +33,22 @@ namespace ODS_Software_Argentina_TFI.Pages.BackupRestore
         protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
-        /// Control txtPath.
+        /// Control txtrestorepath.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPath;
+        protected global::System.Web.UI.WebControls.TextBox txtrestorepath;
 
         /// <summary>
-        /// Control lblRutarestore.
+        /// Control lblrutarestore.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRutarestore;
+        protected global::System.Web.UI.WebControls.Label lblrutarestore;
 
         /// <summary>
         /// Control lblRestore.
@@ -60,21 +60,21 @@ namespace ODS_Software_Argentina_TFI.Pages.BackupRestore
         protected global::System.Web.UI.WebControls.Label lblRestore;
 
         /// <summary>
-        /// Control btnRestore.
+        /// Control btnrestore.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRestore;
+        protected global::System.Web.UI.WebControls.Button btnrestore;
 
         /// <summary>
-        /// Control btnVolver.
+        /// Control btnvolver.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVolver;
+        protected global::System.Web.UI.WebControls.Button btnvolver;
     }
 }

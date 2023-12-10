@@ -15,13 +15,13 @@ namespace ODS_Software_Argentina_TFI.Pages
     {
 
         /// <summary>
-        /// Control lblUsuario.
+        /// Control lblusuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUsuario;
+        protected global::System.Web.UI.WebControls.Label lblusuario;
 
         /// <summary>
         /// Control txtusuario.
@@ -33,13 +33,13 @@ namespace ODS_Software_Argentina_TFI.Pages
         protected global::System.Web.UI.WebControls.TextBox txtusuario;
 
         /// <summary>
-        /// Control LblClaveUsuario.
+        /// Control lblclaveusuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblClaveUsuario;
+        protected global::System.Web.UI.WebControls.Label lblclaveusuario;
 
         /// <summary>
         /// Control txtclave.

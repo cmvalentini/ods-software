@@ -106,41 +106,41 @@ namespace ODS_Software_Argentina_TFI.Pages
                     {
                         case "HacerBackUp":
 
-                            this.btnBackUp.Enabled = true;
-                            this.btnBackUp.Visible = true;
+                            this.btnbackUp.Enabled = true;
+                            this.btnbackUp.Visible = true;
                             break;
 
                         case "abmusuario":
 
-                            this.btnUsuarios.Enabled = true;
-                            this.btnBackUp.Visible = true;
+                            this.btnusuarios.Enabled = true;
+                            this.btnusuarios.Visible = true;
                             break;
 
                         case "consultarbitacora":
-                            btnBitacora.Enabled = true;
-                            btnBitacora.Visible = true;
+                            btnbitacora.Enabled = true;
+                            btnbitacora.Visible = true;
                             break;
 
                         case "ABMFamilias":
-                            BtnPermisos.Enabled = true;
-                            BtnPermisos.Visible = true;
+                            btnpermisos.Enabled = true;
+                            btnpermisos.Visible = true;
                             break;
 
                         case "HacerRestore":
-                            BtnRestore.Enabled = true;
-                            BtnRestore.Visible = true;
+                            btnrestore.Enabled = true;
+                            btnrestore.Visible = true;
                             break;
 
                         case "digitosverificadores":
-                            btnDigitosverificadores.Enabled = true;
-                            btnDigitosverificadores.Visible = true;
+                            btndigitosverificadores.Enabled = true;
+                            btndigitosverificadores.Visible = true;
                             break;
 
                         case "AsignarPermisos":
-                            BtnasignarPermisos.Enabled = true;
-                            BtnasignarPermisos.Visible = true;
-                            BtnasignarPermisosusuario.Enabled = true;
-                            BtnasignarPermisosusuario.Visible = true;
+                            btnasignarpermisos.Enabled = true;
+                            btnasignarpermisos.Visible = true;
+                            btnasignarpermisosusuario.Enabled = true;
+                            btnasignarpermisosusuario.Visible = true;
                             break;
 
                     }

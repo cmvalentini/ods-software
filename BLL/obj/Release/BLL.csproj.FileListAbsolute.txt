@@ -1,0 +1,14 @@
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\bin\Release\BLL.dll
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\bin\Release\BLL.pdb
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\bin\Release\BE.dll
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\bin\Release\DAL.dll
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\bin\Release\BE.pdb
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\bin\Release\DAL.pdb
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\obj\Release\BLL.csproj.AssemblyReference.cache
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\obj\Release\BLL.eng-lang.resources
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\obj\Release\BLL.esp-lang.resources
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\obj\Release\BLL.csproj.GenerateResource.cache
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\obj\Release\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\obj\Release\BLL.csproj.CopyComplete
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\obj\Release\BLL.dll
+C:\Users\Charly\Source\Repos\ODS-Software-Argentina-TFI\BLL\obj\Release\BLL.pdb

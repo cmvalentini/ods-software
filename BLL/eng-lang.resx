@@ -117,145 +117,142 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Admin Options" xml:space="preserve">
+  <data name="admin options" xml:space="preserve">
     <value>Admin Options</value>
   </data>
   <data name="btnaceptar" xml:space="preserve">
     <value>Login</value>
   </data>
-  <data name="btnaceptar1" xml:space="preserve">
-    <value>Login</value>
+  <data name="btnaplicarfamilia" xml:space="preserve">
+    <value>Apply Family</value>
   </data>
-  <data name="btnAsignar" xml:space="preserve">
+  <data name="btnasignar" xml:space="preserve">
     <value>Assign</value>
   </data>
-  <data name="BtnasignarPermisos" xml:space="preserve">
+  <data name="btnasignarpermisos" xml:space="preserve">
     <value>Config User Profile</value>
   </data>
-  <data name="BtnasignarPermisosusuario" xml:space="preserve">
+  <data name="btnasignarpermisosusuario" xml:space="preserve">
     <value>Assign User Operatios</value>
   </data>
-  <data name="BtnBack" xml:space="preserve">
+  <data name="btnback" xml:space="preserve">
     <value>Back</value>
   </data>
-  <data name="btnback1" xml:space="preserve">
-    <value>Back</value>
-  </data>
-  <data name="BtnBack2" xml:space="preserve">
-    <value>Back</value>
-  </data>
-  <data name="btnBackUp" xml:space="preserve">
+  <data name="btnbackup" xml:space="preserve">
     <value>BackUp</value>
   </data>
-  <data name="btnBackup1" xml:space="preserve">
-    <value>Make Back Up</value>
-  </data>
-  <data name="btnBitacora" xml:space="preserve">
+  <data name="btnbitacora" xml:space="preserve">
     <value>Log</value>
   </data>
-  <data name="BtnCreate" xml:space="preserve">
+  <data name="btnconsultarbitacora" xml:space="preserve">
+    <value>View Log</value>
+  </data>
+  <data name="btncreate" xml:space="preserve">
     <value>Create</value>
   </data>
-  <data name="BtnCreate1" xml:space="preserve">
-    <value>Create</value>
-  </data>
-  <data name="btnCreateUser" xml:space="preserve">
+  <data name="btncreateuser" xml:space="preserve">
     <value>Create User</value>
   </data>
-  <data name="BtnDelete" xml:space="preserve">
+  <data name="btndelete" xml:space="preserve">
     <value>Delete</value>
   </data>
-  <data name="BtnDelete1" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="btnDeleteFamily" xml:space="preserve">
+  <data name="btndeletefamily" xml:space="preserve">
     <value>Delete Family</value>
   </data>
-  <data name="btnDeleteUser" xml:space="preserve">
+  <data name="btndeleteuser" xml:space="preserve">
     <value>Delete User</value>
   </data>
-  <data name="btnDesasignar" xml:space="preserve">
+  <data name="btndesasignar" xml:space="preserve">
     <value>Unassign </value>
   </data>
-  <data name="btnDigitosverificadores" xml:space="preserve">
+  <data name="btndigitosverificadores" xml:space="preserve">
     <value>Check Digits</value>
   </data>
-  <data name="btnLogin" xml:space="preserve">
+  <data name="btnexportlog" xml:space="preserve">
+    <value>Export Log</value>
+  </data>
+  <data name="btnlogin" xml:space="preserve">
     <value>Login</value>
   </data>
   <data name="btnModal" xml:space="preserve">
     <value>Accept</value>
   </data>
-  <data name="BtnPermisos" xml:space="preserve">
+  <data name="btnpermisos" xml:space="preserve">
     <value>Profile Users</value>
   </data>
-  <data name="btnRead" xml:space="preserve">
+  <data name="btnread" xml:space="preserve">
     <value>Read</value>
   </data>
-  <data name="btnRead1" xml:space="preserve">
-    <value> Read</value>
-  </data>
-  <data name="btnReadUser" xml:space="preserve">
+  <data name="btnreaduser" xml:space="preserve">
     <value>Read User</value>
   </data>
-  <data name="btnRecalcularDigitos" xml:space="preserve">
+  <data name="btnrecalculardigitos" xml:space="preserve">
     <value>Recheck Digits</value>
   </data>
-  <data name="BtnRestore" xml:space="preserve">
+  <data name="btnrestore" xml:space="preserve">
     <value>Restore</value>
   </data>
-  <data name="btnRestore1" xml:space="preserve">
-    <value>Make Restore</value>
-  </data>
-  <data name="BtnUpdate" xml:space="preserve">
+  <data name="btnupdate" xml:space="preserve">
     <value>Update</value>
   </data>
-  <data name="BtnUpdate1" xml:space="preserve">
-    <value>Update</value>
-  </data>
-  <data name="btnUpdateFamily" xml:space="preserve">
+  <data name="btnupdatefamily" xml:space="preserve">
     <value>Update Family</value>
   </data>
-  <data name="btnUpdateUser" xml:space="preserve">
+  <data name="btnupdateuser" xml:space="preserve">
     <value>Update User</value>
   </data>
-  <data name="btnUsuarios" xml:space="preserve">
+  <data name="btnusuarios" xml:space="preserve">
     <value>Users Operations</value>
   </data>
-  <data name="btnVolver" xml:space="preserve">
+  <data name="btnvolver" xml:space="preserve">
     <value>Back</value>
   </data>
-  <data name="chkHabilitado" xml:space="preserve">
+  <data name="chkhabilitado" xml:space="preserve">
     <value>Enabled</value>
   </data>
   <data name="errRegexPassword" xml:space="preserve">
     <value>The password does not meet the requirements: &lt;br&gt; -It must have between 8 and 15 characters &lt;br&gt; -It must have at least one uppercase and one lowercase letter &lt;br&gt; -It must have at least one number.</value>
   </data>
-  <data name="FechaEvento" xml:space="preserve">
+  <data name="fechaevento" xml:space="preserve">
     <value>Date</value>
   </data>
   <data name="lblapellido" xml:space="preserve">
-    <value>Surname</value>
+    <value>Last Name :</value>
   </data>
-  <data name="lblapellido1" xml:space="preserve">
-    <value>Last Name</value>
+  <data name="lblbackuptittle" xml:space="preserve">
+    <value>Make Back Up</value>
   </data>
-  <data name="lblClave" xml:space="preserve">
+  <data name="lblbitacoratitulo" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="lblclave" xml:space="preserve">
     <value>Key</value>
   </data>
-  <data name="LblClaveUsuario" xml:space="preserve">
+  <data name="lblclaveusuario" xml:space="preserve">
     <value>Password</value>
+  </data>
+  <data name="lblcriticidad" xml:space="preserve">
+    <value>Criticality</value>
   </data>
   <data name="lbldescfamilia" xml:space="preserve">
     <value>Profile Name</value>
   </data>
+  <data name="lbldesde" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="lblgestorfamilias" xml:space="preserve">
+    <value>Family Module</value>
+  </data>
+  <data name="lblgestorusuarios" xml:space="preserve">
+    <value>User Module</value>
+  </data>
   <data name="lblhabilitado" xml:space="preserve">
     <value>Enabled</value>
   </data>
-  <data name="lblhabilitado1" xml:space="preserve">
-    <value>Enabled</value>
+  <data name="lblhasta" xml:space="preserve">
+    <value>To</value>
   </data>
-  <data name="lblLogin" xml:space="preserve">
+  <data name="lbllogin" xml:space="preserve">
     <value>Log In</value>
   </data>
   <data name="lblmail" xml:space="preserve">
@@ -264,37 +261,34 @@
   <data name="lblnombre" xml:space="preserve">
     <value>Name</value>
   </data>
-  <data name="lblnombre1" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="lblpermisosAsignados" xml:space="preserve">
+  <data name="lblpermisosasignados" xml:space="preserve">
     <value>Assigned Permissions</value>
   </data>
-  <data name="lblpermisosNOasignados" xml:space="preserve">
+  <data name="lblpermisosnoasignados" xml:space="preserve">
     <value>Unassigned Permissions</value>
   </data>
-  <data name="lblRutabackup" xml:space="preserve">
+  <data name="lblrutabackup" xml:space="preserve">
     <value>Default Path</value>
   </data>
-  <data name="lblRutarestore" xml:space="preserve">
+  <data name="lblrutarestore" xml:space="preserve">
     <value>Default Path</value>
   </data>
-  <data name="LblSeleccionarFamilia" xml:space="preserve">
+  <data name="lblseleccionarfamilia" xml:space="preserve">
     <value>Select Rol</value>
   </data>
-  <data name="lblUsuario" xml:space="preserve">
-    <value>Username</value>
+  <data name="lblseleccionarusuario" xml:space="preserve">
+    <value>Select User</value>
   </data>
-  <data name="lblusuario1" xml:space="preserve">
-    <value>User</value>
+  <data name="lbltitulorecalculardigitos" xml:space="preserve">
+    <value>Re-check Digits</value>
   </data>
-  <data name="lblUsuario2" xml:space="preserve">
+  <data name="lblusuario" xml:space="preserve">
     <value>User</value>
   </data>
   <data name="LinkButton1" xml:space="preserve">
     <value>For change password, please click here </value>
   </data>
-  <data name="Mensaje" xml:space="preserve">
+  <data name="mensaje" xml:space="preserve">
     <value>Message</value>
   </data>
   <data name="MensajeCuerpo" xml:space="preserve">
@@ -312,7 +306,7 @@
   <data name="TipoEventoSt" xml:space="preserve">
     <value>Type of Event</value>
   </data>
-  <data name="txtDescPerfil" xml:space="preserve">
+  <data name="txtdescperfil" xml:space="preserve">
     <value>Description Profile</value>
   </data>
   <data name="txtemail" xml:space="preserve">

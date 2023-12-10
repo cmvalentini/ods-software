@@ -33,76 +33,76 @@ namespace ODS_Software_Argentina_TFI.Pages
         protected global::System.Web.UI.WebControls.ImageButton imgbutton;
 
         /// <summary>
-        /// Control btnBackUp.
+        /// Control btnbackUp.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBackUp;
+        protected global::System.Web.UI.WebControls.Button btnbackUp;
 
         /// <summary>
-        /// Control btnBitacora.
+        /// Control btnbitacora.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBitacora;
+        protected global::System.Web.UI.WebControls.Button btnbitacora;
 
         /// <summary>
-        /// Control BtnRestore.
+        /// Control btnrestore.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnRestore;
+        protected global::System.Web.UI.WebControls.Button btnrestore;
 
         /// <summary>
-        /// Control btnUsuarios.
+        /// Control btnusuarios.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUsuarios;
+        protected global::System.Web.UI.WebControls.Button btnusuarios;
 
         /// <summary>
-        /// Control BtnPermisos.
+        /// Control btnpermisos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnPermisos;
+        protected global::System.Web.UI.WebControls.Button btnpermisos;
 
         /// <summary>
-        /// Control BtnasignarPermisos.
+        /// Control btnasignarpermisos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnasignarPermisos;
+        protected global::System.Web.UI.WebControls.Button btnasignarpermisos;
 
         /// <summary>
-        /// Control BtnasignarPermisosusuario.
+        /// Control btnasignarpermisosusuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnasignarPermisosusuario;
+        protected global::System.Web.UI.WebControls.Button btnasignarpermisosusuario;
 
         /// <summary>
-        /// Control btnDigitosverificadores.
+        /// Control btndigitosverificadores.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDigitosverificadores;
+        protected global::System.Web.UI.WebControls.Button btndigitosverificadores;
 
         /// <summary>
         /// Control btnlogout.

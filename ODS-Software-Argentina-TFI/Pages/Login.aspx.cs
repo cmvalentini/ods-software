@@ -84,8 +84,8 @@ namespace ODS_Software_Argentina_TFI.Pages
 
                     Response.Redirect("MenuPrincipal.aspx");
                 }
-               
-            }
+
+        }
             catch (Exception  )
             {
                 //en este apartado arrojamos las execpciones por error
@@ -97,7 +97,7 @@ namespace ODS_Software_Argentina_TFI.Pages
 
 
 
-        }
+}
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
